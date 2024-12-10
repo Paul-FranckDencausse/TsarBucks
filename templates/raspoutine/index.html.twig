@@ -1,20 +1,69 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello RaspoutineController!{% endblock %}
+{% block title %}Tsarbucks Raspoutine{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+<section class="py-5 bg-light">
+    <div class="container">
+        <h1 class="text-center mb-4">Tsarbucks Raspoutine</h1>
+        <div class="row">
+            <div class="col-md-6">
+                 <img src="{{ asset('images/stars.jpeg') }}" alt="Description de l'image" class="card-img-top" alt="Tsarbucks Raspoutine" class="img-fluid rounded mb-4">> 
+            </div>
+            <div class="col-md-6">
+                <h2 class="mb-3">Mystère et Magnificence</h2>
+                <p>
+                    Découvrez l'aura énigmatique de Raspoutine dans notre salon Tsarbucks dédié à cette figure légendaire de l'histoire russe. Avec un décor sombre et captivant, plongez dans une atmosphère mystique tout en dégustant nos créations artisanales. Chaque coin de ce café évoque les mystères et légendes qui entourent l'homme influent et controversé de la cour des Romanov.
+                </p>
+                <p>
+                    Le salon Tsarbucks Raspoutine vous invite à une expérience sensorielle unique, alliant cafés raffinés, pâtisseries sophistiquées, et une immersion totale dans une époque fascinante et troublante de l'histoire russe.
+                </p>
+                <p>
+                    <strong>Adresse :</strong> 456 Rue des Ténèbres, Moscou, Russie<br>
+                    <strong>Horaires :</strong> Du lundi au samedi, de 11h00 à 23h00
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+<section class="py-5 bg-white">
+    <div class="container">
+        <h2 class="text-center mb-4">Nos Spécialités</h2>
+      
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="{{ asset('images/coussins_luxueux.jpg') }}" class="card-img-top" alt="Coussins Luxueux">
+                    <div class="card-body">
+                        <h5 class="card-title">Coussins Luxueux</h5>
+                        <p class="card-text">Des pâtisseries moelleuses et raffinées, conçues pour apporter un confort royal à votre palais.</p>
+                        <a href="{{ path('app_menu_index') }}" class="btn btn-success">Le menu complet</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="{{ asset('images/banana_split.jpg') }}" class="card-img-top" alt="Banana Split">
+                    <div class="card-body">
+                        <h5 class="card-title">Banana Split Impérial</h5>
+                        <p class="card-text">Une touche de nostalgie impériale avec une version revisitée du classique Banana Split.</p>
+                        <a href="{{ path('app_menu_index') }}" class="btn btn-success">Le menu complet</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="{{ asset('images/cafe_siberien.jpg') }}" class="card-img-top" alt="Café Sibérien">
+                    <div class="card-body">
+                        <h5 class="card-title">Café Sibérien</h5>
+                        <p class="card-text">Un café intense et chaleureux, parfait pour affronter les vents glacés de la Sibérie.</p>
+                        <a href="{{ path('app_menu_index') }}" class="btn btn-success">Le menu complet</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>/home/paul-franck/Bureau/TsarBucks/TsarBucks/src/Controller/RaspoutineController.php</code></li>
-        <li>Your template at <code>/home/paul-franck/Bureau/TsarBucks/TsarBucks/templates/raspoutine/index.html.twig</code></li>
-    </ul>
-</div>
 {% endblock %}

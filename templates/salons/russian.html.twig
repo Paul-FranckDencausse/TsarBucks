@@ -1,0 +1,104 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Наши салоны{% endblock %}
+
+{% block body %}
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">Наши Кофейни</h2>
+        <div class="row d-flex flex-wrap">
+            <!-- Tsarbucks Stalingrad -->
+            <div class="col-md-4 d-flex">
+                <div class="card mb-4 shadow-sm h-100 d-flex flex-column">
+                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.cruise-bordeaux.com%2Fwp-content%2Fuploads%2F2016%2F02%2FPlace-Stalingrad-Vincent-Bengold.jpg&f=1&nofb=1&ipt=aeea955d3599e24a30dc2ec52520383152665618be7f0f0231d670830b1787d5&ipo=images" class="card-img-top" alt="Tsarbucks Stalingrad">
+                    <div class="card-body flex-grow-1">
+                        <h5 class="card-title">Tsarbucks Stalingrad</h5>
+                        <p class="card-text">
+                            Погружение в захватывающую историю в Tsarbucks Stalingrad, уникальной кофейне, расположенной в сердце Бордо. Вдохновленный величием и стойкостью Сталинграда, этот салон предлагает атмосферу, которая вызывает воспоминания о великих часах СССР, пока вы наслаждаетесь нашими ремесленными кофе.
+                        </p>
+                        <a href="{{ path('app_stalingrad') }}" class="btn btn-success mt-auto">Узнать больше</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tsarbucks Catherine II -->
+            <div class="col-md-4 d-flex">
+                <div class="card mb-4 shadow-sm h-100 d-flex flex-column">
+                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.lequotidiendelart.com%2Fmedia%2Fcache%2Farticle_page_cover%2Fshared%2Farticle-image%2F1377.jpg&f=1&nofb=1&ipt=8960def0889c94161053c3b159a86d259c4f022e49d6935394edee95bd0c1147&ipo=images" class="card-img-top" alt="Tsarbucks Catherine II">
+                    <div class="card-body flex-grow-1">
+                        <h5 class="card-title">Tsarbucks Catherine II</h5>
+                        <p class="card-text">
+                            Откройте для себя Tsarbucks Catherine II, изысканный дань одной из самых знаковых императриц российской истории. Наслаждайтесь нашим кофе в атмосфере, которая вызывает величие правления Екатерины Великой.
+                        </p>
+                        <a href="{{ path('app_catherine') }}" class="btn btn-success mt-auto">Узнать больше</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tsarbucks Pierre Ier -->
+            <div class="col-md-4 d-flex">
+                <div class="card mb-4 shadow-sm h-100 d-flex flex-column">
+                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdni.rbth.com%2Frbthmedia%2Fimages%2F2020.01%2Foriginal%2F5e217c8985600a7aea614939.jpg&f=1&nofb=1&ipt=bb30f2224e331bf66260b3ca050d9134e5c7059e3fc003e9f75543b18f6bb1b0&ipo=images" class="card-img-top" alt="Tsarbucks Pierre Ier">
+                    <div class="card-body flex-grow-1">
+                        <h5 class="card-title">Tsarbucks Pierre Ier</h5>
+                        <p class="card-text">
+                            Добро пожаловать в Tsarbucks Pierre Ier, кафе, вдохновленное выдающимся царем, который модернизировал Россию. Наслаждайтесь изысканными кофе и выпечкой в элегантной и утонченной обстановке.
+                        </p>
+                        <a href="{{ path('app_pierre') }}" class="btn btn-success mt-auto">Узнать больше</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row d-flex flex-wrap">
+            <!-- Tsarbucks Ivan Грозный -->
+            <div class="col-md-4 d-flex">
+                <div class="card mb-4 shadow-sm h-100 d-flex flex-column">
+                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.tripsavvy.com%2Fthmb%2F1m4BZ31TZXwtPpdC95MwfVGXSMc%3D%2F2108x1422%2Ffilters%3Afill(auto%2C1)%2FGettyImages-600201788-5c8e8a1bc9e77c00014a9d8c.jpg&f=1&nofb=1&ipt=8a96fbfde8348192c81621c0128ae383411a4ea88e4854788bb727f434561d1f&ipo=images" class="card-img-top" alt="Tsarbucks Ivan Грозный">
+                    <div class="card-body flex-grow-1">
+                        <h5 class="card-title">Tsarbucks Иван Грозный</h5>
+                        <p class="card-text">
+                            Погружение в средневековую Россию в Tsarbucks Иван Грозный. Исследуйте насыщенные напитки и традиционные блюда в драматической обстановке.
+                        </p>
+                        <a href="{{ path('app_ivan') }}" class="btn btn-success mt-auto">Узнать больше</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tsarbucks Анастасия Романова -->
+            <div class="col-md-4 d-flex">
+                <div class="card mb-4 shadow-sm h-100 d-flex flex-column">
+                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fprefiroviajar.com.br%2Fwp-content%2Fuploads%2Fmoscow.jpg&f=1&nofb=1&ipt=82da0316045ecef1db38f6dc66f32284baf9f5bdee8149d9dae7dce1bfd0ce15&ipo=images" class="card-img-top" alt="Tsarbucks Анастасия Романова">
+                    <div class="card-body flex-grow-1">
+                        <h5 class="card-title">Tsarbucks Анастасия Романова</h5>
+                        <p class="card-text">
+                            Откройте для себя тайну в Tsarbucks Анастасия Романова, кофейне, расположенной в престижном арт-квартале Москвы. Наслаждайтесь цветочными чаями и имперскими выпечками.
+                        </p>
+                        <a href="{{ path('app_anastasia') }}" class="btn btn-success mt-auto">Узнать больше</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tsarbucks Распутин -->
+            <div class="col-md-4 d-flex">
+                <div class="card mb-4 shadow-sm h-100 d-flex flex-column">
+                    <img src="{{ asset('images/vladivostok.jpg') }}" class="card-img-top" alt="Tsarbucks Распутин">
+                    <div class="card-body flex-grow-1">
+                        <h5 class="card-title">Tsarbucks Распутин</h5>
+                        <p class="card-text">
+                            Погружение в мир мистики и эзотерики в Tsarbucks Распутин. Этот салон сочетает темные и загадочные элементы, создавая уникальную атмосферу для тех, кто ищет необычный опыт. Наслаждайтесь редкими травяными настойками, ремесленными ликерами и богатой выпечкой, которые вызывают загадочную ауру легендарного советника Романовых.
+                        </p>
+                        <a href="{{ path('app_raspoutine') }}" class="btn btn-success mt-auto">Узнать больше</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Кнопка по центру к полному меню -->
+        <div class="text-center mt-5">
+            <a href="{{ path('app_menu_index') }}" class="btn btn-success">Полное меню</a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

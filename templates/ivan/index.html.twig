@@ -1,20 +1,70 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello IvanController!{% endblock %}
+{% block title %}Tsarbucks Ivan le Terrible{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+<section class="py-5 bg-light">
+    <div class="container">
+        <h1 class="text-center mb-4">Tsarbucks Ivan le Terrible</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{{ asset('images/strasbourg.jpg') }}"  
+                class="card-img-top" alt="Tsarbucks Ivan le Terrible" class="img-fluid rounded mb-4">>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+            </div>
+            <div class="col-md-6">
+                <h2 class="mb-3">Une Expérience Inoubliable au Temps des Tsars</h2>
+                <p>
+                    Découvrez le mystère et la puissance de l'époque médiévale russe en visitant le Tsarbucks Ivan le Terrible. Ce salon vous plonge dans une ambiance à la fois riche en histoire et propice à la détente.
+                </p>
+                <p>
+                    Avec son décor inspiré par le règne impitoyable d'Ivan IV, surnommé Ivan le Terrible, ce salon est parfait pour une immersion dans l'histoire tout en savourant nos boissons artisanales et nos pâtisseries maison. C'est un lieu idéal pour se détendre, discuter entre amis ou même travailler dans une atmosphère stimulante et unique.
+                </p>
+                <p>
+                    <strong>Adresse :</strong> 456 Rue des Tsars, Moscou, Russie<br>
+                    <strong>Horaires :</strong> Du lundi au dimanche, de 8h00 à 21h00
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>/home/paul-franck/Bureau/TsarBucks/TsarBucks/src/Controller/IvanController.php</code></li>
-        <li>Your template at <code>/home/paul-franck/Bureau/TsarBucks/TsarBucks/templates/ivan/index.html.twig</code></li>
-    </ul>
-</div>
+<section class="py-5 bg-white">
+    <div class="container">
+        <h2 class="text-center mb-4">Nos Spécialités</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="{{ asset('images/mannele.jpg') }}" class="card-img-top" alt="Mannele Impérial">
+                    <div class="card-body">
+                        <h5 class="card-title">Mannele Impérial</h5>
+                        <p class="card-text">Un délicieux Mannele, revisité avec une touche impériale, parfait pour les fêtes ou une douceur quotidienne.</p>
+                        <a href="{{ path('app_menu_index') }}" class="btn btn-success">Le menu complet</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="{{ asset('images/café.jpg') }}" class="card-img-top" alt="Napoléon Press Coffee">
+                    <div class="card-body">
+                        <h5 class="card-title">Napoléon Press Coffee</h5>
+                        <p class="card-text">Un café puissant et audacieux, préparé à la presse, qui vous donnera la détermination d'un conquérant.</p>
+                        <a href="{{ path('app_menu_index') }}" class="btn btn-success">Le menu complet</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="{{ asset('images/blanc.jpeg') }}" class="card-img-top" alt="Thé Russie Blanche">
+                    <div class="card-body">
+                        <h5 class="card-title">Thé "Russie Blanche"</h5>
+                        <p class="card-text">Un thé délicatement parfumé, symbole d'élégance et de raffinement, qui évoque les vastes plaines enneigées.</p>
+                        <a href="{{ path('app_menu_index') }}" class="btn btn-success">Le menu complet</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 {% endblock %}

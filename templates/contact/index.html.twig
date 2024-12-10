@@ -4,34 +4,36 @@
 
 {% block body %}
 <section class="py-5 bg-light">
-    <div class="container">
-        <h1 class="text-center mb-4">Contactez-nous</h1>
+    <div class="container my-5">
+        <h1 class="text-center">Contactez-nous</h1>
 
-        {% for message in app.flashes('success') %}
-            <div class="alert alert-success">
-                {{ message }}
-            </div>
-        {% endfor %}
+        {% if form is defined %}
+            {{ form_start(form) }}
+           
 
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                {{ form_start(contactForm) }}
-                    <div class="mb-3">
-                        {{ form_label(contactForm.subject) }}
-                        {{ form_widget(contactForm.subject) }}
-                        {{ form_errors(contactForm.subject) }}
-                    </div>
-                    <div class="mb-3">
-                        {{ form_label(contactForm.message) }}
-                        {{ form_widget(contactForm.message) }}
-                        {{ form_errors(contactForm.message) }}
-                    </div>
-                    <div class="text-center">
-                        {{ form_widget(contactForm.send) }}
-                    </div>
-                {{ form_end(contactForm) }}
+            <div class="mb-3">
+                {{ form_label(form.email, 'Email', {'label_attr': {'class': 'form-label'}}) }}
+                {{ form_widget(form.email, {'attr': {'class': 'form-control'}}) }}
+                {{ form_errors(form.email) }}
             </div>
-        </div>
+
+            <div class="mb-3">
+                {{ form_label(form.subject, 'Sujet', {'label_attr': {'class': 'form-label'}}) }}
+                {{ form_widget(form.subject, {'attr': {'class': 'form-control'}}) }}
+                {{ form_errors(form.subject) }}
+            </div>
+
+            <div class="mb-3">
+                {{ form_label(form.message, 'Message', {'label_attr': {'class': 'form-label'}}) }}
+                {{ form_widget(form.message, {'attr': {'class': 'form-control', 'rows': 5}}) }}
+                {{ form_errors(form.message) }}
+            </div>
+
+            <button type="submit" class="btn btn-success w-100">Envoyer</button>
+            {{ form_end(form) }}
+        {% else %}
+            <p>Merci pour votre message ! Nous reviendrons vers vous sous peu.</p>
+        {% endif %}
     </div>
 </section>
 {% endblock %}

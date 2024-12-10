@@ -1,18 +1,28 @@
-# config/packages/security.yaml
 security:
     providers:
         app_user_provider:
             entity:
                 class: App\Entity\User
-                property: username # ou email, selon votre champ d'identification
+                property: email  # Utilisation de l'email comme identifiant
 
     firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
         main:
-            pattern: ^/
-            custom_authenticator: App\Security\AppCustomAuthentificatorAuthenticator
+            lazy: true
+            provider: app_user_provider
+            form_login:
+                login_path: app_login
+                check_path: app_login
+                csrf_token_id: authenticate
+                username_parameter: email  # Utilisation de l'email dans le formulaire de connexion
+                password_parameter: password  # Utilisation du mot de passe dans le formulaire
+                enable_csrf: true
             logout:
                 path: app_logout
-               
+                # where to redirect after logout
+                # target: app_any_route
 
     password_hashers:
         App\Entity\User:
