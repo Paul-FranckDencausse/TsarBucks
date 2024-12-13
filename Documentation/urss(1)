@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+        <title>Flux URSS - Tsarbucks</title>
+        <link>https://www.tsarbucks.com</link>
+        <description>Actualités impériales de Tsarbucks</description>
+        <language>fr</language>
+
+                    <item>
+                <title>Lancement du Samovar en Or Massif</title>
+                <link>https://www.tsarbucks.com/samovar-or</link>
+                <description>Découvrez notre dernière innovation : un samovar impérial pour vos thés russes.</description>
+                <pubDate>Fri, 06 Dec 2024 11:52:23 +0000</pubDate>
+            </item>
+                    <item>
+                <title>Ouverture de Tsarbucks en Sibérie</title>
+                <link>https://www.tsarbucks.com/siberie</link>
+                <description>Venez savourer un expresso Romanov au cœur de la toundra sibérienne.</description>
+                <pubDate>Thu, 05 Dec 2024 11:52:23 +0000</pubDate>
+            </item>
+                    <item>
+                <title>Macarons impériaux : nouvelle recette</title>
+                <link>https://www.tsarbucks.com/macarons</link>
+                <description>Nos macarons revisitent la tradition culinaire française avec une touche impériale.</description>
+                <pubDate>Wed, 04 Dec 2024 11:52:23 +0000</pubDate>
+            </item>
+            </channel>
+</rss>
