@@ -3,11 +3,19 @@
 {% block title %}Edit User{% endblock %}
 
 {% block body %}
-    <h1>Edit User</h1>
+<div class="container mt-5">
+    <h1 class="mb-4">Modifier</h1>
 
-    {{ include('user/_form.html.twig', {'button_label': 'Update'}) }}
+    <div class="card p-4 shadow-sm mb-4">
+        {{ include('user/_form.html.twig', {'button_label': 'Update'}) }}
+    </div>
 
-    <a href="{{ path('app_user_index') }}">back to list</a>
+    <div class="d-flex justify-content-between mt-3">
+        <a href="{{ path('app_user_index') }}" class="btn btn-primary">
+            <i class="bi bi-arrow-left"></i> Retour
+        </a>
 
-    {{ include('user/_delete_form.html.twig') }}
+        {{ include('user/_delete_form.html.twig') }}
+    </div>
+</div>
 {% endblock %}

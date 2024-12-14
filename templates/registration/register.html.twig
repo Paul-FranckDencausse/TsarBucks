@@ -15,30 +15,114 @@
 
     <!-- Début du formulaire -->
     {{ form_start(registrationForm, {'attr': {'class': 'needs-validation'}}) }}
-        
 
-        <div class="mb-3">
+    <div class="row g-3">
+        <!-- Adresse e-mail -->
+        <div class="col-md-6">
             {{ form_row(registrationForm.email, {
                 label: 'Adresse e-mail',
                 attr: {'class': 'form-control'}
             }) }}
         </div>
 
-        <div class="mb-3">
+        <!-- Mot de passe -->
+        <div class="col-md-6">
             {{ form_row(registrationForm.plainPassword, {
                 label: 'Mot de passe',
                 attr: {'class': 'form-control'}
             }) }}
         </div>
 
-        <div class="mb-3 form-check">
-            {{ form_row(registrationForm.agreeTerms, {
-                label: 'J\'accepte les termes et conditions',
-                attr: {'class': 'form-check-input'}
+        <!-- Nom -->
+        <div class="col-md-6">
+            {{ form_row(registrationForm.nom, {
+                label: 'Nom',
+                attr: {'class': 'form-control'}
             }) }}
         </div>
 
+        <!-- Prénom -->
+        <div class="col-md-6">
+            {{ form_row(registrationForm.prenom, {
+                label: 'Prénom',
+                attr: {'class': 'form-control'}
+            }) }}
+        </div>
+
+        <!-- Genre -->
+        <div class="col-md-6">
+            {{ form_row(registrationForm.genre, {
+                label: 'Genre',
+                attr: {'class': 'form-select'}
+            }) }}
+        </div>
+
+        <!-- Téléphone -->
+        <div class="col-md-6">
+            {{ form_row(registrationForm.telephone, {
+                label: 'Téléphone',
+                attr: {'class': 'form-control'}
+            }) }}
+        </div>
+
+        <!-- Date de naissance -->
+        <div class="col-md-6">
+            {{ form_row(registrationForm.dateNaissance, {
+                label: 'Date de naissance',
+                attr: {'class': 'form-control'}
+            }) }}
+        </div>
+
+        <!-- Adresse -->
+        <div class="col-md-12">
+            {{ form_row(registrationForm.adresse, {
+                label: 'Adresse',
+                attr: {'class': 'form-control'}
+            }) }}
+        </div>
+
+        <!-- Code postal -->
+        <div class="col-md-6">
+            {{ form_row(registrationForm.codePostal, {
+                label: 'Code postal',
+                attr: {'class': 'form-control'}
+            }) }}
+        </div>
+
+        <!-- Ville -->
+        <div class="col-md-6">
+            {{ form_row(registrationForm.ville, {
+                label: 'Ville',
+                attr: {'class': 'form-control'}
+            }) }}
+        </div>
+
+        <!-- Accord parental -->
+        <div class="col-md-12">
+            <div class="form-check">
+                {{ form_row(registrationForm.accordParental, {
+                    label: 'J\'atteste avoir obtenu l\'accord parental (si mineur)',
+                    attr: {'class': 'form-check-input'}
+                }) }}
+            </div>
+        </div>
+
+        <!-- Accepter les termes -->
+        <div class="col-md-12">
+            <div class="form-check">
+                {{ form_row(registrationForm.agreeTerms, {
+                    label: 'J\'accepte les termes et conditions',
+                    attr: {'class': 'form-check-input'}
+                }) }}
+            </div>
+        </div>
+    </div>
+
+    <!-- Bouton de soumission -->
+    <div class="mt-4">
         <button type="submit" class="btn btn-success">S'inscrire</button>
+    </div>
+    
     {{ form_end(registrationForm) }}
 </div>
 {% endblock %}

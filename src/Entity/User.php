@@ -8,7 +8,7 @@ use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 #[ORM\Entity(repositoryClass: UserRepository::class)]
-#[UniqueEntity(fields: ['email'], message: 'There is already an account with this email')]
+#[UniqueEntity(fields: ['email'], message: 'Il existe déjà un compte avec cet email.')]
 class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
     #[ORM\Id]
@@ -23,13 +23,31 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private ?string $nom = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $prénom = null;
+    private ?string $prenom = null;
+
+    #[ORM\Column(length: 20, nullable: true)]
+    private ?string $genre = null;
+
+    #[ORM\Column(type: 'date', nullable: true)]
+    private ?\DateTimeInterface $dateNaissance = null;
+
+    #[ORM\Column(length: 15, nullable: true)]
+    private ?string $telephone = null;
 
     #[ORM\Column(length: 255, nullable: true)]
-    private ?string $media_id = null;
+    private ?string $adresse = null;
+
+    #[ORM\Column(length: 10, nullable: true)]
+    private ?string $codePostal = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $ville = null;
 
     #[ORM\Column(length: 255)]
     private ?string $mot_de_passe = null;
+
+    #[ORM\Column(type: 'json')]
+    private array $roles = ['ROLE_USER'];
 
     public function getId(): ?int
     {
@@ -60,26 +78,86 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
-    public function getPrénom(): ?string
+    public function getPrenom(): ?string
     {
-        return $this->prénom;
+        return $this->prenom;
     }
 
-    public function setPrénom(string $prénom): static
+    public function setPrenom(string $prenom): static
     {
-        $this->prénom = $prénom;
+        $this->prenom = $prenom;
 
         return $this;
     }
 
-    public function getMediaId(): ?string
+    public function getGenre(): ?string
     {
-        return $this->media_id;
+        return $this->genre;
     }
 
-    public function setMediaId(?string $media_id): static
+    public function setGenre(?string $genre): static
     {
-        $this->media_id = $media_id;
+        $this->genre = $genre;
+
+        return $this;
+    }
+
+    public function getDateNaissance(): ?\DateTimeInterface
+    {
+        return $this->dateNaissance;
+    }
+
+    public function setDateNaissance(?\DateTimeInterface $dateNaissance): static
+    {
+        $this->dateNaissance = $dateNaissance;
+
+        return $this;
+    }
+
+    public function getTelephone(): ?string
+    {
+        return $this->telephone;
+    }
+
+    public function setTelephone(?string $telephone): static
+    {
+        $this->telephone = $telephone;
+
+        return $this;
+    }
+
+    public function getAdresse(): ?string
+    {
+        return $this->adresse;
+    }
+
+    public function setAdresse(?string $adresse): static
+    {
+        $this->adresse = $adresse;
+
+        return $this;
+    }
+
+    public function getCodePostal(): ?string
+    {
+        return $this->codePostal;
+    }
+
+    public function setCodePostal(?string $codePostal): static
+    {
+        $this->codePostal = $codePostal;
+
+        return $this;
+    }
+
+    public function getVille(): ?string
+    {
+        return $this->ville;
+    }
+
+    public function setVille(?string $ville): static
+    {
+        $this->ville = $ville;
 
         return $this;
     }
@@ -96,29 +174,34 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
-    // Obligatoire pour PasswordAuthenticatedUserInterface
     public function getPassword(): ?string
     {
         return $this->mot_de_passe;
     }
 
-    // Obligatoire pour UserInterface
-    public function getRoles(): array
+    public function setRoles(array $roles): static
     {
-        // Par défaut, tous les utilisateurs ont le rôle ROLE_USER
-        return ['ROLE_USER'];
+        $this->roles = $roles;
+
+        return $this;
     }
 
-    // Obligatoire pour UserInterface
+    public function getRoles(): array
+    {
+        // Garantir que tous les utilisateurs aient au moins ROLE_USER
+        $roles = $this->roles;
+        $roles[] = 'ROLE_USER';
+
+        return array_unique($roles);
+    }
+
     public function getUserIdentifier(): string
     {
-        // On utilise l'email comme identifiant unique
         return $this->email;
     }
 
-    // Obligatoire pour UserInterface
     public function eraseCredentials(): void
     {
-        // Si tu as des données sensibles dans l'entité, tu peux les effacer ici
+        // Efface les données sensibles si nécessaire
     }
 }
