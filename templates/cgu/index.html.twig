@@ -1,0 +1,71 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Conditions Générales d'Utilisation{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1 class="mb-4">Conditions Générales d'Utilisation</h1>
+
+    <p>Bienvenue sur notre site. En accédant à notre plateforme, vous acceptez de respecter les présentes Conditions Générales d'Utilisation (CGU).</p>
+
+    <h2>1. Préambule</h2>
+    <p>
+        Les présentes CGU ont pour objet de définir les conditions dans lesquelles les utilisateurs accèdent et utilisent le site.
+        L'utilisation de ce site implique l'acceptation pleine et entière de ces CGU.
+    </p>
+
+    <h2>2. Accès au site</h2>
+    <p>
+        Le site est accessible 24h/24 et 7j/7, sauf en cas de maintenance ou d'événements hors de notre contrôle.
+        Nous nous réservons le droit d'interrompre l'accès au site à tout moment pour des raisons techniques ou légales.
+    </p>
+
+    <h2>3. Inscription</h2>
+    <p>
+        Pour accéder à certaines fonctionnalités, vous devez créer un compte en fournissant des informations exactes et à jour.
+        Les utilisateurs de moins de 16 ans doivent obtenir l'autorisation parentale avant de s'inscrire.
+    </p>
+
+    <h2>4. Responsabilités de l'utilisateur</h2>
+    <p>
+        L'utilisateur s'engage à ne pas :
+        <ul>
+            <li>Utiliser le site à des fins illicites ou interdites par la loi.</li>
+            <li>Partager des informations diffamatoires, abusives ou offensantes.</li>
+            <li>Tenter de compromettre la sécurité du site ou de ses utilisateurs.</li>
+        </ul>
+    </p>
+
+    <h2>5. Données personnelles</h2>
+    <p>
+        Les informations collectées sont utilisées conformément à notre politique de confidentialité.
+        Vous avez le droit d'accéder, de modifier ou de supprimer vos données en nous contactant.
+    </p>
+
+    <h2>6. Propriété intellectuelle</h2>
+    <p>
+        Tous les contenus (textes, images, logos) du site sont protégés par le droit d'auteur. 
+        Toute reproduction ou utilisation non autorisée est strictement interdite.
+    </p>
+
+    <h2>7. Modification des CGU</h2>
+    <p>
+        Nous nous réservons le droit de modifier ces CGU à tout moment. Les modifications prendront effet dès leur publication.
+    </p>
+
+    <h2>8. Loi applicable</h2>
+    <p>
+        Ces CGU sont régies par la loi française. En cas de litige, les tribunaux compétents seront ceux de notre siège social.
+    </p>
+
+    <h2>9. Contact</h2>
+    <p>
+        Pour toute question concernant ces CGU, veuillez nous contacter à l'adresse suivante : <a href="mailto:support@tsarbucks.com">support@tsarbucks.com</a>.
+    </p>
+
+    <div class="mt-4">
+        <a href="{{ path('app_home') }}" class="btn btn-success">Retour à l'accueil</a>
+    </div>
+    <br>
+</div>
+{% endblock %}

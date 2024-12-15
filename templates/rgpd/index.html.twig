@@ -1,0 +1,97 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Politique de Confidentialité (RGPD){% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1 class="mb-4">Politique de Confidentialité</h1>
+
+    <p>
+        La présente politique de confidentialité explique comment nous collectons, utilisons, partageons et protégeons vos données personnelles conformément au 
+        Règlement Général sur la Protection des Données (RGPD).
+    </p>
+
+    <h2>1. Collecte des données personnelles</h2>
+    <p>
+        Nous collectons vos données personnelles lorsque vous :
+        <ul>
+            <li>Créez un compte sur notre site.</li>
+            <li>Effectuez une commande.</li>
+            <li>Nous contactez via un formulaire ou par email.</li>
+        </ul>
+    </p>
+    <p>Les types de données collectées incluent :</p>
+    <ul>
+        <li>Nom et prénom</li>
+        <li>Adresse email</li>
+        <li>Adresse postale</li>
+        <li>Numéro de téléphone</li>
+        <li>Données de paiement (traitées via des plateformes sécurisées)</li>
+    </ul>
+
+    <h2>2. Utilisation des données</h2>
+    <p>
+        Vos données personnelles sont utilisées pour :
+        <ul>
+            <li>Gérer votre compte utilisateur.</li>
+            <li>Traiter vos commandes et assurer leur livraison.</li>
+            <li>Vous fournir un support client personnalisé.</li>
+            <li>Vous envoyer des communications marketing si vous avez donné votre consentement explicite.</li>
+        </ul>
+    </p>
+
+    <h2>3. Partage des données</h2>
+    <p>
+        Nous ne partageons pas vos données personnelles avec des tiers, sauf dans les cas suivants :
+        <ul>
+            <li>Lorsque cela est nécessaire pour exécuter votre commande (par exemple, prestataires de livraison).</li>
+            <li>Pour respecter une obligation légale ou une demande des autorités compétentes.</li>
+        </ul>
+    </p>
+
+    <h2>4. Conservation des données</h2>
+    <p>
+        Vos données personnelles sont conservées uniquement pour la durée nécessaire aux finalités pour lesquelles elles ont été collectées, conformément aux exigences légales.
+    </p>
+
+    <h2>5. Vos droits</h2>
+    <p>
+        En vertu du RGPD, vous disposez des droits suivants concernant vos données personnelles :
+        <ul>
+            <li><strong>Droit d'accès :</strong> Vous pouvez demander une copie des données que nous détenons sur vous.</li>
+            <li><strong>Droit de rectification :</strong> Vous pouvez corriger des informations inexactes ou incomplètes.</li>
+            <li><strong>Droit à l'effacement :</strong> Vous pouvez demander la suppression de vos données, sous réserve des obligations légales de conservation.</li>
+            <li><strong>Droit d'opposition :</strong> Vous pouvez vous opposer à l'utilisation de vos données à des fins de marketing.</li>
+            <li><strong>Droit à la portabilité :</strong> Vous pouvez demander le transfert de vos données à un autre prestataire.</li>
+        </ul>
+    </p>
+    <p>
+        Pour exercer ces droits, contactez-nous à l'adresse suivante : <a href="mailto:privacy@votresite.com">privacy@votresite.com</a>.
+    </p>
+
+    <h2>6. Sécurité des données</h2>
+    <p>
+        Nous mettons en œuvre des mesures de sécurité techniques et organisationnelles pour protéger vos données contre tout accès non autorisé, perte ou divulgation.
+    </p>
+
+    <h2>7. Cookies</h2>
+    <p>
+        Notre site utilise des cookies pour améliorer votre expérience utilisateur et analyser le trafic. Vous pouvez configurer votre navigateur pour refuser ou supprimer les cookies.
+    </p>
+
+    <h2>8. Modifications de la politique de confidentialité</h2>
+    <p>
+        Nous nous réservons le droit de modifier la présente politique à tout moment. Toute modification sera publiée sur cette page avec une date de mise à jour.
+    </p>
+
+    <h2>9. Contact</h2>
+     <p>
+        Pour toute question concernant notre politique de confidentialité, veuillez nous contacter à l'adresse suivante : <a href="mailto:support@tsarbucks.com">support@tsarbucks.com</a>.
+    </p>
+
+    <div class="mt-4">
+        <a href="{{ path('app_home') }}" class="btn btn-success">Retour à l'accueil</a>
+    </div>
+    <br>
+</div>
+{% endblock %}

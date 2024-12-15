@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Index des Réservations{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1 class="mb-4">Index des Réservations</h1>
+
+    <table class="table table-bordered table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th>ID</th>
+                <th>Utilisateur ID</th>
+                <th>Salon ID</th>
+                <th>Date</th>
+                <th>Personnes</th>
+                <th>Statut</th>
+                <th>Activité ID</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for reservation in reservations %}
+            <tr>
+                <td>{{ reservation.id }}</td>
+                <td>{{ reservation.userId }}</td>
+                <td>{{ reservation.saloonId ? reservation.saloonId|date('Y-m-d') : '' }}</td>
+                <td>{{ reservation.date ? reservation.date|date('Y-m-d') : '' }}</td>
+                <td>{{ reservation.people }}</td>
+                <td>{{ reservation.status }}</td>
+                <td>{{ reservation.activityId }}</td>
+                <td>
+                    <a href="{{ path('app_admin_reservations_show', {'id': reservation.id}) }}" class="btn btn-info btn-sm">Voir</a>
+                    <a href="{{ path('app_admin_reservations_edit', {'id': reservation.id}) }}" class="btn btn-warning btn-sm">Modifier</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8" class="text-center">Aucun enregistrement trouvé</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_admin_reservations_new') }}" class="btn btn-primary">Créer nouveau</a>
+</div>
+{% endblock %}

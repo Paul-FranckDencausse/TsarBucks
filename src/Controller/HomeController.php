@@ -37,4 +37,12 @@ class HomeController extends AbstractController
             'controller_name' => 'CastellanoController',
         ]);
     }
+
+    #[Route('/activites', name: 'app_activites')]
+    public function activites(): Response
+    {
+        return $this->render('activites/index.html.twig', [
+            'controller_name' => 'ActivitesController',
+        ]);
+    }
 }
