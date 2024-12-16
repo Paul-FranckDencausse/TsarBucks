@@ -5,90 +5,166 @@
 {% block body %}
 <div class="container mt-5">
     <h1 class="text-center">Menu Petit Déjeuner, Brunch & Goûner Tsarbucks</h1>
-    <p class="text-center lead">Commencez votre journée avec un petit déjeuner royal, poursuivez avec un brunch délicieux, et terminez avec un goûner parfait pour une fin d'après-midi ou un dîner léger.</p>
+    <p class="text-center lead">Commencez votre journée avec un petit déjeuner royal, poursuivez avec un brunch délicieux, et terminez avec un goûter parfait pour une fin d'après-midi ou un dîner léger.</p>
 
     <div class="row">
         <!-- Boissons Chaudes -->
         <div class="col-md-6">
             <h2 class="mb-4">Boissons Chaudes</h2>
-
-            <div class="menu-item mb-4">
-                <h4>Expresso <span class="float-end">2.00€</span></h4>
-                <p>Un expresso court et intense, parfait pour un coup d'énergie rapide.</p>
-            </div>
-            <div class="menu-item mb-4">
-                <h4>Rixtretto <span class="float-end">2.20€</span></h4>
-                <p>Un rixtretto corsé et puissant, pour les amateurs de café fort.</p>
-            </div>
-            <div class="menu-item mb-4">
-                <h4>Capuccino <span class="float-end">3.00€</span></h4>
-                <p>Un mélange parfait d'expresso, de lait chaud et de mousse.</p>
-            </div>
-            <div class="menu-item mb-4">
-                <h4>Moka <span class="float-end">3.50€</span></h4>
-                <p>Un expresso sucré au chocolat et au lait.</p>
-            </div>
-            <div class="menu-item mb-4">
-                <h4>Café Percolé <span class="float-end">2.50€</span></h4>
-                <p>Café classique infusé lentement pour une saveur riche.</p>
-            </div>
-            <div class="menu-item mb-4">
-                <h4>French Press Coffee <span class="float-end">3.00€</span></h4>
-                <p>Un café fraîchement pressé à la méthode française.</p>
-            </div>
-            <div class="menu-item mb-4">
-                <h4>Viennois <span class="float-end">3.50€</span></h4>
-                <p>Un expresso avec une touche de chantilly.</p>
-            </div>
-            <div class="menu-item mb-4">
-                <h4>Americano <span class="float-end">2.50€</span></h4>
-                <p>Un expresso allongé avec de l'eau chaude.</p>
-            </div>
-            <div class="menu-item mb-4">
-                <h4>Chocolat Chaud <span class="float-end">3.00€</span></h4>
-                <p>Un chocolat riche et onctueux.</p>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <img src="{{ asset('images/espresso.jpg') }}" class="card-img-top img-fluid" alt="Expresso">
+                        <div class="card-body">
+                            <h5 class="card-title">Expresso <span class="float-end">2.00€</span></h5>
+                            <p class="card-text">Avec un X pour énerver les Italiens, parce que l'expresso, c'est la vie !</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <img src="{{ asset('images/ristretto.png') }}" class="card-img-top img-fluid" alt="Ristretto">
+                        <div class="card-body">
+                            <h5 class="card-title">Ristretto <span class="float-end">2.20€</span></h5>
+                            <p class="card-text">Un expresso avec un X en plus, pour ceux qui aiment vivre dangereusement.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <img src="{{ asset('images/capuccino.jpeg') }}" class="card-img-top img-fluid" alt="Capuccino">
+                        <div class="card-body">
+                            <h5 class="card-title">Capuccino <span class="float-end">3.00€</span></h5>
+                            <p class="card-text">Un mélange parfait d'expresso, de lait chaud et de mousse, pour ceux qui aiment la mousse au chocolat... sans le chocolat.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <img src="{{ asset('images/moka.jpg') }}" class="card-img-top img-fluid" alt="Moka">
+                        <div class="card-body">
+                            <h5 class="card-title">Moka <span class="float-end">3.50€</span></h5>
+                            <p class="card-text">Un expresso sucré au chocolat et au lait, parce que le chocolat, c'est la vie !</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <img src="{{ asset('images/percole.jpg') }}" class="card-img-top img-fluid" alt="Café Perkele">
+                        <div class="card-body">
+                            <h5 class="card-title">Café Perkele <span class="float-end">2.50€</span></h5>
+                            <p class="card-text">Café classique infusé lentement pour une saveur riche, parce que le café, c'est sérieux.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <img src="{{ asset('images/press.jpg') }}" class="card-img-top img-fluid" alt="Napoleon Press Coffee">
+                        <div class="card-body">
+                            <h5 class="card-title">Napoleon Press Coffee <span class="float-end">3.00€</span></h5>
+                            <p class="card-text">Un café fraîchement pressé à la méthode française, parce que même Napoléon aimait son café pressé.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <img src="{{ asset('images/viennois.jpg') }}" class="card-img-top img-fluid" alt="Moscovite">
+                        <div class="card-body">
+                            <h5 class="card-title">Moscovite <span class="float-end">3.50€</span></h5>
+                            <p class="card-text">Un expresso avec une touche de chantilly, parce que même les Moscovites aiment la douceur.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <img src="{{ asset('images/americano.jpg') }}" class="card-img-top img-fluid" alt="Russiano">
+                        <div class="card-body">
+                            <h5 class="card-title">Russiano <span class="float-end">2.50€</span></h5>
+                            <p class="card-text">Un expresso allongé avec de l'eau chaude, parce que parfois, il faut allonger la sauce.</p>
+                        </div>
+                    </div>
+                </div>
+              
             </div>
         </div>
 
         <!-- Thés et Boissons Froides -->
         <div class="col-md-6">
             <h2 class="mb-4">Thés & Boissons Froides</h2>
-
-            <div class="menu-item mb-4">
-                <h4>Thé Noir <span class="float-end">2.00€</span></h4>
-                <p>Infusion riche et classique de thé noir.</p>
-            </div>
-            <div class="menu-item mb-4">
-                <h4>Thé Vert <span class="float-end">2.50€</span></h4>
-                <p>Un thé vert léger et rafraîchissant.</p>
-            </div>
-            <div class="menu-item mb-4">
-                <h4>Thé à la Menthe <span class="float-end">2.50€</span></h4>
-                <p>Une infusion rafraîchissante de feuilles de menthe.</p>
-            </div>
-            <div class="menu-item mb-4">
-                <h4>Thé Blanc <span class="float-end">3.00€</span></h4>
-                <p>Délicat et légèrement floral.</p>
-            </div>
-            <div class="menu-item mb-4">
-                <h4>Rooibos <span class="float-end">2.50€</span></h4>
-                <p>Infusion sud-africaine naturellement sans caféine.</p>
-            </div>
-            <div class="menu-item mb-4">
-                <h4>Matcha <span class="float-end">4.00€</span></h4>
-                <p>Poudre de thé vert japonaise battue dans l'eau chaude.</p>
-            </div>
-            <div class="menu-item mb-4">
-                <h4>Chai <span class="float-end">3.50€</span></h4>
-                <p>Thé épicé avec une base de lait chaud.</p>
-            </div>
-            <div class="menu-item mb-4">
-                <h4>Eau Plate <span class="float-end">1.50€</span></h4>
-                <p>Une eau pure et désaltérante.</p>
-            </div>
-            <div class="menu-item mb-4">
-                <h4>Jus de Fruit <span class="float-end">3.00€</span></h4>
-                <p>Jus de fruits frais au choix.</p>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <img src="{{ asset('images/noir.jpg') }}" class="card-img-top img-fluid" alt="Thé Noir">
+                        <div class="card-body">
+                            <h5 class="card-title">Thé Noir <span class="float-end">2.00€</span></h5>
+                            <p class="card-text">Infusion riche et classique de thé noir, parce que le thé noir, c'est le nouveau noir.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <img src="{{ asset('images/the.jpg') }}" class="card-img-top img-fluid" alt="Thé au Polonium">
+                        <div class="card-body">
+                            <h5 class="card-title">Thé au Polonium (vert) <span class="float-end">2.50€</span></h5>
+                            <p class="card-text">Un thé vert léger et rafraîchissant, parce que le polonium, c'est radioactif... mais le thé vert, c'est sain !</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <img src="{{ asset('images/menthe.jpg') }}" class="card-img-top img-fluid" alt="Thé du Mentheur">
+                        <div class="card-body">
+                            <h5 class="card-title">Thé du Mentheur (menthe) <span class="float-end">2.50€</span></h5>
+                            <p class="card-text">Une infusion rafraîchissante de feuilles de menthe, parce que le mentheur, c'est le nouveau mentor.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <img src="{{ asset('images/blanc.jpeg') }}" class="card-img-top img-fluid" alt="Thé Russie Blanche">
+                        <div class="card-body">
+                            <h5 class="card-title">Thé Russie Blanche <span class="float-end">3.00€</span></h5>
+                            <p class="card-text">Délicat et légèrement floral, parce que la Russie blanche, c'est le nouveau blanc.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <img src="{{ asset('images/rooibos.jpg') }}" class="card-img-top img-fluid" alt="Rooibots">
+                        <div class="card-body">
+                            <h5 class="card-title">Rooibots <span class="float-end">2.50€</span></h5>
+                            <p class="card-text">Infusion sud-africaine naturellement sans caféine, parce que les rooibots, c'est les nouveaux robots.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <img src="{{ asset('images/matcha.jpg') }}" class="card-img-top img-fluid" alt="Matcha">
+                        <div class="card-body">
+                            <h5 class="card-title">Matcha <span class="float-end">4.00€</span></h5>
+                            <p class="card-text">Poudre de thé vert japonaise battue dans l'eau chaude, parce que le matcha, c'est le nouveau match.</p>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <img src="{{ asset('images/eau.jpg') }}" class="card-img-top img-fluid" alt="Novichok">
+                        <div class="card-body">
+                            <h5 class="card-title">Novichok (eau plate) <span class="float-end">1.50€</span></h5>
+                            <p class="card-text">Une eau pure et désaltérante, parce que le novichok, c'est le nouveau choc.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <img src="{{ asset('images/jus.jpg') }}" class="card-img-top img-fluid" alt="Jus de Fruit 'Tropico'">
+                        <div class="card-body">
+                            <h5 class="card-title">Jus de Fruit "Tropico" <span class="float-end">3.00€</span></h5>
+                            <p class="card-text">Jus de fruits frais au choix, parce que le tropico, c'est le nouveau tropique.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -99,26 +175,62 @@
             <h2 class="mb-4">Pâtisseries</h2>
 
             <div class="menu-item mb-4">
-                <h4>Croissant <span class="float-end">2.00€</span></h4>
-                <p>Croissant traditionnel au beurre.</p>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="{{ asset('images/croissant.jpg') }}" class="img-fluid rounded mb-2" alt="Croissant">
+                    </div>
+                    <div class="col-md-8">
+                        <h4>Croissant <span class="float-end">2.00€</span></h4>
+                        <p>Croissant traditionnel au beurre.</p>
+                    </div>
+                </div>
             </div>
             <div class="menu-item mb-4">
-                <h4>Chocolatine <span class="float-end">2.20€</span></h4>
-                <p>Pain au chocolat doré et croustillant.</p>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="{{ asset('images/chocolatines.jpg') }}" class="img-fluid rounded mb-2" alt="Chocolatine">
+                    </div>
+                    <div class="col-md-8">
+                        <h4>Chocolatine <span class="float-end">2.20€</span></h4>
+                        <p>Pain au chocolat doré et croustillant.</p>
+                    </div>
+                </div>
             </div>
             <div class="menu-item mb-4">
-                <h4>Gâteau Napoléon <span class="float-end">5.00€</span></h4>
-                <p>Couches de pâte feuilletée et crème.</p>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="{{ asset('images/gateau.jpg') }}" class="img-fluid rounded mb-2" alt="Gâteau Napoléon">
+                    </div>
+                    <div class="col-md-8">
+                        <h4>Gâteau Napoléon <span class="float-end">5.00€</span></h4>
+                        <p>Couches de pâte feuilletée et crème.</p>
+                    </div>
+                </div>
             </div>
             <div class="menu-item mb-4">
-                <h4>Muffin <span class="float-end">2.50€</span></h4>
-                <p>Muffin moelleux, disponible en plusieurs saveurs.</p>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="{{ asset('images/muffins.jpg') }}" class="img-fluid rounded mb-2" alt="Muffin">
+                    </div>
+                    <div class="col-md-8">
+                        <h4>Muffin <span class="float-end">2.50€</span></h4>
+                        <p>Muffin moelleux, disponible en plusieurs saveurs.</p>
+                    </div>
+                </div>
             </div>
             <div class="menu-item mb-4">
-                <h4>Brownie <span class="float-end">3.00€</span></h4>
-                <p>Un gâteau chocolaté fondant.</p>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="{{ asset('images/cookies.jpg') }}" class="img-fluid rounded mb-2" alt="Cookies Communiste">
+                    </div>
+                    <div class="col-md-8">
+                        <h4>Cookies Communiste <span class="float-end">3.00€</span></h4>
+                        <p>Parce que même les communistes aiment les cookies.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
 {% endblock %}

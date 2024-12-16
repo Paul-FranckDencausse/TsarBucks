@@ -1,14 +1,21 @@
+# config/packages/security.yaml
+
 security:
+    password_hashers:
+        App\Entity\User:
+            algorithm: auto
+
     providers:
         app_user_provider:
             entity:
                 class: App\Entity\User
-                property: email  # Utilisation de l'email comme identifiant
+                property: email
 
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
+
         main:
             lazy: true
             provider: app_user_provider
@@ -16,14 +23,15 @@ security:
                 login_path: app_login
                 check_path: app_login
                 csrf_token_id: authenticate
-                username_parameter: email  # Utilisation de l'email dans le formulaire de connexion
-                password_parameter: password  # Utilisation du mot de passe dans le formulaire
+                username_parameter: _username
+                password_parameter: _password
                 enable_csrf: true
             logout:
                 path: app_logout
                 # where to redirect after logout
                 # target: app_any_route
 
-    password_hashers:
-        App\Entity\User:
-            algorithm: auto
+    access_control:
+        - { path: ^/admin, roles: ROLE_ADMIN }
+        - { path: ^/profile, roles: ROLE_USER }
+        - { path: ^/dashboard, roles: ROLE_USER }

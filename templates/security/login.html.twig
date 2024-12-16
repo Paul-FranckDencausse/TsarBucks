@@ -15,7 +15,7 @@
         <!-- Message si l'utilisateur est déjà connecté -->
         {% if app.user %}
             <div class="alert alert-info mb-3">
-                Vous êtes connecté en tant que {{ app.user.userIdentifier }}. 
+                Vous êtes connecté en tant que {{ app.user.userIdentifier }}.
                 <a href="{{ path('app_logout') }}" class="btn btn-link">Déconnexion</a>
             </div>
         {% endif %}
@@ -25,14 +25,14 @@
 
         <!-- Champ Email -->
         <div class="form-group">
-        <label for="email">Adresse email</label>
-        <input type="email" id="email" name="email" class="form-control" required>
-    </div>
+            <label for="email">Adresse email</label>
+            <input type="email" id="email" name="_username" class="form-control" required>
+        </div>
 
         <!-- Champ Mot de passe -->
         <div class="mb-3">
             <label for="password" class="form-label">Mot de passe</label>
-            <input type="password" name="_password" id="password" 
+            <input type="password" name="_password" id="password"
                    class="form-control" autocomplete="current-password" required>
         </div>
 
@@ -49,11 +49,9 @@
         <button class="btn btn-lg btn-success w-100" type="submit">
             Se connecter
         </button>
-        
     </form>
+
     <br>
-    <button class="btn btn-lg btn-primary w-100">
-    <a href="{{ path('app_register') }}" class="btn btn-primary">S'inscrire</a>
-    </button>
+    <a href="{{ path('app_register') }}" class="btn btn-lg btn-primary w-100">S'inscrire</a>
 </div>
 {% endblock %}
