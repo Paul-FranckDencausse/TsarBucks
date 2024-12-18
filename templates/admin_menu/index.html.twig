@@ -4,7 +4,7 @@
 
 {% block body %}
 <div class="container mt-5">
-    <h1 class="mb-4">Liste des menus</h1>
+    <h1 class="mb-4">Liste des plats</h1>
 
     <table class="table table-striped table-bordered">
         <thead class="table-dark">
@@ -32,13 +32,15 @@
             </tr>
         {% else %}
             <tr>
-                <td colspan="6" class="text-center">Aucun menu trouvé</td>
+                <td colspan="6" class="text-center">Aucun plat trouvé</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a href="{{ path('app_admin_menu_new') }}" class="btn btn-success btn-lg mt-3">Créer un nouveau menu</a>
+    <a href="{{ path('app_admin_menu_new') }}" class="btn btn-success btn-lg mt-3">Créer un nouveau plat</a>
     <a href="{{ path('app_admin_dashboard')}}" class="btn text-light btn-info btn-lg mt-3">Retour au tableau de bord</a>
+    <br>
 </div>
+<br>
 {% endblock %}
