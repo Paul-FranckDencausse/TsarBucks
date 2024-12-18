@@ -25,7 +25,6 @@ class UserRepository extends ServiceEntityRepository implements PasswordUpgrader
 
     public function upgradePassword(PasswordAuthenticatedUserInterface $user, string $newHashedPassword): void
     {
-        // this method is called to upgrade the user's password to a newer hashing algorithm
         if (!$user instanceof User) {
             throw new UnsupportedUserException(sprintf('Instances of "%s" are not supported.', \get_class($user)));
         }
@@ -43,4 +42,15 @@ class UserRepository extends ServiceEntityRepository implements PasswordUpgrader
             ->getQuery()
             ->getOneOrNullResult();
     }
+
+    // Compter tous les utilisateurs
+    public function countAllUsers(): int
+    {
+        return $this->createQueryBuilder('u')
+            ->select('COUNT(u.id)')
+            ->getQuery()
+            ->getSingleScalarResult();
+    }
+
+    
 }

@@ -9,40 +9,35 @@
     <div class="row">
         <!-- Statistiques des Utilisateurs -->
         <div class="col-md-4">
-            <div class="card mb-4">
-                <div class="card-body">
-                    <h5 class="card-title">Statistiques des Utilisateurs</h5>
-                    <p class="card-text"><strong>Nombre d'Utilisateurs:</strong> </p>
-                    <p class="card-text"><strong>Nouveaux Utilisateurs (30 jours):</strong> </p>
-                    <p class="card-text"><strong>Utilisateurs Actifs:</strong> </p>
-                </div>
-            </div>
+    <div class="card mb-4">
+        <div class="card-body">
+            <h5 class="card-title">Statistiques des Utilisateurs</h5>
+            <p class="card-text"><strong>Nombre d'Utilisateurs:</strong> {{ totalUsers }}</p>
+         
         </div>
+    </div>
+</div>
 
-        <!-- Statistiques des Salons -->
-        <div class="col-md-4">
-            <div class="card mb-4">
-                <div class="card-body">
-                    <h5 class="card-title">Statistiques des Salons</h5>
-                    <p class="card-text"><strong>Nombre de Salons: 6 </strong> </p>
-                    <p class="card-text"><strong>Nouveaux Salons (30 jours): 0 </strong> </p>
-                    <p class="card-text"><strong>Salons Actifs: 6</strong></p>
-                </div>
-            </div>
+<div class="col-md-4">
+    <div class="card mb-4">
+        <div class="card-body">
+            <h5 class="card-title">Statistiques des Salons</h5>
+            <p class="card-text"><strong>Nombre de Salons:</strong> {{ totalSaloons }}</p>
+           
         </div>
+    </div>
+</div>
 
-        <!-- Statistiques des Commandes -->
-        <div class="col-md-4">
-            <div class="card mb-4">
-                <div class="card-body">
-                    <h5 class="card-title">Statistiques des demandes de contact</h5>
-                    <p class="card-text"><strong>Nombre de demandes:</strong> </p>
-                    <p class="card-text"><strong>Nouvelles demandes (30 jours):</strong> </p>
-                    <p class="card-text"><strong>Demandes en Attente:</strong> </p>
-                </div>
+  <!-- Statistiques des Contacts -->
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">Statistiques des Demandes de Contact</h5>
+                <p class="card-text"><strong>Nombre de demandes :</strong> {{ totalContacts }}</p>
             </div>
         </div>
     </div>
+</div>
 
     <!-- Liens Utiles -->
     <div class="row">

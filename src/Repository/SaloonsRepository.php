@@ -16,28 +16,15 @@ class SaloonsRepository extends ServiceEntityRepository
         parent::__construct($registry, Saloons::class);
     }
 
-    //    /**
-    //     * @return Saloons[] Returns an array of Saloons objects
-    //     */
-    //    public function findByExampleField($value): array
-    //    {
-    //        return $this->createQueryBuilder('s')
-    //            ->andWhere('s.exampleField = :val')
-    //            ->setParameter('val', $value)
-    //            ->orderBy('s.id', 'ASC')
-    //            ->setMaxResults(10)
-    //            ->getQuery()
-    //            ->getResult()
-    //        ;
-    //    }
+    // Compter tous les salons
+    public function countAllSaloons(): int
+    {
+        return $this->createQueryBuilder('s')
+            ->select('COUNT(s.id)')
+            ->getQuery()
+            ->getSingleScalarResult();
+    }
 
-    //    public function findOneBySomeField($value): ?Saloons
-    //    {
-    //        return $this->createQueryBuilder('s')
-    //            ->andWhere('s.exampleField = :val')
-    //            ->setParameter('val', $value)
-    //            ->getQuery()
-    //            ->getOneOrNullResult()
-    //        ;
-    //    }
+
+   
 }
