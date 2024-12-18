@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouveau Menu{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1 class="mb-4">Créer un nouveau menu</h1>
+
+    <div class="card p-4 shadow-sm">
+        {{ include('admin_menu/_form.html.twig') }}
+    </div>
+
+    <a href="{{ path('app_admin_menu_index') }}" class="btn btn-secondary mt-3">Retour à la liste</a>
+</div>
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des menus{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1 class="mb-4">Liste des menus</h1>
+
+    <table class="table table-striped table-bordered">
+        <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>Media</th>
+                <th>Nom</th>
+                <th>Type</th>
+                <th>Recette</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for menu in menus %}
+            <tr>
+                <td>{{ menu.id }}</td>
+                <td>{{ menu.mediaId }}</td>
+                <td>{{ menu.name }}</td>
+                <td>{{ menu.type }}</td>
+                <td>{{ menu.recipeId }}</td>
+                <td>
+                    <a href="{{ path('app_admin_menu_show', {'id': menu.id}) }}" class="btn btn-info btn-lg text-light">Voir</a>
+                    <a href="{{ path('app_admin_menu_edit', {'id': menu.id}) }}" class="btn btn-warning btn-lg text-light">Modifier</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6" class="text-center">Aucun menu trouvé</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_admin_menu_new') }}" class="btn btn-success btn-lg mt-3">Créer un nouveau menu</a>
+    <a href="{{ path('app_admin_dashboard')}}" class="btn text-light btn-info btn-lg mt-3">Retour au tableau de bord</a>
+</div>
+{% endblock %}

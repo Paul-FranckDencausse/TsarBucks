@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Salons{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Liste des Salons</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Adresse</th>
+                <th>Numéro</th>
+                <th>Email</th>
+                <th>Heures d'ouverture</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for saloon in saloons %}
+                <tr>
+                    <td>{{ saloon.id }}</td>
+                    <td>{{ saloon.name }}</td>
+                    <td>{{ saloon.address }}</td>
+                    <td>{{ saloon.number }}</td>
+                    <td>{{ saloon.email }}</td>
+                    <td>{{ saloon.openingHours }}</td>
+                    <td>
+                        <a href="{{ path('app_admin_saloons_show', {'id': saloon.id}) }}" class="btn text-light btn-info btn-lg">Voir</a>
+                        <a href="{{ path('app_admin_saloons_edit', {'id': saloon.id}) }}" class="btn text-light btn-warning btn-lg">Modifier</a>
+                        <a href="{{ path('app_admin_saloons_delete', {'id': saloon.id}) }}" class="btn btn-danger btn-lg">Supprimer</a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="7">Aucun salon trouvé</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{{ path('app_admin_saloons_new') }}" class="btn-lg btn btn-success">Ajouter un nouveau salon</a>
+    <a href="{{ path('app_admin_dashboard')}}" class="btn text-light btn-info btn-lg ">Retour au tableau de bord</a>
+    
+</div>
+
+<br>
+{% endblock %}

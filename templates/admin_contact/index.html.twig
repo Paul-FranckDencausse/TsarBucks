@@ -24,8 +24,8 @@
                 <td>{{ contact.subject }}</td>
                 <td>{{ contact.message }}</td>
                 <td>
-                    <a href="{{ path('app_admin_contact_show', {'id': contact.id}) }}" class="btn btn-info btn-sm">Voir</a>
-                    <a href="{{ path('app_admin_contact_edit', {'id': contact.id}) }}" class="btn btn-warning btn-sm">Statut</a>
+                    <a href="{{ path('app_admin_contact_show', {'id': contact.id}) }}" class="btn btn-info btn-lg text-light">Voir</a>
+                    <a href="{{ path('app_admin_contact_edit', {'id': contact.id}) }}" class="btn btn-warning btn-lg text-light">Statut</a>
                 </td>
             </tr>
         {% else %}
@@ -35,7 +35,7 @@
         {% endfor %}
         </tbody>
     </table>
-
+<a href="{{ path('app_admin_dashboard')}}" class="btn text-light btn-info btn-lg mb-2">Retour au tableau de bord</a>
     
 </div>
 {% endblock %}
