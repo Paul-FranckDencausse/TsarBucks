@@ -28,7 +28,7 @@
                 <p class="text-center">
                     Nos salons sont des lieux de rencontre où se mêlent tradition et modernité, où chaque tasse de café devient une opportunité de voyager à travers le temps et l'espace. Venez découvrir pourquoi Tsarbucks est bien plus qu'un simple café — c'est une destination.
                 </p>
-                 <div class="text-center mt-4">
+                <div class="text-center mt-4">
                     <a href="{{ path('app_menu_index') }}" class="btn btn-primary">Voir le Menu</a>
                     <a href="{{ path('app_activites') }}" class="btn btn-secondary ml-2">Voir les Activités</a>
                 </div>
@@ -72,4 +72,50 @@
         </div>
     </div>
 </section>
+
+<div class="modal fade" id="cookieModal" tabindex="-1" aria-labelledby="cookieModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="cookieModalLabel">Utilisation des cookies</h5>
+            </div>
+            <div class="modal-body">
+                Camarade! Acceptez donc de partager vos cookies avec nous!
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="acceptCookies">Accepter</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 {% endblock %}
+{% block javascript %}
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const cookieModal = new bootstrap.Modal(document.getElementById('cookieModal'), {
+        backdrop: 'static',
+        keyboard: false
+    });
+    const acceptButton = document.getElementById('acceptCookies');
+
+    // Vérifie si le cookie existe
+    const isCookieAccepted = document.cookie.split('; ').find(row => row.startsWith('cookieConsent='));
+
+    // Affiche le modal si le cookie n'est pas défini
+    if (!isCookieAccepted) {
+        cookieModal.show();
+    }
+
+    // Gestion du clic sur le bouton
+    acceptButton.addEventListener('click', () => {
+        document.cookie = "cookieConsent=true; path=/; max-age=" + 60 * 60 * 24 * 365; // 1 an
+        cookieModal.hide();
+    });
+});
+
+</script>
+{% endblock %}
+
+

@@ -57,7 +57,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Liens Utiles</h5>
                     <a href="#" class="btn btn-primary btn-lg text-white mb-2">Modifier le Profil</a>
-                    <a href="#" class="btn btn-secondary btn-lg text-white mb-2">Changer le Mot de Passe</a>
+                    <a href="{{ path('app_forgot_password_request') }}" class="btn btn-secondary btn-lg text-white mb-2">Changer le Mot de Passe</a>
                     <a href="{{ path('app_logout') }}" class="btn btn-danger btn-lg text-white mb-2">Déconnexion</a>
                     {% if is_granted('ROLE_ADMIN') %}
                         <a href="{{ path('app_admin_dashboard') }}" class="btn btn-warning btn-lg text-white mb-2">Tableau de Bord Admin</a>
