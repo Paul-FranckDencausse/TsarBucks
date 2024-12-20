@@ -9,35 +9,34 @@
     <div class="row">
         <!-- Statistiques des Utilisateurs -->
         <div class="col-md-4">
-    <div class="card mb-4">
-        <div class="card-body">
-            <h5 class="card-title">Statistiques des Utilisateurs</h5>
-            <p class="card-text"><strong>Nombre d'Utilisateurs:</strong> {{ totalUsers }}</p>
-         
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Statistiques des Utilisateurs</h5>
+                    <p class="card-text"><strong>Nombre d'Utilisateurs:</strong> {{ totalUsers }}</p>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
 
-<div class="col-md-4">
-    <div class="card mb-4">
-        <div class="card-body">
-            <h5 class="card-title">Statistiques des Salons</h5>
-            <p class="card-text"><strong>Nombre de Salons:</strong> {{ totalSaloons }}</p>
-           
+        <!-- Statistiques des Salons -->
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Statistiques des Salons</h5>
+                    <p class="card-text"><strong>Nombre de Salons:</strong> {{ totalSaloons }}</p>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
 
-  <!-- Statistiques des Contacts -->
-    <div class="col-md-4">
-        <div class="card mb-4">
-            <div class="card-body">
-                <h5 class="card-title">Statistiques des Demandes de Contact</h5>
-                <p class="card-text"><strong>Nombre de demandes :</strong> {{ totalContacts }}</p>
+        <!-- Statistiques des Contacts -->
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Statistiques des Demandes de Contact</h5>
+                    <p class="card-text"><strong>Nombre de demandes :</strong> {{ totalContacts }}</p>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
     <!-- Liens Utiles -->
     <div class="row">
@@ -45,10 +44,33 @@
             <div class="card mb-4">
                 <div class="card-body">
                     <h5 class="card-title">Liens Utiles</h5>
-                    <a href="{{ path('app_user_index') }}" class="btn text-light btn-info btn-lg mb-2">Les utilisateurs</a>
-                    <a href="{{ path('app_admin_saloons_index') }}" class="btn btn-lg btn-primary mb-2">Les salons</a>
-                    <a href="{{ path('app_admin_contact_index') }}" class="btn btn-success btn-lg mb-2">Demandes de contact</a>
-                     <a href="{{ path('app_admin_menu_index') }}" class="btn btn-secondary btn-lg mb-2">Le menu</a>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <a href="{{ path('app_user_index') }}" class="btn btn-success btn-block btn-lg text-white">
+                                <i class="fas fa-users"></i> Clients
+                            </a>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <a href="{{ path('app_admin_saloons_index') }}" class="btn btn-success btn-block btn-lg text-white">
+                                <i class="fas fa-store"></i> Salons
+                            </a>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <a href="{{ path('app_admin_contact_index') }}" class="btn btn-success btn-block btn-lg text-white">
+                                <i class="fas fa-envelope"></i>  Contact
+                            </a>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <a href="{{ path('app_admin_menu_index') }}" class="btn btn-success btn-block btn-lg text-white">
+                                <i class="fas fa-utensils"></i> Menu 
+                            </a>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <a href="{{ path('app_user_dashboard') }}" class="btn btn-info btn-block btn-lg text-light">
+                                <i class="fas fa-user"></i> Mon profil
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

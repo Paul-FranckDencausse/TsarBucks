@@ -1,4 +1,5 @@
 <?php
+// src/Entity/User.php
 namespace App\Entity;
 
 use App\Repository\UserRepository;
@@ -29,7 +30,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private ?string $mot_de_passe = null;
 
     #[ORM\Column(type: 'json')]
-    private array $roles = ['ROLE_USER'];
+    private array $roles = [];
 
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $gender = null;
@@ -49,6 +50,12 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $city = null;
 
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $securityQuestion = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $securityAnswer = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -59,7 +66,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->email;
     }
 
-    public function setEmail(string $email): static
+    public function setEmail(string $email): self
     {
         $this->email = $email;
 
@@ -71,7 +78,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->nom;
     }
 
-    public function setNom(string $nom): static
+    public function setNom(string $nom): self
     {
         $this->nom = $nom;
 
@@ -83,7 +90,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->prenom;
     }
 
-    public function setPrenom(string $prenom): static
+    public function setPrenom(string $prenom): self
     {
         $this->prenom = $prenom;
 
@@ -95,7 +102,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->mot_de_passe;
     }
 
-    public function setMotDePasse(string $mot_de_passe): static
+    public function setMotDePasse(string $mot_de_passe): self
     {
         $this->mot_de_passe = $mot_de_passe;
 
@@ -107,20 +114,27 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->mot_de_passe;
     }
 
-    public function setRoles(array $roles): static
+    public function setPassword(string $mot_de_passe): self
     {
-        $this->roles = $roles;
+        $this->mot_de_passe = $mot_de_passe;
 
         return $this;
     }
 
     public function getRoles(): array
     {
-        // Garantir que tous les utilisateurs aient au moins ROLE_USER
         $roles = $this->roles;
+        // Garantir que tous les utilisateurs aient au moins ROLE_USER
         $roles[] = 'ROLE_USER';
 
         return array_unique($roles);
+    }
+
+    public function setRoles(array $roles): self
+    {
+        $this->roles = $roles;
+
+        return $this;
     }
 
     public function getUserIdentifier(): string
@@ -138,7 +152,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->gender;
     }
 
-    public function setGender(?string $gender): static
+    public function setGender(?string $gender): self
     {
         $this->gender = $gender;
 
@@ -150,7 +164,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->birthDate;
     }
 
-    public function setBirthDate(?string $birthDate): static
+    public function setBirthDate(?string $birthDate): self
     {
         $this->birthDate = $birthDate;
 
@@ -162,7 +176,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->phone;
     }
 
-    public function setPhone(?string $phone): static
+    public function setPhone(?string $phone): self
     {
         $this->phone = $phone;
 
@@ -174,7 +188,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->address;
     }
 
-    public function setAddress(?string $address): static
+    public function setAddress(?string $address): self
     {
         $this->address = $address;
 
@@ -186,7 +200,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->postalCode;
     }
 
-    public function setPostalCode(?string $postalCode): static
+    public function setPostalCode(?string $postalCode): self
     {
         $this->postalCode = $postalCode;
 
@@ -198,9 +212,33 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->city;
     }
 
-    public function setCity(?string $city): static
+    public function setCity(?string $city): self
     {
         $this->city = $city;
+
+        return $this;
+    }
+
+    public function getSecurityQuestion(): ?string
+    {
+        return $this->securityQuestion;
+    }
+
+    public function setSecurityQuestion(?string $securityQuestion): self
+    {
+        $this->securityQuestion = $securityQuestion;
+
+        return $this;
+    }
+
+    public function getSecurityAnswer(): ?string
+    {
+        return $this->securityAnswer;
+    }
+
+    public function setSecurityAnswer(?string $securityAnswer): self
+    {
+        $this->securityAnswer = $securityAnswer;
 
         return $this;
     }

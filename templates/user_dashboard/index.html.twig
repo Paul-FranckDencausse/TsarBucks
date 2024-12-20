@@ -15,12 +15,12 @@
                     <p class="card-text"><strong>Nom:</strong> {{ user.nom }}</p>
                     <p class="card-text"><strong>Prénom:</strong> {{ user.prenom }}</p>
                     <p class="card-text"><strong>Email:</strong> {{ user.email }}</p>
-                    <p class="card-text"><strong>Genre:</strong>  {{ user.gender }}</p>
-                    <p class="card-text"><strong>Date de Naissance:</strong> {{ user.birthDate }} </p>
-                    <p class="card-text"><strong>Téléphone:</strong>  {{ user.phone }}</p>
-                    <p class="card-text"><strong>Adresse:</strong> {{ user.address }} </p>
-                    <p class="card-text"><strong>Code Postal:</strong> {{ user.postalCode }} </p>
-                    <p class="card-text"><strong>Ville:</strong> {{ user.city}} </p>
+                    <p class="card-text"><strong>Genre:</strong> {{ user.gender }}</p>
+                    <p class="card-text"><strong>Date de Naissance:</strong> {{ user.birthDate }}</p>
+                    <p class="card-text"><strong>Téléphone:</strong> {{ user.phone }}</p>
+                    <p class="card-text"><strong>Adresse:</strong> {{ user.address }}</p>
+                    <p class="card-text"><strong>Code Postal:</strong> {{ user.postalCode }}</p>
+                    <p class="card-text"><strong>Ville:</strong> {{ user.city }}</p>
                 </div>
             </div>
         </div>
@@ -32,7 +32,6 @@
                     <div class="card mb-4">
                         <div class="card-body">
                             <h5 class="card-title">Statistiques</h5>
-                           
                             <p class="card-text"><strong>Rôle:</strong> {{ role }}</p>
                         </div>
                     </div>
@@ -60,6 +59,9 @@
                     <a href="#" class="btn btn-primary btn-lg text-white mb-2">Modifier le Profil</a>
                     <a href="#" class="btn btn-secondary btn-lg text-white mb-2">Changer le Mot de Passe</a>
                     <a href="{{ path('app_logout') }}" class="btn btn-danger btn-lg text-white mb-2">Déconnexion</a>
+                    {% if is_granted('ROLE_ADMIN') %}
+                        <a href="{{ path('app_admin_dashboard') }}" class="btn btn-warning btn-lg text-white mb-2">Tableau de Bord Admin</a>
+                    {% endif %}
                 </div>
             </div>
         </div>
