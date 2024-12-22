@@ -1,0 +1,71 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Terms of Use{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1 class="mb-4">Terms of Use</h1>
+
+    <p>Welcome to our website. By accessing our platform, you agree to comply with these Terms of Use (TOU).</p>
+
+    <h2>1. Preamble</h2>
+    <p>
+        These TOU are intended to define the conditions under which users access and use the site.
+        Use of this site implies full and complete acceptance of these TOU.
+    </p>
+
+    <h2>2. Access to the Site</h2>
+    <p>
+        The site is accessible 24/7, except in cases of maintenance or events beyond our control.
+        We reserve the right to interrupt access to the site at any time for technical or legal reasons.
+    </p>
+
+    <h2>3. Registration</h2>
+    <p>
+        To access certain features, you must create an account by providing accurate and up-to-date information.
+        Users under the age of 16 must obtain parental permission before registering.
+    </p>
+
+    <h2>4. User Responsibilities</h2>
+    <p>
+        The user agrees not to:
+        <ul>
+            <li>Use the site for illegal or prohibited purposes.</li>
+            <li>Share defamatory, abusive, or offensive information.</li>
+            <li>Attempt to compromise the security of the site or its users.</li>
+        </ul>
+    </p>
+
+    <h2>5. Personal Data</h2>
+    <p>
+        The information collected is used in accordance with our privacy policy.
+        You have the right to access, modify, or delete your data by contacting us.
+    </p>
+
+    <h2>6. Intellectual Property</h2>
+    <p>
+        All content (texts, images, logos) on the site is protected by copyright.
+        Any unauthorized reproduction or use is strictly prohibited.
+    </p>
+
+    <h2>7. Modification of the TOU</h2>
+    <p>
+        We reserve the right to modify these TOU at any time. The modifications will take effect upon publication.
+    </p>
+
+    <h2>8. Applicable Law</h2>
+    <p>
+        These TOU are governed by French law. In case of dispute, the competent courts will be those of our head office.
+    </p>
+
+    <h2>9. Contact</h2>
+    <p>
+        For any questions regarding these TOU, please contact us at the following address: <a href="mailto:support@tsarbucks.com">support@tsarbucks.com</a>.
+    </p>
+
+    <div class="mt-4">
+        <a href="{{ path('app_home') }}" class="btn btn-success">Return to Home</a>
+    </div>
+    <br>
+</div>
+{% endblock %}

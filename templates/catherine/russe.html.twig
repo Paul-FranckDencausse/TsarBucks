@@ -1,0 +1,69 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Привет CatherineController!{% endblock %}
+
+{% block body %}
+
+<section class="py-5 bg-light">
+    <div class="container">
+        <h1 class="text-center mb-4">Tsarbucks Catherine II</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.lequotidiendelart.com%2Fmedia%2Fcache%2Farticle_page_cover%2Fshared%2Farticle-image%2F1377.jpg&f=1&nofb=1&ipt=8960def0889c94161053c3b159a86d259c4f022e49d6935394edee95bd0c1147&ipo=images" class="img-fluid rounded mb-4" alt="Tsarbucks Catherine II">
+            </div>
+            <div class="col-md-6">
+                <h2 class="mb-3">Путешествие во времени</h2>
+                <p>
+                    Откройте для себя Tsarbucks Catherine II, изысканную дань уважения одной из самых знаменитых цариц в истории России. Расположенный на улице Москвы в Париже, наш кофейный салон сочетает в себе имперскую элегантность и современный комфорт. С роскошными креслами и декором, вдохновленным дворцами Санкт-Петербурга, каждое посещение становится путешествием во времени.
+                </p>
+                <p>
+                    Наслаждайтесь нашими авторскими кофе и выпечкой в атмосфере, напоминающей величие правления Екатерины Великой. Интерьер салона украшен золотыми элементами и цветочными мотивами, напоминающими имперскую эпоху. Будь то быстрый кофе или послеполуденный отдых, наша команда встретит вас с максимальной заботой.
+                </p>
+                <p>
+                    <strong>Адрес:</strong> Улица Москвы, Париж, Франция<br>
+                    <strong>Часы работы:</strong> С понедельника по воскресенье, с 8:00 до 20:00
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-white">
+    <div class="container">
+        <h2 class="text-center mb-4">Наши специальности</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="#" class="card-img-top" alt="Императорские макаруны">
+                    <div class="card-body">
+                        <h5 class="card-title">Императорские макаруны</h5>
+                        <p class="card-text">Изысканные макаруны с королевскими вкусами и идеальной текстурой для императорского наслаждения.</p>
+                        <a href="{{ path('app_menu_index') }}" class="btn btn-success">Полное меню</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="#" class="card-img-top" alt="Горячий шоколад 'Белая Русь'">
+                    <div class="card-body">
+                        <h5 class="card-title">Горячий шоколад "Белая Русь"</h5>
+                        <p class="card-text">Кремовый и бархатистый горячий шоколад, вдохновленный русскими зимами, чтобы согреть самые холодные души.</p>
+                        <a href="{{ path('app_menu_index') }}" class="btn btn-success">Полное меню</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="#" class="card-img-top" alt="Московский кофе">
+                    <div class="card-body">
+                        <h5 class="card-title">Московский кофе</h5>
+                        <p class="card-text">Переосмысленный венский кофе, сочетающий интенсивность кофе и сладость сливок для путешествия в сердце Москвы.</p>
+                        <a href="{{ path('app_menu_index') }}" class="btn btn-success">Полное меню</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

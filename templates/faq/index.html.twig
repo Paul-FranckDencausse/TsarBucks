@@ -22,7 +22,8 @@
         <p>
             Rien de plus simple ! 
             <ol>
-                <li>Rendez-vous sur notre page d’accueil et cherchez l’icône RSS (ce petit symbole 🔊 discret mais puissant).</li>
+                <li>Rendez-vous sur notre page d’accueil et cherchez l’icône RSS <a class="nav-link {% if app.request.attributes.get('_route') == 'urss_index' %}active{% endif %}" href="{{ path('urss_index') }}">
+                            <i class="fas fa-rss" style="color: orange; font-size: 24px;"></i></a> </li>
                 <li>Copiez l’URL du flux, qui se termine souvent par <code>.xml</code>.</li>
                 <li>Collez cette URL dans votre fidèle lecteur RSS, tel un camarade déposant une lettre dans la boîte aux lettres du Parti.</li>
                 <li>Et voilà ! Les dernières nouvelles de Tsarbucks, directement dans votre appareil, prêtes à être savourées avec votre café du matin.</li>

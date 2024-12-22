@@ -1,0 +1,71 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Términos y Condiciones de Uso{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1 class="mb-4">Términos y Condiciones de Uso</h1>
+
+    <p>Bienvenido a nuestro sitio. Al acceder a nuestra plataforma, acepta cumplir con los presentes Términos y Condiciones de Uso (TCU).</p>
+
+    <h2>1. Preámbulo</h2>
+    <p>
+        Los presentes TCU tienen por objeto definir las condiciones en las que los usuarios acceden y utilizan el sitio.
+        El uso de este sitio implica la aceptación plena y completa de estos TCU.
+    </p>
+
+    <h2>2. Acceso al sitio</h2>
+    <p>
+        El sitio es accesible 24/7, excepto en casos de mantenimiento o eventos fuera de nuestro control.
+        Nos reservamos el derecho de interrumpir el acceso al sitio en cualquier momento por razones técnicas o legales.
+    </p>
+
+    <h2>3. Registro</h2>
+    <p>
+        Para acceder a ciertas funcionalidades, debe crear una cuenta proporcionando información exacta y actualizada.
+        Los usuarios menores de 16 años deben obtener la autorización parental antes de registrarse.
+    </p>
+
+    <h2>4. Responsabilidades del usuario</h2>
+    <p>
+        El usuario se compromete a no:
+        <ul>
+            <li>Utilizar el sitio para fines ilícitos o prohibidos por la ley.</li>
+            <li>Compartir información difamatoria, abusiva u ofensiva.</li>
+            <li>Intentar comprometer la seguridad del sitio o de sus usuarios.</li>
+        </ul>
+    </p>
+
+    <h2>5. Datos personales</h2>
+    <p>
+        La información recopilada se utiliza de acuerdo con nuestra política de privacidad.
+        Tiene el derecho de acceder, modificar o eliminar sus datos contactándonos.
+    </p>
+
+    <h2>6. Propiedad intelectual</h2>
+    <p>
+        Todos los contenidos (textos, imágenes, logos) del sitio están protegidos por derechos de autor.
+        Cualquier reproducción o uso no autorizado está estrictamente prohibido.
+    </p>
+
+    <h2>7. Modificación de los TCU</h2>
+    <p>
+        Nos reservamos el derecho de modificar estos TCU en cualquier momento. Las modificaciones entrarán en vigor a partir de su publicación.
+    </p>
+
+    <h2>8. Ley aplicable</h2>
+    <p>
+        Estos TCU se rigen por la ley francesa. En caso de disputa, los tribunales competentes serán los de nuestra sede.
+    </p>
+
+    <h2>9. Contacto</h2>
+    <p>
+        Para cualquier pregunta relacionada con estos TCU, contáctenos en la siguiente dirección: <a href="mailto:support@tsarbucks.com">support@tsarbucks.com</a>.
+    </p>
+
+    <div class="mt-4">
+        <a href="{{ path('app_home') }}" class="btn btn-success">Volver al inicio</a>
+    </div>
+    <br>
+</div>
+{% endblock %}

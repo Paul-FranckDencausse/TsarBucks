@@ -1,0 +1,89 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Condiciones Generales de Venta{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1 class="mb-4">Condiciones Generales de Venta</h1>
+
+    <p>
+        Las presentes Condiciones Generales de Venta (CGV) rigen las relaciones contractuales entre el vendedor y el comprador.
+        Al realizar un pedido en nuestro sitio, acepta las presentes CGV sin reservas.
+    </p>
+
+    <h2>1. Objeto</h2>
+    <p>
+        Las presentes CGV tienen por objeto definir los derechos y obligaciones de las partes en el marco de la venta de productos y servicios ofrecidos en el sitio.
+    </p>
+
+    <h2>2. Productos y servicios</h2>
+    <p>
+        Los productos y servicios ofrecidos se describen y presentan con la mayor precisión posible. Sin embargo, pueden ocurrir errores u omisiones.
+        Las fotografías de los productos no son contractuales.
+    </p>
+
+    <h2>3. Precios</h2>
+    <p>
+        Todos los precios mostrados en el sitio están en euros (€) e incluyen el IVA. Los gastos de envío se facturan por separado y se indican antes de la validación del pedido.
+        Nos reservamos el derecho de modificar nuestros precios en cualquier momento, pero los productos se facturarán sobre la base de las tarifas vigentes en el momento del pedido.
+    </p>
+
+    <h2>4. Pedido</h2>
+    <p>
+        El comprador debe verificar la exactitud de su pedido antes de validarlo. Una vez confirmado el pedido, se enviará un correo electrónico de confirmación al comprador.
+        El vendedor se reserva el derecho de cancelar o rechazar cualquier pedido en caso de disputa con el comprador o problemas de pago.
+    </p>
+
+    <h2>5. Pago</h2>
+    <p>
+        El pago es exigible inmediatamente al realizar el pedido. Los medios de pago aceptados son los siguientes:
+        <ul>
+            <li>Tarjeta bancaria</li>
+            <li>PayPal</li>
+            <li>Transferencia bancaria</li>
+        </ul>
+        Las transacciones están aseguradas mediante protocolos de cifrado conformes a los estándares de la industria.
+    </p>
+
+    <h2>6. Entrega</h2>
+    <p>
+        Los productos se entregan en la dirección indicada por el comprador al realizar el pedido. Los plazos de entrega son indicativos y no pueden dar lugar a penalizaciones o indemnizaciones en caso de retraso.
+    </p>
+
+    <h2>7. Derecho de desistimiento</h2>
+    <p>
+        De acuerdo con la legislación vigente, el comprador dispone de un plazo de 14 días a partir de la recepción de los productos para ejercer su derecho de desistimiento.
+        Los gastos de devolución corren a cargo del comprador. Los productos devueltos deben estar en su estado original.
+    </p>
+
+    <h2>8. Garantía</h2>
+    <p>
+        Los productos se benefician de las garantías legales de conformidad y contra defectos ocultos. En caso de no conformidad o defecto, contacte con nuestro servicio de atención al cliente para organizar un cambio o reembolso.
+    </p>
+
+    <h2>9. Responsabilidad</h2>
+    <p>
+        El vendedor no será responsable de los daños indirectos relacionados con el uso de los productos vendidos, especialmente en caso de mal uso por parte del comprador.
+    </p>
+
+    <h2>10. Datos personales</h2>
+    <p>
+        Los datos recopilados se utilizan de acuerdo con nuestra política de privacidad. Son necesarios para la gestión de los pedidos y la relación con el cliente.
+    </p>
+
+    <h2>11. Disputas</h2>
+    <p>
+        En caso de disputa, se preferirá una solución amistosa. Si no se llega a un acuerdo, los tribunales franceses serán competentes para resolver la disputa.
+    </p>
+
+    <h2>12. Contacto</h2>
+    <p>
+        Para cualquier pregunta relacionada con estas CGV, contáctenos en la siguiente dirección: <a href="mailto:support@tsarbucks.com">support@tsarbucks.com</a>.
+    </p>
+
+    <div class="mt-4">
+        <a href="{{ path('app_home') }}" class="btn btn-success">Volver al inicio</a>
+    </div>
+    <br>
+</div>
+{% endblock %}

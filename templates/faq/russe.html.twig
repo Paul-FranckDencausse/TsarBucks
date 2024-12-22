@@ -1,0 +1,73 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}RSS-поток: Кофеинная пропаганда{% endblock %}
+
+{% block body %}
+<div class="container py-5">
+    <header class="text-center mb-5">
+        <h1 class="display-4">RSS-поток: Почему и Как?</h1>
+        <p class="lead text-muted">Потому что в Tsarbucks мы верим в свободную, неспамную и вкусную кофеинную информацию.</p>
+    </header>
+
+    <section class="mb-5">
+        <h2>Почему RSS-поток?</h2>
+        <p>
+            Товарищи, в духе Великого Союза Вкусных и Объединённых Республик, RSS-поток Tsarbucks был создан, чтобы предложить вам чистый и независимый информационный опыт.
+            Никакой навязчивой рекламы, никаких алгоритмических фильтров! С RSS-потоком новости децентрализованы и поступают прямо в ваш любимый RSS-ридер, как хороший фильтрованный кофе — просто, эффективно и без горечи.
+        </p>
+    </section>
+
+    <section class="mb-5">
+        <h2>Как получить наш RSS-поток?</h2>
+        <p>
+            Это просто!
+            <ol>
+                <li>Перейдите на нашу главную страницу и найдите иконку RSS <a class="nav-link {% if app.request.attributes.get('_route') == 'urss_index' %}active{% endif %}" href="{{ path('urss_index') }}">
+                            <i class="fas fa-rss" style="color: orange; font-size: 24px;"></i></a> </li>
+                <li>Скопируйте URL-адрес потока, который часто заканчивается на <code>.xml</code>.</li>
+                <li>Вставьте этот URL-адрес в ваш надёжный RSS-ридер, как товарищ, опускающий письмо в почтовый ящик Партии.</li>
+                <li>И вот! Последние новости от Tsarbucks прямо на вашем устройстве, готовые к наслаждению с утренним кофе.</li>
+            </ol>
+        </p>
+    </section>
+
+    <hr class="my-5">
+
+    <section class="mb-5">
+        <h2>Кофе и Потоки: Рекомендации для ваших RSS-ридеров</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Feedly</h5>
+                        <p class="card-text">Идеально для отслеживания всех ваших потоков с современным и чистым интерфейсом.</p>
+                        <a href="https://feedly.com" target="_blank" class="btn btn-success">Попробовать Feedly</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Inoreader</h5>
+                        <p class="card-text">Для товарищей, которые любят организовывать свои потоки с точностью.</p>
+                        <a href="https://www.inoreader.com" target="_blank" class="btn btn-primary">Исследовать Inoreader</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Reeder (iOS)</h5>
+                        <p class="card-text">RSS-ридер для современных царей, использующих устройства Apple.</p>
+                        <a href="https://reederapp.com" target="_blank" class="btn btn-secondary">Посмотреть Reeder</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center mt-5">
+        <p class="text-muted">В Tsarbucks каждый поток — это революция!</p>
+    </footer>
+</div>
+{% endblock %}

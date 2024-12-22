@@ -1,0 +1,69 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CatherineController!{% endblock %}
+
+{% block body %}
+
+<section class="py-5 bg-light">
+    <div class="container">
+        <h1 class="text-center mb-4">Tsarbucks Catherine II</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.lequotidiendelart.com%2Fmedia%2Fcache%2Farticle_page_cover%2Fshared%2Farticle-image%2F1377.jpg&f=1&nofb=1&ipt=8960def0889c94161053c3b159a86d259c4f022e49d6935394edee95bd0c1147&ipo=images" class="img-fluid rounded mb-4" alt="Tsarbucks Catherine II">
+            </div>
+            <div class="col-md-6">
+                <h2 class="mb-3">Un Viaje en el Tiempo</h2>
+                <p>
+                    Descubre Tsarbucks Catherine II, un homenaje refinado a una de las zarinas más emblemáticas de la historia rusa. Ubicado en la Rue de Moscou, en París, nuestro salón de café combina elegancia imperial con comodidad moderna. Con sillones lujosos y decoración inspirada en los palacios de San Petersburgo, cada visita es un viaje en el tiempo.
+                </p>
+                <p>
+                    Disfruta de nuestros cafés artesanales y pasteles en una atmósfera que evoca la grandeza del reinado de Catalina la Grande. El interior del salón está decorado con toques dorados y motivos florales que recuerdan la época imperial. Ya sea que vengas para un café rápido o para una tarde de relajación, nuestro equipo te recibirá con el mayor cuidado.
+                </p>
+                <p>
+                    <strong>Dirección:</strong> Rue de Moscou, París, Francia<br>
+                    <strong>Horarios:</strong> De lunes a domingo, de 8:00 a 20:00
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-white">
+    <div class="container">
+        <h2 class="text-center mb-4">Nuestras Especialidades</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="#" class="card-img-top" alt="Macarons Imperiales">
+                    <div class="card-body">
+                        <h5 class="card-title">Macarons Imperiales</h5>
+                        <p class="card-text">Macarons refinados, con sabores reales y textura perfecta, para un deleite imperial.</p>
+                        <a href="{{ path('app_menu_index') }}" class="btn btn-success">Menú Completo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="#" class="card-img-top" alt="Chocolat Chaud Russie Blanche">
+                    <div class="card-body">
+                        <h5 class="card-title">Chocolat Chaud "Russie Blanche"</h5>
+                        <p class="card-text">Un chocolate caliente cremoso y aterciopelado, inspirado en los inviernos rusos, para calentar las almas más frías.</p>
+                        <a href="{{ path('app_menu_index') }}" class="btn btn-success">Menú Completo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="#" class="card-img-top" alt="Café Moscovite">
+                    <div class="card-body">
+                        <h5 class="card-title">Café Moscovite</h5>
+                        <p class="card-text">Un café vienés revisitado, que combina la intensidad del café con la dulzura de la crema, para un viaje al corazón de Moscú.</p>
+                        <a href="{{ path('app_menu_index') }}" class="btn btn-success">Menú Completo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,89 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}General Terms and Conditions of Sale{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1 class="mb-4">General Terms and Conditions of Sale</h1>
+
+    <p>
+        These General Terms and Conditions of Sale (GTCS) govern the contractual relationship between the seller and the buyer.
+        By placing an order on our site, you accept these GTCS without reservation.
+    </p>
+
+    <h2>1. Purpose</h2>
+    <p>
+        These GTCS aim to define the rights and obligations of the parties within the framework of the sale of products and services offered on the site.
+    </p>
+
+    <h2>2. Products and Services</h2>
+    <p>
+        The products and services offered are described and presented with the greatest possible accuracy. However, errors or omissions may occur.
+        The photographs of the products are not contractual.
+    </p>
+
+    <h2>3. Prices</h2>
+    <p>
+        All prices displayed on the site are in euros (€) and include VAT. Shipping costs are billed separately and are indicated before order confirmation.
+        We reserve the right to modify our prices at any time, but products will be billed based on the rates in effect at the time of the order.
+    </p>
+
+    <h2>4. Order</h2>
+    <p>
+        The buyer must verify the accuracy of their order before confirming it. Once the order is confirmed, a confirmation email will be sent to the buyer.
+        The seller reserves the right to cancel or refuse any order in case of a dispute with the buyer or payment issues.
+    </p>
+
+    <h2>5. Payment</h2>
+    <p>
+        Payment is due immediately upon ordering. The accepted payment methods are as follows:
+        <ul>
+            <li>Credit card</li>
+            <li>PayPal</li>
+            <li>Bank transfer</li>
+        </ul>
+        Transactions are secured via encryption protocols in accordance with industry standards.
+    </p>
+
+    <h2>6. Delivery</h2>
+    <p>
+        Products are delivered to the address indicated by the buyer at the time of the order. Delivery times are indicative and cannot give rise to penalties or compensation in case of delay.
+    </p>
+
+    <h2>7. Right of Withdrawal</h2>
+    <p>
+        In accordance with current legislation, the buyer has a period of 14 days from receipt of the products to exercise their right of withdrawal.
+        Return shipping costs are the responsibility of the buyer. Returned products must be in their original condition.
+    </p>
+
+    <h2>8. Warranty</h2>
+    <p>
+        Products benefit from legal guarantees of conformity and against hidden defects. In case of non-conformity or defect, contact our customer service to arrange an exchange or refund.
+    </p>
+
+    <h2>9. Liability</h2>
+    <p>
+        The seller cannot be held responsible for indirect damages related to the use of the products sold, particularly in case of misuse by the buyer.
+    </p>
+
+    <h2>10. Personal Data</h2>
+    <p>
+        The collected data is used in accordance with our privacy policy. It is necessary for the management of orders and customer relations.
+    </p>
+
+    <h2>11. Disputes</h2>
+    <p>
+        In case of a dispute, an amicable solution will be preferred. If no agreement is reached, the French courts will be competent to settle the dispute.
+    </p>
+
+    <h2>12. Contact</h2>
+    <p>
+        For any questions regarding these GTCS, please contact us at the following address: <a href="mailto:support@tsarbucks.com">support@tsarbucks.com</a>.
+    </p>
+
+    <div class="mt-4">
+        <a href="{{ path('app_home') }}" class="btn btn-success">Return to Home</a>
+    </div>
+    <br>
+</div>
+{% endblock %}

@@ -1,0 +1,83 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Наши Мероприятия{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Наши Мероприятия</h1>
+
+    <div class="row">
+        <!-- Сессия Бариста -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{{ asset('images/barista.jpg') }}" class="card-img-top" alt="Сессия Бариста">
+                <div class="card-body">
+                    <h5 class="card-title">Сессия Бариста</h5>
+                    <p class="card-text">Научитесь искусству приготовления отличных кофейных напитков с нашими экспертами бариста. Откройте для себя техники приготовления, помола и заваривания.</p>
+                    <a href="#" class="btn btn-success">Узнать больше</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Латте Арт -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{{ asset('images/latte.jpeg') }}" class="card-img-top" alt="Латте Арт">
+                <div class="card-body">
+                    <h5 class="card-title">Латте Арт</h5>
+                    <p class="card-text">Исследуйте креативность в приготовлении вашего кофе, научившись создавать рисунки из молочной пены.</p>
+                    <a href="#" class="btn btn-success">Узнать больше</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Шахматы -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{{ asset('images/echecs.jpg') }}" class="card-img-top" alt="Шахматы">
+                <div class="card-body">
+                    <h5 class="card-title">Шахматы</h5>
+                    <p class="card-text">Участвуйте в наших шахматных турнирах и улучшайте свои стратегические навыки с другими энтузиастами.</p>
+                    <a href="#" class="btn btn-success">Узнать больше</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Русский Язык и Культура -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{{ asset('images/traditions_russe.jpg') }}" class="card-img-top" alt="Русский Язык и Культура">
+                <div class="card-body">
+                    <h5 class="card-title">Русский Язык и Культура</h5>
+                    <p class="card-text">Откройте для себя русский язык и культуру через интерактивные курсы и увлекательные мастер-классы.</p>
+                    <a href="#" class="btn btn-success">Узнать больше</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Мастер-класс по Обжарке -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{{ asset('images/torréfaction.jpg') }}" class="card-img-top" alt="Мастер-класс по Обжарке">
+                <div class="card-body">
+                    <h5 class="card-title">Мастер-класс по Обжарке</h5>
+                    <p class="card-text">Приходите узнать процесс обжарки кофе и научитесь создавать уникальные смеси.</p>
+                    <a href="#" class="btn btn-success">Узнать больше</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Мероприятия для Детей -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{{ asset('images/kids.jpg') }}" class="card-img-top" alt="Мероприятия для Детей">
+                <div class="card-body">
+                    <h5 class="card-title">Мероприятия для Детей</h5>
+                    <p class="card-text">Игровые и образовательные мастер-классы для самых маленьких: игры, художественные творения и многое другое!</p>
+                    <a href="#" class="btn btn-success">Узнать больше</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

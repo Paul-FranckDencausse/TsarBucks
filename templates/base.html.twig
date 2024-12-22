@@ -48,9 +48,13 @@
                         <a class="nav-link {% if app.request.attributes.get('_route') == 'app_contact' %}active{% endif %}" href="{{ path('app_contact') }}">Contact</a>
                     </li>
                      <li class="nav-item">
-                        <a class="nav-link {% if app.request.attributes.get('_route') == 'urss_index' %}active{% endif %}" href="{{ path('urss_index') }}">Flux URSS</a>
+                        <a class="nav-link {% if app.request.attributes.get('_route') == 'app_faq' %}active{% endif %}" href="{{ path('app_faq') }}">Flux URSS</a>
+                       
                     </li>
-                    
+                    <li>
+                     <a class="nav-link {% if app.request.attributes.get('_route') == 'urss_index' %}active{% endif %}" href="{{ path('urss_index') }}">
+                            <i class="fas fa-rss" style="color: orange; font-size: 24px;"></i></a>
+                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fas fa-globe"></i> Langue

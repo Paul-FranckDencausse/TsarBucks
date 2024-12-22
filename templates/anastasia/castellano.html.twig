@@ -1,0 +1,69 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Tsarbucks Anastasia Romanov{% endblock %}
+
+{% block body %}
+<section class="py-5 bg-light">
+    <div class="container">
+        <h1 class="text-center mb-4">Tsarbucks Anastasia Romanov</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{{ asset('images/stars.jpeg') }}" class="card-img-top img-fluid rounded mb-4" alt="Tsarbucks Anastasia Romanov">
+            </div>
+            <div class="col-md-6">
+                <h2 class="mb-3">Un Viaje Real a Través del Tiempo</h2>
+                <p>
+                    Entra en un mundo de misterio y elegancia en Tsarbucks Anastasia Romanov. Inspirado en la fascinante historia de la última gran duquesa de Rusia, este salón te ofrece una atmósfera real mezclada con dulzura y encanto, perfecta para una pausa de café inolvidable.
+                </p>
+                <p>
+                    Con decoraciones suntuosas que recuerdan la época imperial rusa y toques contemporáneos, Tsarbucks Anastasia Romanov es el lugar ideal para relajarse y disfrutar de nuestras bebidas artesanales y pasteles caseros. Ya sea para una cita tranquila o para una exploración de la historia, este salón te transportará a otra época.
+                </p>
+                <p>
+                    <strong>Dirección:</strong> 789 Calle Imperial, San Petersburgo, Rusia<br>
+                    <strong>Horarios:</strong> De lunes a domingo, de 10:00 a 20:00
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-white">
+    <div class="container">
+        <h2 class="text-center mb-4">Nuestras Especialidades</h2>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="{{ asset('images/navette_anastasia.jpg') }}" class="card-img-top" alt="Navette d'Anastasia">
+                    <div class="card-body">
+                        <h5 class="card-title">La Navette d'Anastasia</h5>
+                        <p class="card-text">Una pastelería ligera y aérea, que evoca los recuerdos de un viaje imperial.</p>
+                        <a href="{{ path('app_menu_index') }}" class="btn btn-success">Menú Completo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="{{ asset('images/expresso_romanov.jpg') }}" class="card-img-top" alt="Expresso Romanov">
+                    <div class="card-body">
+                        <h5 class="card-title">Expresso Romanov</h5>
+                        <p class="card-text">Un expreso potente y refinado, inspirado en los gustos imperiales.</p>
+                        <a href="{{ path('app_menu_index') }}" class="btn btn-success">Menú Completo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="{{ asset('images/the_russe.jpg') }}" class="card-img-top" alt="Thé Russe">
+                    <div class="card-body">
+                        <h5 class="card-title">Té Ruso al Samovar</h5>
+                        <p class="card-text">Un té auténtico, servido según la tradición rusa en un samovar imperial.</p>
+                        <a href="{{ path('app_menu_index') }}" class="btn btn-success">Menú Completo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,73 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}RSS Feed: Caffeinated Propaganda{% endblock %}
+
+{% block body %}
+<div class="container py-5">
+    <header class="text-center mb-5">
+        <h1 class="display-4">RSS Feed: Why and How?</h1>
+        <p class="lead text-muted">Because at Tsarbucks, we believe in free, non-spammy, and deliciously caffeinated information.</p>
+    </header>
+
+    <section class="mb-5">
+        <h2>Why an RSS Feed?</h2>
+        <p>
+            Comrades, in the spirit of the Great Union of Flavorful and United Republics, Tsarbucks' RSS Feed has been created to offer you a pure and uninterrupted information experience.
+            No intrusive ads, no algorithmic filters! With the RSS Feed, news is decentralized and flows directly to your favorite RSS reader, like a good filter coffee — simple, effective, and without bitterness.
+        </p>
+    </section>
+
+    <section class="mb-5">
+        <h2>How to Get Our RSS Feed?</h2>
+        <p>
+            It's simple!
+            <ol>
+                <li>Go to our homepage and look for the RSS icon <a class="nav-link {% if app.request.attributes.get('_route') == 'urss_index' %}active{% endif %}" href="{{ path('urss_index') }}">
+                            <i class="fas fa-rss" style="color: orange; font-size: 24px;"></i></a> </li>
+                <li>Copy the feed URL, which often ends with <code>.xml</code>.</li>
+                <li>Paste this URL into your trusted RSS reader, like a comrade dropping a letter into the Party's mailbox.</li>
+                <li>And there you have it! The latest news from Tsarbucks, directly on your device, ready to be enjoyed with your morning coffee.</li>
+            </ol>
+        </p>
+    </section>
+
+    <hr class="my-5">
+
+    <section class="mb-5">
+        <h2>Coffee and Feeds: Recommendations for Your RSS Readers</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Feedly</h5>
+                        <p class="card-text">Perfect for following all your feeds, with a modern and clean interface.</p>
+                        <a href="https://feedly.com" target="_blank" class="btn btn-success">Try Feedly</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Inoreader</h5>
+                        <p class="card-text">For comrades who like to organize their feeds with precision.</p>
+                        <a href="https://www.inoreader.com" target="_blank" class="btn btn-primary">Explore Inoreader</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Reeder (iOS)</h5>
+                        <p class="card-text">An RSS reader for modern tsars using Apple devices.</p>
+                        <a href="https://reederapp.com" target="_blank" class="btn btn-secondary">See Reeder</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center mt-5">
+        <p class="text-muted">At Tsarbucks, every feed is a revolution!</p>
+    </footer>
+</div>
+{% endblock %}

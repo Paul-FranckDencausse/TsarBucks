@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contacto - Tsarbucks{% endblock %}
+
+{% block body %}
+<section class="py-5 bg-light">
+    <div class="container my-5">
+        <h1 class="text-center">Contáctenos</h1>
+
+        {% if form is defined %}
+            {{ form_start(form) }}
+
+            <div class="mb-3">
+                {{ form_label(form.email, 'Correo electrónico', {'label_attr': {'class': 'form-label'}}) }}
+                {{ form_widget(form.email, {'attr': {'class': 'form-control'}}) }}
+                {{ form_errors(form.email) }}
+            </div>
+
+            <div class="mb-3">
+                {{ form_label(form.subject, 'Asunto', {'label_attr': {'class': 'form-label'}}) }}
+                {{ form_widget(form.subject, {'attr': {'class': 'form-control'}}) }}
+                {{ form_errors(form.subject) }}
+            </div>
+
+            <div class="mb-3">
+                {{ form_label(form.message, 'Mensaje', {'label_attr': {'class': 'form-label'}}) }}
+                {{ form_widget(form.message, {'attr': {'class': 'form-control', 'rows': 5}}) }}
+                {{ form_errors(form.message) }}
+            </div>
+
+            <button type="submit" class="btn btn-success w-100">Enviar</button>
+            {{ form_end(form) }}
+        {% else %}
+            <p>¡Gracias por su mensaje! Nos pondremos en contacto con usted pronto.</p>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}
