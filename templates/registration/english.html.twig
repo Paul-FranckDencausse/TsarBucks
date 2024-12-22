@@ -1,0 +1,128 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Registration{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1 class="mb-4">Registration</h1>
+
+    <!-- Display global form errors -->
+    {% if form_errors(registrationForm) %}
+        <div class="alert alert-danger">
+            {{ form_errors(registrationForm) }}
+        </div>
+    {% endif %}
+
+    <!-- Start of the form -->
+    {{ form_start(registrationForm, {'attr': {'class': 'needs-validation'}}) }}
+
+    <div class="row g-3">
+        <!-- Email Address -->
+        <div class="col-md-6">
+            {{ form_row(registrationForm.email, {
+                label: 'Email Address',
+                attr: {'class': 'form-control'}
+            }) }}
+        </div>
+
+        <!-- Password -->
+        <div class="col-md-6">
+            {{ form_row(registrationForm.plainPassword, {
+                label: 'Password',
+                attr: {'class': 'form-control'}
+            }) }}
+        </div>
+
+        <!-- Last Name -->
+        <div class="col-md-6">
+            {{ form_row(registrationForm.nom, {
+                label: 'Last Name',
+                attr: {'class': 'form-control'}
+            }) }}
+        </div>
+
+        <!-- First Name -->
+        <div class="col-md-6">
+            {{ form_row(registrationForm.prenom, {
+                label: 'First Name',
+                attr: {'class': 'form-control'}
+            }) }}
+        </div>
+
+        <!-- Gender -->
+        <div class="col-md-6">
+            {{ form_row(registrationForm.genre, {
+                label: 'Gender',
+                attr: {'class': 'form-select'}
+            }) }}
+        </div>
+
+        <!-- Phone -->
+        <div class="col-md-6">
+            {{ form_row(registrationForm.telephone, {
+                label: 'Phone',
+                attr: {'class': 'form-control'}
+            }) }}
+        </div>
+
+        <!-- Date of Birth -->
+        <div class="col-md-6">
+            {{ form_row(registrationForm.dateNaissance, {
+                label: 'Date of Birth',
+                attr: {'class': 'form-control'}
+            }) }}
+        </div>
+
+        <!-- Address -->
+        <div class="col-md-12">
+            {{ form_row(registrationForm.adresse, {
+                label: 'Address',
+                attr: {'class': 'form-control'}
+            }) }}
+        </div>
+
+        <!-- Postal Code -->
+        <div class="col-md-6">
+            {{ form_row(registrationForm.codePostal, {
+                label: 'Postal Code',
+                attr: {'class': 'form-control'}
+            }) }}
+        </div>
+
+        <!-- City -->
+        <div class="col-md-6">
+            {{ form_row(registrationForm.ville, {
+                label: 'City',
+                attr: {'class': 'form-control'}
+            }) }}
+        </div>
+
+        <!-- Parental Consent -->
+        <div class="col-md-12">
+            <div class="form-check">
+                {{ form_row(registrationForm.accordParental, {
+                    label: 'I certify that I have obtained parental consent (if a minor)',
+                    attr: {'class': 'form-check-input'}
+                }) }}
+            </div>
+        </div>
+
+        <!-- Accept Terms -->
+        <div class="col-md-12">
+            <div class="form-check">
+                {{ form_row(registrationForm.agreeTerms, {
+                    label: 'I accept the terms and conditions',
+                    attr: {'class': 'form-check-input'}
+                }) }}
+            </div>
+        </div>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="mt-4">
+        <button type="submit" class="btn btn-success">Register</button>
+    </div>
+
+    {{ form_end(registrationForm) }}
+</div>
+{% endblock %}

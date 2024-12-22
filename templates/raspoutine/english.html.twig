@@ -1,0 +1,69 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Tsarbucks Rasputin{% endblock %}
+
+{% block body %}
+<section class="py-5 bg-light">
+    <div class="container">
+        <h1 class="text-center mb-4">Tsarbucks Rasputin</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{{ asset('images/stars.jpeg') }}" alt="Description de l'image" class="card-img-top" alt="Tsarbucks Rasputin" class="img-fluid rounded mb-4">
+            </div>
+            <div class="col-md-6">
+                <h2 class="mb-3">Mystery and Magnificence</h2>
+                <p>
+                    Discover the enigmatic aura of Rasputin in our Tsarbucks lounge dedicated to this legendary figure of Russian history. With a dark and captivating decor, immerse yourself in a mystical atmosphere while enjoying our artisanal creations. Every corner of this café evokes the mysteries and legends surrounding the influential and controversial man of the Romanov court.
+                </p>
+                <p>
+                    The Tsarbucks Rasputin lounge invites you to a unique sensory experience, combining refined coffees, sophisticated pastries, and total immersion in a fascinating and troubling era of Russian history.
+                </p>
+                <p>
+                    <strong>Address:</strong> 456 Rue des Ténèbres, Moscow, Russia<br>
+                    <strong>Hours:</strong> Monday to Saturday, 11:00 AM to 11:00 PM
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-white">
+    <div class="container">
+        <h2 class="text-center mb-4">Our Specialties</h2>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="{{ asset('images/coussins_luxueux.jpg') }}" class="card-img-top" alt="Luxurious Cushions">
+                    <div class="card-body">
+                        <h5 class="card-title">Luxurious Cushions</h5>
+                        <p class="card-text">Soft and refined pastries, designed to bring royal comfort to your palate.</p>
+                        <a href="{{ path('app_menu_index') }}" class="btn btn-success">Full Menu</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="{{ asset('images/banana_split.jpg') }}" class="card-img-top" alt="Imperial Banana Split">
+                    <div class="card-body">
+                        <h5 class="card-title">Imperial Banana Split</h5>
+                        <p class="card-text">A touch of imperial nostalgia with a revisited version of the classic Banana Split.</p>
+                        <a href="{{ path('app_menu_index') }}" class="btn btn-success">Full Menu</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="{{ asset('images/cafe_siberien.jpg') }}" class="card-img-top" alt="Siberian Coffee">
+                    <div class="card-body">
+                        <h5 class="card-title">Siberian Coffee</h5>
+                        <p class="card-text">An intense and warm coffee, perfect for facing the icy winds of Siberia.</p>
+                        <a href="{{ path('app_menu_index') }}" class="btn btn-success">Full Menu</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

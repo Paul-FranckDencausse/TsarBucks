@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Tsarbucks Pierre Ier{% endblock %}
+
+{% block body %}
+<section class="py-5 bg-light">
+    <div class="container">
+        <h1 class="text-center mb-4">Tsarbucks de la URSS</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.lequotidiendelart.com%2Fmedia%2Fcache%2Farticle_page_cover%2Fshared%2Farticle-image%2F1377.jpg&f=1&nofb=1&ipt=8960def0889c94161053c3b159a86d259c4f022e49d6935394edee95bd0c1147&ipo=images" class="img-fluid rounded mb-4" alt="Café de la URSS">
+            </div>
+            <div class="col-md-6">
+                <h2 class="mb-3">Un Viaje al Corazón de la Historia</h2>
+                <p>
+                    Bienvenido al Café de la URSS, un lugar que celebra el espíritu y la cultura de la era soviética. Situado en la Avenida de la URSS en Toulouse, nuestro café combina una estética retro con comodidad moderna. Con sus carteles de propaganda de la época, sus sillones robustos y su ambiente cálido, cada visita es una inmersión en un pasado fascinante.
+                </p>
+                <p>
+                    Disfrute de nuestras bebidas y especialidades inspiradas en los sabores de la URSS en un entorno único. Ya sea que sienta nostalgia por esa época o simplemente tenga curiosidad por descubrir otro mundo, el Café de la URSS le ofrece una experiencia inolvidable.
+                </p>
+                <p>
+                    <strong>Dirección:</strong> Avenida de la URSS, Toulouse, Francia<br>
+                    <strong>Horarios:</strong> De lunes a domingo, de 8:00 a 20:00
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-white">
+    <div class="container">
+        <h2 class="text-center mb-4">Nuestras Especialidades</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="#" class="card-img-top" alt="Chocolatina Imperial">
+                    <div class="card-body">
+                        <h5 class="card-title">Chocolatina Imperial</h5>
+                        <p class="card-text">Una chocolatina dorada y generosamente rellena, perfecta para un desayuno o una pausa gourmet digna de un imperio.</p>
+                        <a href="{{ path('app_menu_index') }}" class="btn btn-success">Menú Completo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="#" class="card-img-top" alt="Café Capitalista">
+                    <div class="card-body">
+                        <h5 class="card-title">Café Capitalista</h5>
+                        <p class="card-text">Un café intenso servido con monedas de chocolate para simbolizar la abundancia y el éxito.</p>
+                        <a href="{{ path('app_menu_index') }}" class="btn btn-success">Menú Completo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="#" class="card-img-top" alt="Té Ahumado con Puros Cubanos">
+                    <div class="card-body">
+                        <h5 class="card-title">Té Ahumado & Puros Cubanos</h5>
+                        <p class="card-text">Un té con aromas ahumados acompañado de puros cubanos... ¡para saborear! Una experiencia audaz y llena de carácter.</p>
+                        <a href="{{ path('app_menu_index') }}" class="btn btn-success">Menú Completo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Tsarbucks Stalingrado{% endblock %}
+
+{% block body %}
+<section class="py-5 bg-light">
+    <div class="container">
+        <h1 class="text-center mb-4">Tsarbucks Stalingrado</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.cruise-bordeaux.com%2Fwp-content%2Fuploads%2F2016%2F02%2FPlace-Stalingrad-Vincent-Bengold.jpg&f=1&nofb=1&ipt=aeea955d3599e24a30dc2ec52520383152665618be7f0f0231d670830b1787d5&ipo=images" class="card-img-top" alt="Tsarbucks Stalingrado" class="img-fluid rounded mb-4">
+            </div>
+            <div class="col-md-6">
+                <h2 class="mb-3">Una Epopeya en el Corazón de Burdeos</h2>
+                <p>
+                    Sumérjase en la historia fascinante en Tsarbucks Stalingrado, un café con un encanto único situado en el corazón de Burdeos. Inspirado en la grandeza y la resiliencia de Stalingrado, nuestro salón ofrece una atmósfera que evoca las grandes horas de la URSS, combinando confort moderno y ambiente histórico.
+                </p>
+                <p>
+                    Con sus decoraciones elegantes y referencias históricas, cada visita es una inmersión en un pasado glorioso mientras se saborean nuestros cafés artesanales y pasteles caseros. Nuestro espacio es ideal para una pausa de café tranquila, una cita con amigos o simplemente para disfrutar de un momento de relajación en un entorno excepcional.
+                </p>
+                <p>
+                    <strong>Dirección:</strong> 123 Avenida Stalingrado, Burdeos, Francia<br>
+                    <strong>Horarios:</strong> De lunes a domingo, de 9:00 a 22:00
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-white">
+    <div class="container">
+        <h2 class="text-center mb-4">Nuestras Especialidades</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="{{ asset('images/canneles.jpg') }}" class="card-img-top" alt="Cannelés Imperiales">
+                    <div class="card-body">
+                        <h5 class="card-title">Cannelés Imperiales</h5>
+                        <p class="card-text">Cannelés dorados a la perfección, crujientes por fuera y tiernos por dentro, un homenaje a la grandeza imperial.</p>
+                        <a href="{{ path('app_menu_index') }}" class="btn btn-success">Menú Completo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="{{ asset('images/café.jpg') }}" class="card-img-top" alt="Café Stakhanovista">
+                    <div class="card-body">
+                        <h5 class="card-title">Café Stakhanovista</h5>
+                        <p class="card-text">Un café robusto y energizante, perfecto para mantener el ritmo de los días intensos, inspirado en la dedicación de los trabajadores.</p>
+                        <a href="{{ path('app_menu_index') }}" class="btn btn-success">Menú Completo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="{{ asset('images/matcha.jpg') }}" class="card-img-top" alt="Té de Polonio">
+                    <div class="card-body">
+                        <h5 class="card-title">Té de Polonio</h5>
+                        <p class="card-text">Un té único y poderoso, servido a los amantes de sabores intensos, recordando una era de misterio e intriga.</p>
+                        <a href="{{ path('app_menu_index') }}" class="btn btn-success">Menú Completo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

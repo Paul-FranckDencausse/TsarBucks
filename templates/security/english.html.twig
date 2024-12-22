@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Login{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <form method="post" class="needs-validation">
+        <!-- Error message -->
+        {% if error %}
+            <div class="alert alert-danger">
+                {{ error.messageKey|trans(error.messageData, 'security') }}
+            </div>
+        {% endif %}
+
+        <!-- Message if the user is already logged in -->
+        {% if app.user %}
+            <div class="alert alert-info mb-3">
+                You are logged in as {{ app.user.userIdentifier }}.
+                <a href="{{ path('app_logout') }}" class="btn btn-link">Logout</a>
+            </div>
+        {% endif %}
+
+        <!-- Title -->
+        <h1 class="h3 mb-3 font-weight-normal">Please log in</h1>
+
+        <!-- Email Field -->
+        <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="_username" class="form-control" required>
+        </div>
+
+        <!-- Password Field -->
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" name="_password" id="password"
+                   class="form-control" autocomplete="current-password" required>
+        </div>
+
+        <!-- CSRF Token -->
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+        <!-- "Remember me" Checkbox -->
+        <div class="form-check mb-3">
+            <input type="checkbox" name="_remember_me" id="_remember_me" class="form-check-input">
+            <label for="_remember_me" class="form-check-label">Remember me</label>
+        </div>
+
+        <!-- Login Button -->
+        <button class="btn btn-lg btn-success w-100" type="submit">
+            Log in
+        </button>
+    </form>
+
+    <br>
+    <a href="{{ path('app_register') }}" class="btn btn-lg btn-primary w-100">Register</a>
+</div>
+{% endblock %}

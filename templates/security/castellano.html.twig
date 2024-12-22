@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inicio de Sesión{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <form method="post" class="needs-validation">
+        <!-- Mensaje de error -->
+        {% if error %}
+            <div class="alert alert-danger">
+                {{ error.messageKey|trans(error.messageData, 'security') }}
+            </div>
+        {% endif %}
+
+        <!-- Mensaje si el usuario ya está conectado -->
+        {% if app.user %}
+            <div class="alert alert-info mb-3">
+                Estás conectado como {{ app.user.userIdentifier }}.
+                <a href="{{ path('app_logout') }}" class="btn btn-link">Cerrar sesión</a>
+            </div>
+        {% endif %}
+
+        <!-- Título -->
+        <h1 class="h3 mb-3 font-weight-normal">Por favor, inicia sesión</h1>
+
+        <!-- Campo de Correo Electrónico -->
+        <div class="form-group">
+            <label for="email">Dirección de correo electrónico</label>
+            <input type="email" id="email" name="_username" class="form-control" required>
+        </div>
+
+        <!-- Campo de Contraseña -->
+        <div class="mb-3">
+            <label for="password" class="form-label">Contraseña</label>
+            <input type="password" name="_password" id="password"
+                   class="form-control" autocomplete="current-password" required>
+        </div>
+
+        <!-- Token CSRF -->
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+        <!-- Casilla "Recordarme" -->
+        <div class="form-check mb-3">
+            <input type="checkbox" name="_remember_me" id="_remember_me" class="form-check-input">
+            <label for="_remember_me" class="form-check-label">Recordarme</label>
+        </div>
+
+        <!-- Botón de Inicio de Sesión -->
+        <button class="btn btn-lg btn-success w-100" type="submit">
+            Iniciar sesión
+        </button>
+    </form>
+
+    <br>
+    <a href="{{ path('app_register') }}" class="btn btn-lg btn-primary w-100">Registrarse</a>
+</div>
+{% endblock %}

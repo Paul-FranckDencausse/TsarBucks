@@ -1,0 +1,97 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Privacy Policy (GDPR){% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1 class="mb-4">Privacy Policy</h1>
+
+    <p>
+        This privacy policy explains how we collect, use, share, and protect your personal data in accordance with the
+        General Data Protection Regulation (GDPR).
+    </p>
+
+    <h2>1. Collection of Personal Data</h2>
+    <p>
+        We collect your personal data when you:
+        <ul>
+            <li>Create an account on our site.</li>
+            <li>Place an order.</li>
+            <li>Contact us via a form or email.</li>
+        </ul>
+    </p>
+    <p>The types of data collected include:</p>
+    <ul>
+        <li>First and last name</li>
+        <li>Email address</li>
+        <li>Postal address</li>
+        <li>Phone number</li>
+        <li>Payment data (processed via secure platforms)</li>
+    </ul>
+
+    <h2>2. Use of Data</h2>
+    <p>
+        Your personal data is used for:
+        <ul>
+            <li>Managing your user account.</li>
+            <li>Processing your orders and ensuring their delivery.</li>
+            <li>Providing you with personalized customer support.</li>
+            <li>Sending you marketing communications if you have given your explicit consent.</li>
+        </ul>
+    </p>
+
+    <h2>3. Sharing of Data</h2>
+    <p>
+        We do not share your personal data with third parties, except in the following cases:
+        <ul>
+            <li>When necessary to execute your order (e.g., delivery providers).</li>
+            <li>To comply with a legal obligation or a request from competent authorities.</li>
+        </ul>
+    </p>
+
+    <h2>4. Data Retention</h2>
+    <p>
+        Your personal data is retained only for the duration necessary for the purposes for which it was collected, in accordance with legal requirements.
+    </p>
+
+    <h2>5. Your Rights</h2>
+    <p>
+        Under the GDPR, you have the following rights regarding your personal data:
+        <ul>
+            <li><strong>Right of access:</strong> You can request a copy of the data we hold about you.</li>
+            <li><strong>Right to rectification:</strong> You can correct inaccurate or incomplete information.</li>
+            <li><strong>Right to erasure:</strong> You can request the deletion of your data, subject to legal retention obligations.</li>
+            <li><strong>Right to object:</strong> You can object to the use of your data for marketing purposes.</li>
+            <li><strong>Right to portability:</strong> You can request the transfer of your data to another provider.</li>
+        </ul>
+    </p>
+    <p>
+        To exercise these rights, contact us at the following address: <a href="mailto:privacy@yoursite.com">privacy@yoursite.com</a>.
+    </p>
+
+    <h2>6. Data Security</h2>
+    <p>
+        We implement technical and organizational security measures to protect your data from unauthorized access, loss, or disclosure.
+    </p>
+
+    <h2>7. Cookies</h2>
+    <p>
+        Our site uses cookies to improve your user experience and analyze traffic. You can configure your browser to refuse or delete cookies.
+    </p>
+
+    <h2>8. Changes to the Privacy Policy</h2>
+    <p>
+        We reserve the right to modify this policy at any time. Any changes will be posted on this page with an updated date.
+    </p>
+
+    <h2>9. Contact</h2>
+    <p>
+        For any questions regarding our privacy policy, please contact us at the following address: <a href="mailto:support@tsarbucks.com">support@tsarbucks.com</a>.
+    </p>
+
+    <div class="mt-4">
+        <a href="{{ path('app_home') }}" class="btn btn-success">Return to Home</a>
+    </div>
+    <br>
+</div>
+{% endblock %}

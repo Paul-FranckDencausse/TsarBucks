@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Tsarbucks Сталинград{% endblock %}
+
+{% block body %}
+<section class="py-5 bg-light">
+    <div class="container">
+        <h1 class="text-center mb-4">Tsarbucks Сталинград</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.cruise-bordeaux.com%2Fwp-content%2Fuploads%2F2016%2F02%2FPlace-Stalingrad-Vincent-Bengold.jpg&f=1&nofb=1&ipt=aeea955d3599e24a30dc2ec52520383152665618be7f0f0231d670830b1787d5&ipo=images" class="card-img-top" alt="Tsarbucks Сталинград" class="img-fluid rounded mb-4">
+            </div>
+            <div class="col-md-6">
+                <h2 class="mb-3">Эпопея в сердце Бордо</h2>
+                <p>
+                    Погрузитесь в увлекательную историю в Tsarbucks Сталинград, кафе с уникальным очарованием, расположенное в сердце Бордо. Вдохновленное величием и стойкостью Сталинграда, наш салон предлагает атмосферу, напоминающую о великих часах СССР, сочетая современный комфорт и историческую обстановку.
+                </p>
+                <p>
+                    С элегантными декорациями и историческими отсылками, каждое посещение — это погружение в славное прошлое, наслаждаясь нашими авторскими кофе и домашними десертами. Наше пространство идеально подходит для спокойного кофе-брейка, встречи с друзьями или просто для того, чтобы насладиться моментом расслабления в исключительной обстановке.
+                </p>
+                <p>
+                    <strong>Адрес:</strong> 123 Авеню Сталинград, Бордо, Франция<br>
+                    <strong>Часы работы:</strong> С понедельника по воскресенье, с 9:00 до 22:00
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-white">
+    <div class="container">
+        <h2 class="text-center mb-4">Наши специальности</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="{{ asset('images/canneles.jpg') }}" class="card-img-top" alt="Императорские Каннеле">
+                    <div class="card-body">
+                        <h5 class="card-title">Императорские Каннеле</h5>
+                        <p class="card-text">Золотистые каннеле, хрустящие снаружи и нежные внутри, дань имперскому величию.</p>
+                        <a href="{{ path('app_menu_index') }}" class="btn btn-success">Полное меню</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="{{ asset('images/café.jpg') }}" class="card-img-top" alt="Кофе Стахановский">
+                    <div class="card-body">
+                        <h5 class="card-title">Кофе Стахановский</h5>
+                        <p class="card-text">Крепкий и энергичный кофе, идеально подходящий для поддержания ритма в напряженные дни, вдохновленный преданностью рабочих.</p>
+                        <a href="{{ path('app_menu_index') }}" class="btn btn-success">Полное меню</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="{{ asset('images/matcha.jpg') }}" class="card-img-top" alt="Чай с Полонием">
+                    <div class="card-body">
+                        <h5 class="card-title">Чай с Полонием</h5>
+                        <p class="card-text">Уникальный и мощный чай, предназначенный для любителей интенсивных вкусов, напоминающий эпоху тайн и интриг.</p>
+                        <a href="{{ path('app_menu_index') }}" class="btn btn-success">Полное меню</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

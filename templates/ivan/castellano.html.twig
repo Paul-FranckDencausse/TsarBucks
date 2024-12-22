@@ -1,0 +1,69 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Tsarbucks Iván el Terrible{% endblock %}
+
+{% block body %}
+<section class="py-5 bg-light">
+    <div class="container">
+        <h1 class="text-center mb-4">Tsarbucks Iván el Terrible</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{{ asset('images/strasbourg.jpg') }}"
+                class="card-img-top" alt="Tsarbucks Iván el Terrible" class="img-fluid rounded mb-4">
+            </div>
+            <div class="col-md-6">
+                <h2 class="mb-3">Una Experiencia Inolvidable en la Época de los Zares</h2>
+                <p>
+                    Descubra el misterio y el poder de la Rusia medieval visitando Tsarbucks Iván el Terrible. Este salón le sumerge en una atmósfera rica en historia y propicia para la relajación.
+                </p>
+                <p>
+                    Con su decoración inspirada en el reinado implacable de Iván IV, conocido como Iván el Terrible, este salón es perfecto para sumergirse en la historia mientras disfruta de nuestras bebidas artesanales y pasteles caseros. Es un lugar ideal para relajarse, charlar con amigos o incluso trabajar en una atmósfera estimulante y única.
+                </p>
+                <p>
+                    <strong>Dirección:</strong> Calle de los Zares, 456, Moscú, Rusia<br>
+                    <strong>Horarios:</strong> De lunes a domingo, de 8:00 a 21:00
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-white">
+    <div class="container">
+        <h2 class="text-center mb-4">Nuestras Especialidades</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="{{ asset('images/mannele.jpg') }}" class="card-img-top" alt="Mannele Imperial">
+                    <div class="card-body">
+                        <h5 class="card-title">Mannele Imperial</h5>
+                        <p class="card-text">Un delicioso Mannele, revisado con un toque imperial, perfecto para celebraciones o un dulce diario.</p>
+                        <a href="{{ path('app_menu_index') }}" class="btn btn-success">Menú Completo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="{{ asset('images/café.jpg') }}" class="card-img-top" alt="Café Prensa Napoleón">
+                    <div class="card-body">
+                        <h5 class="card-title">Café Prensa Napoleón</h5>
+                        <p class="card-text">Un café potente y audaz, preparado a presión, que le dará la determinación de un conquistador.</p>
+                        <a href="{{ path('app_menu_index') }}" class="btn btn-success">Menú Completo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="{{ asset('images/blanc.jpeg') }}" class="card-img-top" alt="Té Rusia Blanca">
+                    <div class="card-body">
+                        <h5 class="card-title">Té "Rusia Blanca"</h5>
+                        <p class="card-text">Un té delicadamente perfumado, símbolo de elegancia y refinamiento, que evoca vastas llanuras nevadas.</p>
+                        <a href="{{ path('app_menu_index') }}" class="btn btn-success">Menú Completo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

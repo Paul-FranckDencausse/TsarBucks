@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Tsarbucks Pierre Ier{% endblock %}
+
+{% block body %}
+<section class="py-5 bg-light">
+    <div class="container">
+        <h1 class="text-center mb-4">Tsarbucks СССР</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.lequotidiendelart.com%2Fmedia%2Fcache%2Farticle_page_cover%2Fshared%2Farticle-image%2F1377.jpg&f=1&nofb=1&ipt=8960def0889c94161053c3b159a86d259c4f022e49d6935394edee95bd0c1147&ipo=images" class="img-fluid rounded mb-4" alt="Кафе СССР">
+            </div>
+            <div class="col-md-6">
+                <h2 class="mb-3">Возвращение в Сердце Истории</h2>
+                <p>
+                    Добро пожаловать в Кафе СССР, место, которое празднует дух и культуру советской эпохи. Расположенное на проспекте СССР в Тулузе, наше кафе сочетает в себе ретро-эстетику и современный комфорт. С его винтажными пропагандистскими плакатами, прочными креслами и теплой атмосферой, каждое посещение — это погружение в увлекательное прошлое.
+                </p>
+                <p>
+                    Наслаждайтесь нашими напитками и специальностями, вдохновленными вкусами СССР, в уникальной обстановке. Будь то ностальгия по той эпохе или просто любопытство к открытию другого мира, Кафе СССР предлагает вам незабываемый опыт.
+                </p>
+                <p>
+                    <strong>Адрес:</strong> Проспект СССР, Тулуза, Франция<br>
+                    <strong>Часы работы:</strong> С понедельника по воскресенье, с 8:00 до 20:00
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-white">
+    <div class="container">
+        <h2 class="text-center mb-4">Наши Специальности</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="#" class="card-img-top" alt="Императорская Шоколатина">
+                    <div class="card-body">
+                        <h5 class="card-title">Императорская Шоколатина</h5>
+                        <p class="card-text">Золотая шоколатина с щедрой начинкой, идеальная для завтрака или гастрономического перерыва, достойного империи.</p>
+                        <a href="{{ path('app_menu_index') }}" class="btn btn-success">Полное меню</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="#" class="card-img-top" alt="Капиталистический Кофе">
+                    <div class="card-body">
+                        <h5 class="card-title">Капиталистический Кофе</h5>
+                        <p class="card-text">Интенсивный кофе, подаваемый с шоколадными монетами, символизирующими изобилие и успех.</p>
+                        <a href="{{ path('app_menu_index') }}" class="btn btn-success">Полное меню</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="#" class="card-img-top" alt="Копченый Чай с Кубинскими Сигарами">
+                    <div class="card-body">
+                        <h5 class="card-title">Копченый Чай & Кубинские Сигары</h5>
+                        <p class="card-text">Чай с копчеными ароматами, сопровождаемый кубинскими сигарами... чтобы насладиться! Смелый и характерный опыт.</p>
+                        <a href="{{ path('app_menu_index') }}" class="btn btn-success">Полное меню</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

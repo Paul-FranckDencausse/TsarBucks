@@ -1,0 +1,69 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Tsarbucks Иван Грозный{% endblock %}
+
+{% block body %}
+<section class="py-5 bg-light">
+    <div class="container">
+        <h1 class="text-center mb-4">Tsarbucks Иван Грозный</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{{ asset('images/strasbourg.jpg') }}"
+                class="card-img-top" alt="Tsarbucks Иван Грозный" class="img-fluid rounded mb-4">
+            </div>
+            <div class="col-md-6">
+                <h2 class="mb-3">Незабываемый опыт времен царей</h2>
+                <p>
+                    Откройте для себя тайну и мощь средневековой России, посетив Tsarbucks Иван Грозный. Этот салон погружает вас в атмосферу, богатую историей и способствующую релаксации.
+                </p>
+                <p>
+                    С его декором, вдохновленным безжалостным правлением Ивана IV, известного как Иван Грозный, этот салон идеален для погружения в историю, наслаждаясь нашими авторскими напитками и домашней выпечкой. Это идеальное место для отдыха, бесед с друзьями или даже работы в стимулирующей и уникальной атмосфере.
+                </p>
+                <p>
+                    <strong>Адрес:</strong> Улица Царей, 456, Москва, Россия<br>
+                    <strong>Часы работы:</strong> С понедельника по воскресенье, с 8:00 до 21:00
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-white">
+    <div class="container">
+        <h2 class="text-center mb-4">Наши специальности</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="{{ asset('images/mannele.jpg') }}" class="card-img-top" alt="Императорский Маннеле">
+                    <div class="card-body">
+                        <h5 class="card-title">Императорский Маннеле</h5>
+                        <p class="card-text">Вкусный Маннеле с императорским оттенком, идеально подходящий для праздников или ежедневного удовольствия.</p>
+                        <a href="{{ path('app_menu_index') }}" class="btn btn-success">Полное меню</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="{{ asset('images/café.jpg') }}" class="card-img-top" alt="Кофе Наполеон Пресс">
+                    <div class="card-body">
+                        <h5 class="card-title">Кофе Наполеон Пресс</h5>
+                        <p class="card-text">Сильный и смелый кофе, приготовленный под прессом, который придаст вам решимость завоевателя.</p>
+                        <a href="{{ path('app_menu_index') }}" class="btn btn-success">Полное меню</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="{{ asset('images/blanc.jpeg') }}" class="card-img-top" alt="Чай 'Белая Русь'">
+                    <div class="card-body">
+                        <h5 class="card-title">Чай "Белая Русь"</h5>
+                        <p class="card-text">Нежно ароматизированный чай, символ элегантности и утонченности, напоминающий о бескрайних снежных равнинах.</p>
+                        <a href="{{ path('app_menu_index') }}" class="btn btn-success">Полное меню</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

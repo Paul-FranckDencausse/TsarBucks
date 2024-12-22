@@ -1,0 +1,69 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Tsarbucks Ivan the Terrible{% endblock %}
+
+{% block body %}
+<section class="py-5 bg-light">
+    <div class="container">
+        <h1 class="text-center mb-4">Tsarbucks Ivan the Terrible</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{{ asset('images/strasbourg.jpg') }}"
+                class="card-img-top" alt="Tsarbucks Ivan the Terrible" class="img-fluid rounded mb-4">
+            </div>
+            <div class="col-md-6">
+                <h2 class="mb-3">An Unforgettable Experience from the Time of the Tsars</h2>
+                <p>
+                    Discover the mystery and power of medieval Russia by visiting Tsarbucks Ivan the Terrible. This lounge immerses you in an atmosphere rich in history and conducive to relaxation.
+                </p>
+                <p>
+                    With its decor inspired by the ruthless reign of Ivan IV, known as Ivan the Terrible, this lounge is perfect for immersing yourself in history while enjoying our artisanal beverages and homemade pastries. It is an ideal place to relax, chat with friends, or even work in a stimulating and unique atmosphere.
+                </p>
+                <p>
+                    <strong>Address:</strong> 456 Tsar Street, Moscow, Russia<br>
+                    <strong>Hours:</strong> Monday to Sunday, 8:00 AM to 9:00 PM
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-white">
+    <div class="container">
+        <h2 class="text-center mb-4">Our Specialties</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="{{ asset('images/mannele.jpg') }}" class="card-img-top" alt="Imperial Mannele">
+                    <div class="card-body">
+                        <h5 class="card-title">Imperial Mannele</h5>
+                        <p class="card-text">A delicious Mannele, revisited with an imperial touch, perfect for celebrations or a daily treat.</p>
+                        <a href="{{ path('app_menu_index') }}" class="btn btn-success">Full Menu</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="{{ asset('images/café.jpg') }}" class="card-img-top" alt="Napoleon Press Coffee">
+                    <div class="card-body">
+                        <h5 class="card-title">Napoleon Press Coffee</h5>
+                        <p class="card-text">A powerful and bold coffee, press-prepared, that will give you the determination of a conqueror.</p>
+                        <a href="{{ path('app_menu_index') }}" class="btn btn-success">Full Menu</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="{{ asset('images/blanc.jpeg') }}" class="card-img-top" alt="White Russia Tea">
+                    <div class="card-body">
+                        <h5 class="card-title">"White Russia" Tea</h5>
+                        <p class="card-text">A delicately scented tea, symbol of elegance and refinement, evoking vast snowy plains.</p>
+                        <a href="{{ path('app_menu_index') }}" class="btn btn-success">Full Menu</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

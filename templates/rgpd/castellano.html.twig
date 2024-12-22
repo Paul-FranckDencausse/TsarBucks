@@ -1,0 +1,97 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Política de Privacidad (RGPD){% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1 class="mb-4">Política de Privacidad</h1>
+
+    <p>
+        La presente política de privacidad explica cómo recopilamos, utilizamos, compartimos y protegemos sus datos personales de acuerdo con el
+        Reglamento General de Protección de Datos (RGPD).
+    </p>
+
+    <h2>1. Recopilación de Datos Personales</h2>
+    <p>
+        Recopilamos sus datos personales cuando:
+        <ul>
+            <li>Crea una cuenta en nuestro sitio.</li>
+            <li>Realiza un pedido.</li>
+            <li>Nos contacta a través de un formulario o correo electrónico.</li>
+        </ul>
+    </p>
+    <p>Los tipos de datos recopilados incluyen:</p>
+    <ul>
+        <li>Nombre y apellido</li>
+        <li>Dirección de correo electrónico</li>
+        <li>Dirección postal</li>
+        <li>Número de teléfono</li>
+        <li>Datos de pago (procesados a través de plataformas seguras)</li>
+    </ul>
+
+    <h2>2. Uso de los Datos</h2>
+    <p>
+        Sus datos personales se utilizan para:
+        <ul>
+            <li>Gestionar su cuenta de usuario.</li>
+            <li>Procesar sus pedidos y asegurar su entrega.</li>
+            <li>Proporcionarle un soporte al cliente personalizado.</li>
+            <li>Enviarle comunicaciones de marketing si ha dado su consentimiento explícito.</li>
+        </ul>
+    </p>
+
+    <h2>3. Compartir Datos</h2>
+    <p>
+        No compartimos sus datos personales con terceros, excepto en los siguientes casos:
+        <ul>
+            <li>Cuando sea necesario para ejecutar su pedido (por ejemplo, proveedores de entrega).</li>
+            <li>Para cumplir con una obligación legal o una solicitud de las autoridades competentes.</li>
+        </ul>
+    </p>
+
+    <h2>4. Conservación de Datos</h2>
+    <p>
+        Sus datos personales se conservan únicamente durante el tiempo necesario para los fines para los cuales fueron recopilados, de acuerdo con los requisitos legales.
+    </p>
+
+    <h2>5. Sus Derechos</h2>
+    <p>
+        De acuerdo con el RGPD, usted tiene los siguientes derechos con respecto a sus datos personales:
+        <ul>
+            <li><strong>Derecho de acceso:</strong> Puede solicitar una copia de los datos que tenemos sobre usted.</li>
+            <li><strong>Derecho de rectificación:</strong> Puede corregir información inexacta o incompleta.</li>
+            <li><strong>Derecho de supresión:</strong> Puede solicitar la eliminación de sus datos, sujeto a las obligaciones legales de retención.</li>
+            <li><strong>Derecho de oposición:</strong> Puede oponerse al uso de sus datos con fines de marketing.</li>
+            <li><strong>Derecho de portabilidad:</strong> Puede solicitar la transferencia de sus datos a otro proveedor.</li>
+        </ul>
+    </p>
+    <p>
+        Para ejercer estos derechos, contáctenos en la siguiente dirección: <a href="mailto:privacy@yoursite.com">privacy@yoursite.com</a>.
+    </p>
+
+    <h2>6. Seguridad de los Datos</h2>
+    <p>
+        Implementamos medidas de seguridad técnicas y organizativas para proteger sus datos contra el acceso no autorizado, la pérdida o la divulgación.
+    </p>
+
+    <h2>7. Cookies</h2>
+    <p>
+        Nuestro sitio utiliza cookies para mejorar su experiencia de usuario y analizar el tráfico. Puede configurar su navegador para rechazar o eliminar las cookies.
+    </p>
+
+    <h2>8. Modificaciones de la Política de Privacidad</h2>
+    <p>
+        Nos reservamos el derecho de modificar esta política en cualquier momento. Cualquier cambio se publicará en esta página con una fecha de actualización.
+    </p>
+
+    <h2>9. Contacto</h2>
+    <p>
+        Para cualquier pregunta sobre nuestra política de privacidad, contáctenos en la siguiente dirección: <a href="mailto:support@tsarbucks.com">support@tsarbucks.com</a>.
+    </p>
+
+    <div class="mt-4">
+        <a href="{{ path('app_home') }}" class="btn btn-success">Volver al inicio</a>
+    </div>
+    <br>
+</div>
+{% endblock %}

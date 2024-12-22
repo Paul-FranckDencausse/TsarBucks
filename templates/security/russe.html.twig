@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Вход{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <form method="post" class="needs-validation">
+        <!-- Сообщение об ошибке -->
+        {% if error %}
+            <div class="alert alert-danger">
+                {{ error.messageKey|trans(error.messageData, 'security') }}
+            </div>
+        {% endif %}
+
+        <!-- Сообщение, если пользователь уже вошел в систему -->
+        {% if app.user %}
+            <div class="alert alert-info mb-3">
+                Вы вошли как {{ app.user.userIdentifier }}.
+                <a href="{{ path('app_logout') }}" class="btn btn-link">Выйти</a>
+            </div>
+        {% endif %}
+
+        <!-- Заголовок -->
+        <h1 class="h3 mb-3 font-weight-normal">Пожалуйста, войдите</h1>
+
+        <!-- Поле Email -->
+        <div class="form-group">
+            <label for="email">Адрес электронной почты</label>
+            <input type="email" id="email" name="_username" class="form-control" required>
+        </div>
+
+        <!-- Поле Пароль -->
+        <div class="mb-3">
+            <label for="password" class="form-label">Пароль</label>
+            <input type="password" name="_password" id="password"
+                   class="form-control" autocomplete="current-password" required>
+        </div>
+
+        <!-- Токен CSRF -->
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+        <!-- Флажок "Запомнить меня" -->
+        <div class="form-check mb-3">
+            <input type="checkbox" name="_remember_me" id="_remember_me" class="form-check-input">
+            <label for="_remember_me" class="form-check-label">Запомнить меня</label>
+        </div>
+
+        <!-- Кнопка входа -->
+        <button class="btn btn-lg btn-success w-100" type="submit">
+            Войти
+        </button>
+    </form>
+
+    <br>
+    <a href="{{ path('app_register') }}" class="btn btn-lg btn-primary w-100">Зарегистрироваться</a>
+</div>
+{% endblock %}

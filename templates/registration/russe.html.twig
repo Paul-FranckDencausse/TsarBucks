@@ -1,0 +1,128 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Регистрация{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1 class="mb-4">Регистрация</h1>
+
+    <!-- Отображение глобальных ошибок формы -->
+    {% if form_errors(registrationForm) %}
+        <div class="alert alert-danger">
+            {{ form_errors(registrationForm) }}
+        </div>
+    {% endif %}
+
+    <!-- Начало формы -->
+    {{ form_start(registrationForm, {'attr': {'class': 'needs-validation'}}) }}
+
+    <div class="row g-3">
+        <!-- Адрес электронной почты -->
+        <div class="col-md-6">
+            {{ form_row(registrationForm.email, {
+                label: 'Адрес электронной почты',
+                attr: {'class': 'form-control'}
+            }) }}
+        </div>
+
+        <!-- Пароль -->
+        <div class="col-md-6">
+            {{ form_row(registrationForm.plainPassword, {
+                label: 'Пароль',
+                attr: {'class': 'form-control'}
+            }) }}
+        </div>
+
+        <!-- Имя -->
+        <div class="col-md-6">
+            {{ form_row(registrationForm.nom, {
+                label: 'Имя',
+                attr: {'class': 'form-control'}
+            }) }}
+        </div>
+
+        <!-- Фамилия -->
+        <div class="col-md-6">
+            {{ form_row(registrationForm.prenom, {
+                label: 'Фамилия',
+                attr: {'class': 'form-control'}
+            }) }}
+        </div>
+
+        <!-- Пол -->
+        <div class="col-md-6">
+            {{ form_row(registrationForm.genre, {
+                label: 'Пол',
+                attr: {'class': 'form-select'}
+            }) }}
+        </div>
+
+        <!-- Телефон -->
+        <div class="col-md-6">
+            {{ form_row(registrationForm.telephone, {
+                label: 'Телефон',
+                attr: {'class': 'form-control'}
+            }) }}
+        </div>
+
+        <!-- Дата рождения -->
+        <div class="col-md-6">
+            {{ form_row(registrationForm.dateNaissance, {
+                label: 'Дата рождения',
+                attr: {'class': 'form-control'}
+            }) }}
+        </div>
+
+        <!-- Адрес -->
+        <div class="col-md-12">
+            {{ form_row(registrationForm.adresse, {
+                label: 'Адрес',
+                attr: {'class': 'form-control'}
+            }) }}
+        </div>
+
+        <!-- Почтовый индекс -->
+        <div class="col-md-6">
+            {{ form_row(registrationForm.codePostal, {
+                label: 'Почтовый индекс',
+                attr: {'class': 'form-control'}
+            }) }}
+        </div>
+
+        <!-- Город -->
+        <div class="col-md-6">
+            {{ form_row(registrationForm.ville, {
+                label: 'Город',
+                attr: {'class': 'form-control'}
+            }) }}
+        </div>
+
+        <!-- Родительское согласие -->
+        <div class="col-md-12">
+            <div class="form-check">
+                {{ form_row(registrationForm.accordParental, {
+                    label: 'Я подтверждаю, что получил родительское согласие (если несовершеннолетний)',
+                    attr: {'class': 'form-check-input'}
+                }) }}
+            </div>
+        </div>
+
+        <!-- Принятие условий -->
+        <div class="col-md-12">
+            <div class="form-check">
+                {{ form_row(registrationForm.agreeTerms, {
+                    label: 'Я принимаю условия и положения',
+                    attr: {'class': 'form-check-input'}
+                }) }}
+            </div>
+        </div>
+    </div>
+
+    <!-- Кнопка отправки -->
+    <div class="mt-4">
+        <button type="submit" class="btn btn-success">Зарегистрироваться</button>
+    </div>
+
+    {{ form_end(registrationForm) }}
+</div>
+{% endblock %}

@@ -1,0 +1,81 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Menciones Legales - Tsarbucks{% endblock %}
+
+{% block body %}
+<section class="py-5 bg-light">
+    <div class="container">
+        <h1 class="text-center mb-4">Menciones Legales</h1>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="mt-4">1. Información Legal</h2>
+                <p>
+                    De conformidad con las disposiciones de los artículos 6-III y 19 de la Ley n° 2004-575 del 21 de junio de 2004 para la Confianza en la Economía Digital, conocida como L.C.E.N., se informa a los usuarios y visitantes del sitio Tsarbucks de las siguientes menciones legales.
+                </p>
+                <p>
+                    El sitio Tsarbucks es accesible en la siguiente dirección: www.tsarbucks.com (en adelante "el Sitio"). El acceso y uso del Sitio están sujetos a las presentes "Menciones Legales" detalladas a continuación, así como a las leyes y/o reglamentos aplicables.
+                </p>
+
+                <h2 class="mt-4">2. Editor del Sitio</h2>
+                <p>
+                    El sitio Tsarbucks es editado por:
+                </p>
+                <ul>
+                    <li><strong>Nombre de la empresa:</strong> Tsarbucks Inc.</li>
+                    <li><strong>Dirección:</strong> 123 Avenida de los Zares, 75000 París, Francia</li>
+                    <li><strong>Teléfono:</strong> +33 1 23 45 67 89</li>
+                    <li><strong>Email:</strong> contact@tsarbucks.com</li>
+                    <li><strong>Director de publicación:</strong> Iván Románov</li>
+                </ul>
+
+                <h2 class="mt-4">3. Alojamiento</h2>
+                <p>
+                    El sitio está alojado por:
+                </p>
+                <ul>
+                    <li><strong>Nombre del alojamiento:</strong> Alojamiento XYZ</li>
+                    <li><strong>Dirección:</strong> 456 Calle de Internet, 75000 París, Francia</li>
+                    <li><strong>Teléfono:</strong> +33 9 87 65 43 21</li>
+                </ul>
+
+                <h2 class="mt-4">4. Propiedad Intelectual</h2>
+                <p>
+                    La estructura general del Sitio, así como los textos, gráficos, imágenes, sonidos y videos que lo componen, son propiedad del editor o de sus socios. Cualquier representación y/o reproducción y/o explotación, parcial o total, de los contenidos y servicios ofrecidos por el Sitio, por cualquier procedimiento que sea, sin la autorización previa y por escrito de Tsarbucks y/o de sus socios, está estrictamente prohibida y podría constituir una falsificación según los artículos L 335-2 y siguientes del Código de la Propiedad Intelectual.
+                </p>
+
+                <h2 class="mt-4">5. Enlaces Hipertexto</h2>
+                <p>
+                    El Sitio puede contener enlaces hipertexto a otros sitios presentes en la red Internet. Los enlaces a estos otros recursos lo sacarán del Sitio. Es posible crear un enlace a la página de presentación de este Sitio sin autorización expresa del editor. No se puede exigir ninguna autorización o solicitud de información previa por parte del editor respecto a un sitio que desee establecer un enlace al sitio del editor. Sin embargo, el sitio debe mostrarse en una nueva ventana del navegador. Sin embargo, el editor se reserva el derecho de solicitar la eliminación de un enlace que considere no conforme con el objeto del Sitio.
+                </p>
+
+                <h2 class="mt-4">6. Recopilación de Datos Personales</h2>
+                <p>
+                    La información recopilada en el Sitio es objeto de un tratamiento informático destinado a la gestión de nuestra relación con usted. Se conservan durante el tiempo estrictamente necesario para la realización de las finalidades mencionadas en el momento de su recopilación.
+                </p>
+                <p>
+                    De conformidad con la ley "Informática y Libertades" del 6 de enero de 1978 modificada y el Reglamento General de Protección de Datos (RGPD), usted dispone de un derecho de acceso, rectificación, supresión y portabilidad de los datos que le conciernen. También puede oponerse al tratamiento o solicitar su limitación.
+                </p>
+
+                <h2 class="mt-4">7. Cookies</h2>
+                <p>
+                    El Sitio puede recopilar automáticamente información estándar como su dirección IP, el tipo de navegador, el sistema operativo y los tiempos de acceso. Toda la información recopilada indirectamente solo se utilizará para seguir el volumen, el tipo y la configuración del tráfico que utiliza este Sitio, para desarrollar su diseño y disposición y para otros fines administrativos y de planificación y, más generalmente, para mejorar el servicio que le ofrecemos.
+                </p>
+
+                <h2 class="mt-4">8. Derecho Aplicable</h2>
+                <p>
+                    Las presentes condiciones del Sitio están regidas por las leyes francesas y cualquier litigio o controversia que pueda surgir de la interpretación o ejecución de las mismas estará sujeto a la jurisdicción exclusiva de los tribunales franceses.
+                </p>
+
+                <h2 class="mt-4">9. Contacto</h2>
+                <p>
+                    Para cualquier pregunta o información sobre los productos presentados en el Sitio, o relacionada con el Sitio mismo, puede dejar un mensaje en la siguiente dirección: contact@tsarbucks.com
+                </p>
+            </div>
+        </div>
+        <div class="mt-4">
+            <a href="{{ path('app_home') }}" class="btn btn-success">Volver al inicio</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

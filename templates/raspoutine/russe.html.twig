@@ -1,0 +1,69 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Tsarbucks Распутин{% endblock %}
+
+{% block body %}
+<section class="py-5 bg-light">
+    <div class="container">
+        <h1 class="text-center mb-4">Tsarbucks Распутин</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{{ asset('images/stars.jpeg') }}" alt="Описание изображения" class="card-img-top" alt="Tsarbucks Распутин" class="img-fluid rounded mb-4">
+            </div>
+            <div class="col-md-6">
+                <h2 class="mb-3">Тайна и Великолепие</h2>
+                <p>
+                    Откройте для себя загадочную ауру Распутина в нашем салоне Tsarbucks, посвященном этой легендарной фигуре русской истории. С темной и захватывающей атмосферой, погрузитесь в мистическую обстановку, наслаждаясь нашими авторскими творениями. Каждый уголок этого кафе напоминает о тайнах и легендах, окружающих влиятельного и противоречивого человека при дворе Романовых.
+                </p>
+                <p>
+                    Салон Tsarbucks Распутин приглашает вас на уникальный сенсорный опыт, сочетающий изысканные кофе, утонченные десерты и полное погружение в захватывающую и тревожную эпоху русской истории.
+                </p>
+                <p>
+                    <strong>Адрес:</strong> Улица Теней, 456, Москва, Россия<br>
+                    <strong>Часы работы:</strong> С понедельника по субботу, с 11:00 до 23:00
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-white">
+    <div class="container">
+        <h2 class="text-center mb-4">Наши Специальности</h2>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="{{ asset('images/coussins_luxueux.jpg') }}" class="card-img-top" alt="Роскошные Подушки">
+                    <div class="card-body">
+                        <h5 class="card-title">Роскошные Подушки</h5>
+                        <p class="card-text">Мягкие и утонченные десерты, созданные для того, чтобы принести королевский комфорт вашему вкусу.</p>
+                        <a href="{{ path('app_menu_index') }}" class="btn btn-success">Полное меню</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="{{ asset('images/banana_split.jpg') }}" class="card-img-top" alt="Императорский Банановый Сплит">
+                    <div class="card-body">
+                        <h5 class="card-title">Императорский Банановый Сплит</h5>
+                        <p class="card-text">Прикосновение имперской ностальгии с переосмысленной версией классического Бананового Сплита.</p>
+                        <a href="{{ path('app_menu_index') }}" class="btn btn-success">Полное меню</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="{{ asset('images/cafe_siberien.jpg') }}" class="card-img-top" alt="Сибирский Кофе">
+                    <div class="card-body">
+                        <h5 class="card-title">Сибирский Кофе</h5>
+                        <p class="card-text">Интенсивный и теплый кофе, идеально подходящий для противостояния ледяным ветрам Сибири.</p>
+                        <a href="{{ path('app_menu_index') }}" class="btn btn-success">Полное меню</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

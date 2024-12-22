@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Tsarbucks Stalingrad{% endblock %}
+
+{% block body %}
+<section class="py-5 bg-light">
+    <div class="container">
+        <h1 class="text-center mb-4">Tsarbucks Stalingrad</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.cruise-bordeaux.com%2Fwp-content%2Fuploads%2F2016%2F02%2FPlace-Stalingrad-Vincent-Bengold.jpg&f=1&nofb=1&ipt=aeea955d3599e24a30dc2ec52520383152665618be7f0f0231d670830b1787d5&ipo=images" class="card-img-top" alt="Tsarbucks Stalingrad" class="img-fluid rounded mb-4">
+            </div>
+            <div class="col-md-6">
+                <h2 class="mb-3">An Epic in the Heart of Bordeaux</h2>
+                <p>
+                    Immerse yourself in the fascinating history at Tsarbucks Stalingrad, a café with a unique charm located in the heart of Bordeaux. Inspired by the grandeur and resilience of Stalingrad, our lounge offers an atmosphere that evokes the great hours of the USSR, while combining modern comfort and historical ambiance.
+                </p>
+                <p>
+                    With its elegant decorations and historical references, each visit is an immersion into a glorious past while savoring our artisanal coffees and homemade pastries. Our space is ideal for a quiet coffee break, a meeting with friends, or simply to enjoy a moment of relaxation in an exceptional setting.
+                </p>
+                <p>
+                    <strong>Address:</strong> 123 Avenue Stalingrad, Bordeaux, France<br>
+                    <strong>Hours:</strong> Monday to Sunday, 9:00 AM to 10:00 PM
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-white">
+    <div class="container">
+        <h2 class="text-center mb-4">Our Specialties</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="{{ asset('images/canneles.jpg') }}" class="card-img-top" alt="Imperial Cannelés">
+                    <div class="card-body">
+                        <h5 class="card-title">Imperial Cannelés</h5>
+                        <p class="card-text">Golden cannelés, crispy on the outside and tender on the inside, a tribute to imperial grandeur.</p>
+                        <a href="{{ path('app_menu_index') }}" class="btn btn-success">Full Menu</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="{{ asset('images/café.jpg') }}" class="card-img-top" alt="Stakhanovist Coffee">
+                    <div class="card-body">
+                        <h5 class="card-title">Stakhanovist Coffee</h5>
+                        <p class="card-text">A robust and energizing coffee, perfect for keeping up with intense days, inspired by the dedication of workers.</p>
+                        <a href="{{ path('app_menu_index') }}" class="btn btn-success">Full Menu</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="{{ asset('images/matcha.jpg') }}" class="card-img-top" alt="Polonium Tea">
+                    <div class="card-body">
+                        <h5 class="card-title">Polonium Tea</h5>
+                        <p class="card-text">A unique and powerful tea, served to lovers of intense flavors, reminiscent of an era of mystery and intrigue.</p>
+                        <a href="{{ path('app_menu_index') }}" class="btn btn-success">Full Menu</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
