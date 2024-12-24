@@ -1,0 +1,95 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Allergènes et Interdits{% endblock %}
+
+{% block body %}
+<div class="container my-5">
+    <h1 class="text-center mb-4">Allergènes et Interdits</h1>
+
+    <h2 class="mt-5">Allergènes</h2>
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped table-hover">
+            <thead class="table-primary">
+                <tr>
+                    <th>Catégorie</th>
+                    <th>Exemples</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Lactose</td>
+                    <td>Lait, Crème, Beurre, Fromage, Chocolat au lait, Chantilly, Yaourt, Chocolat blanc</td>
+                </tr>
+                <tr>
+                    <td>Œufs</td>
+                    <td>Quiche, Œufs Fabergé, Croissant, Pain perdu, Muffins</td>
+                </tr>
+                <tr>
+                    <td>Gluten</td>
+                    <td>Blé, Seigle, Orge, Pâtisseries, Croissants, Muffins, Cookies, Brownies, Quiche, Pain, Toast, Pain perdu, Galette de sarrasin</td>
+                </tr>
+                <tr>
+                    <td>Fruits à coque</td>
+                    <td>Noix, Amandes, Noisettes, Sirop, Pâte à tartiner, Garnitures</td>
+                </tr>
+                <tr>
+                    <td>Soja</td>
+                    <td>Chocolat, Lait de soja</td>
+                </tr>
+                <tr>
+                    <td>Arachides</td>
+                    <td>Chocolat</td>
+                </tr>
+                <tr>
+                    <td>Poisson</td>
+                    <td>Bâtonnets de poisson</td>
+                </tr>
+                <tr>
+                    <td>Autres</td>
+                    <td>Sésame, Moutarde, Sulfites, Lupin, Céleri</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2 class="mt-5">Interdits selon les croyances et consciences</h2>
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped table-hover">
+            <thead class="table-success">
+                <tr>
+                    <th>Croyance/Conscience</th>
+                    <th>Viande</th>
+                    <th>Poisson</th>
+                    <th>Produits laitiers</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Judaïsme</td>
+                    <td>Interdits : quiche avec viande non casher, bacon, pirojki au porc, goulash non casher</td>
+                    <td>Interdits : bâtonnets de poisson (vérifier l'espèce et l'abattage)</td>
+                    <td>Interdits si mélangés avec viande : cappuccino, chocolat chaud, croissants, quiches au fromage, café viennois</td>
+                </tr>
+                <tr>
+                    <td>Islam</td>
+                    <td>Interdits : quiche avec porc, bacon, pirojki avec porc, goulash non halal</td>
+                    <td>Interdits pour certaines écoles : bâtonnets de poisson, crevettes</td>
+                    <td>Autorisés : produits laitiers halal, comme cappuccino, chocolat chaud</td>
+                </tr>
+                <tr>
+                    <td>Végétarisme</td>
+                    <td>Interdits : quiches avec viande, pirojki à la viande, bâtonnets de poisson, goulash</td>
+                    <td>Interdits : bâtonnets de poisson</td>
+                    <td>Autorisés : produits laitiers comme cappuccino, chocolat chaud, croissants, quiches au fromage</td>
+                </tr>
+                <tr>
+                    <td>Véganisme</td>
+                    <td>Interdits : tout plat contenant de la viande (quiches, pirojki, goulash)</td>
+                    <td>Interdits : bâtonnets de poisson</td>
+                    <td>Interdits : produits laitiers (cappuccino, chocolat chaud, croissants, gâteaux avec beurre, yaourts)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

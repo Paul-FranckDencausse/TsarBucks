@@ -64,6 +64,14 @@ class SalonsController extends AbstractController
             'controller_name' => 'AnastasiaController',
         ]);
     }
+    #[Route('/catherine', name: 'app_catherine')]
+    public function catherine(): Response
+    {
+        return $this->render('catherine/index.html.twig', [
+            'controller_name' => 'CatherineController',
+        ]);
+    }
+
     #[Route('/ru/catherine', name: 'app_catherine_russe')]
     public function ruCatherine(): Response
     {
