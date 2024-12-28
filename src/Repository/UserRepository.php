@@ -1,4 +1,6 @@
 <?php
+// src/Repository/UserRepository.php
+
 namespace App\Repository;
 
 use App\Entity\User;
@@ -52,5 +54,12 @@ class UserRepository extends ServiceEntityRepository implements PasswordUpgrader
             ->getSingleScalarResult();
     }
 
-    
+    // Trier les utilisateurs
+    public function findAllSorted(string $sort, string $order): array
+    {
+        return $this->createQueryBuilder('u')
+            ->orderBy('u.' . $sort, $order)
+            ->getQuery()
+            ->getResult();
+    }
 }

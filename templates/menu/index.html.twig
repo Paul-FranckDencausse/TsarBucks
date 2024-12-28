@@ -1,10 +1,10 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Menu Petit Déjeuner, Brunch & Goûner - Tsarbucks{% endblock %}
+{% block title %}Menu Petit Déjeuner, Brunch & Goûter - Tsarbucks{% endblock %}
 
 {% block body %}
 <div class="container mt-5">
-    <h1 class="text-center">Menu Petit Déjeuner, Brunch & Goûner Tsarbucks</h1>
+    <h1 class="text-center">Menu Petit Déjeuner, Brunch & Goûter Tsarbucks</h1>
     <p class="text-center lead">Commencez votre journée avec un petit déjeuner royal, poursuivez avec un brunch délicieux, et terminez avec un goûter parfait pour une fin d'après-midi ou un dîner léger.</p>
 
     <div class="row">
@@ -14,77 +14,95 @@
             <div class="row">
                 <div class="col-md-6 mb-4">
                     <div class="card">
-                        <img src="{{ asset('images/espresso.jpg') }}" class="card-img-top img-fluid" alt="Expresso">
                         <div class="card-body">
                             <h5 class="card-title">Expresso <span class="float-end">2.00€</span></h5>
-                            <p class="card-text">Avec un X pour énerver les Italiens, parce que l'expresso, c'est la vie !</p>
+                            <p class="card-text">Avec un X pour énerver les Italiens!</p>
+                             <div>
+                                <span class="badge bg-warning text-dark"><i class="fas fa-exclamation-triangle"></i> Contient caféine</span>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 mb-4">
                     <div class="card">
-                        <img src="{{ asset('images/ristretto.png') }}" class="card-img-top img-fluid" alt="Ristretto">
                         <div class="card-body">
-                            <h5 class="card-title">Ristretto <span class="float-end">2.20€</span></h5>
-                            <p class="card-text">Un expresso avec un X en plus, pour ceux qui aiment vivre dangereusement.</p>
+                            <h5 class="card-title">Rixtretto <span class="float-end">2.20€</span></h5>
+                            <p class="card-text">Avec un X pour énerver les Italiens!</p>
+                             <div>
+                                <span class="badge bg-warning text-dark"><i class="fas fa-exclamation-triangle"></i> Contient caféine</span>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 mb-4">
                     <div class="card">
-                        <img src="{{ asset('images/capuccino.jpeg') }}" class="card-img-top img-fluid" alt="Capuccino">
                         <div class="card-body">
-                            <h5 class="card-title">Capuccino <span class="float-end">3.00€</span></h5>
-                            <p class="card-text">Un mélange parfait d'expresso, de lait chaud et de mousse, pour ceux qui aiment la mousse au chocolat... sans le chocolat.</p>
+                            <h5 class="card-title">Caput-ccino  <span class="float-end">3.00€</span></h5>
+                            <p class="card-text">Pour les grands coup de fatigue.</p>
+                            <div>
+                                <span class="badge bg-warning text-dark"><i class="fas fa-exclamation-triangle"></i> Contient lactose</span>
+                                <span class="badge bg-danger"><i class="fas fa-times-circle"></i> Non végétalien</span>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 mb-4">
                     <div class="card">
-                        <img src="{{ asset('images/moka.jpg') }}" class="card-img-top img-fluid" alt="Moka">
                         <div class="card-body">
-                            <h5 class="card-title">Moka <span class="float-end">3.50€</span></h5>
-                            <p class="card-text">Un expresso sucré au chocolat et au lait, parce que le chocolat, c'est la vie !</p>
+                            <h5 class="card-title">Mock-Moka <span class="float-end">3.50€</span></h5>
+                            <p class="card-text">Vrai ou Faux? A vous de choisir!</p>
+                             <div>
+                                <span class="badge bg-warning text-dark"><i class="fas fa-exclamation-triangle"></i> Contient caféine</span>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 mb-4">
                     <div class="card">
-                        <img src="{{ asset('images/percole.jpg') }}" class="card-img-top img-fluid" alt="Café Perkele">
                         <div class="card-body">
                             <h5 class="card-title">Café Perkele <span class="float-end">2.50€</span></h5>
-                            <p class="card-text">Café classique infusé lentement pour une saveur riche, parce que le café, c'est sérieux.</p>
+                            <p class="card-text">A nos chers voisins suédois.</p>
+                              <div>
+                                <span class="badge bg-warning text-dark"><i class="fas fa-exclamation-triangle"></i> Contient caféine</span>
+                            </div>
                         </div>
+                        <br>
                     </div>
+
                 </div>
                 <div class="col-md-6 mb-4">
                     <div class="card">
-                        <img src="{{ asset('images/press.jpg') }}" class="card-img-top img-fluid" alt="Napoleon Press Coffee">
                         <div class="card-body">
                             <h5 class="card-title">Napoleon Press Coffee <span class="float-end">3.00€</span></h5>
-                            <p class="card-text">Un café fraîchement pressé à la méthode française, parce que même Napoléon aimait son café pressé.</p>
+                            <p class="card-text">"Bon baisers de Russie"</p>
+                             <div>
+                                <span class="badge bg-warning text-dark"><i class="fas fa-exclamation-triangle"></i> Contient caféine</span>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 mb-4">
                     <div class="card">
-                        <img src="{{ asset('images/viennois.jpg') }}" class="card-img-top img-fluid" alt="Moscovite">
                         <div class="card-body">
                             <h5 class="card-title">Moscovite <span class="float-end">3.50€</span></h5>
-                            <p class="card-text">Un expresso avec une touche de chantilly, parce que même les Moscovites aiment la douceur.</p>
+                            <p class="card-text">Toute ressemblance avec un café viennois est purement fortuite.</p>
+                              <div>
+                                <span class="badge bg-warning text-dark"><i class="fas fa-exclamation-triangle"></i> Contient caféine</span>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 mb-4">
                     <div class="card">
-                        <img src="{{ asset('images/americano.jpg') }}" class="card-img-top img-fluid" alt="Russiano">
                         <div class="card-body">
                             <h5 class="card-title">Russiano <span class="float-end">2.50€</span></h5>
-                            <p class="card-text">Un expresso allongé avec de l'eau chaude, parce que parfois, il faut allonger la sauce.</p>
+                            <p class="card-text">Toute ressemblance avec un americano est purement fortuite.</p>
+                            <div>
+                                <span class="badge bg-warning text-dark"><i class="fas fa-exclamation-triangle"></i> Contient caféine</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-              
             </div>
         </div>
 
@@ -94,74 +112,97 @@
             <div class="row">
                 <div class="col-md-6 mb-4">
                     <div class="card">
-                        <img src="{{ asset('images/noir.jpg') }}" class="card-img-top img-fluid" alt="Thé Noir">
                         <div class="card-body">
-                            <h5 class="card-title">Thé Noir <span class="float-end">2.00€</span></h5>
-                            <p class="card-text">Infusion riche et classique de thé noir, parce que le thé noir, c'est le nouveau noir.</p>
+                            <h5 class="card-title">Thé rouge du camarade Staline (noir) <span class="float-end">2.00€</span></h5>
+                            <p class="card-text">Infusion riche et classique de thé noir, parce que le thé rouge, c'est le nouveau noir.</p>
+                               <div>
+                                <span class="badge bg-success"><i class="fas fa-check-circle"></i> Végétalien</span>
+                                <span class="badge bg-info text-dark"><i class="fas fa-seedling"></i> Sans allergènes</span>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 mb-4">
                     <div class="card">
-                        <img src="{{ asset('images/the.jpg') }}" class="card-img-top img-fluid" alt="Thé au Polonium">
                         <div class="card-body">
                             <h5 class="card-title">Thé au Polonium (vert) <span class="float-end">2.50€</span></h5>
-                            <p class="card-text">Un thé vert léger et rafraîchissant, parce que le polonium, c'est radioactif... mais le thé vert, c'est sain !</p>
+                            <p class="card-text">L'établissement dénie toute responsabilité en cas d'empoisonement.</p>
+                            <div>
+                                <span class="badge bg-success"><i class="fas fa-check-circle"></i> Végétalien</span>
+                                <span class="badge bg-info text-dark"><i class="fas fa-seedling"></i> Sans allergènes</span>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 mb-4">
                     <div class="card">
-                        <img src="{{ asset('images/menthe.jpg') }}" class="card-img-top img-fluid" alt="Thé du Mentheur">
                         <div class="card-body">
                             <h5 class="card-title">Thé du Mentheur (menthe) <span class="float-end">2.50€</span></h5>
-                            <p class="card-text">Une infusion rafraîchissante de feuilles de menthe, parce que le mentheur, c'est le nouveau mentor.</p>
+                            <p class="card-text">La vérité si je mens!</p>
+                               <div>
+                                <span class="badge bg-success"><i class="fas fa-check-circle"></i> Végétalien</span>
+                                <span class="badge bg-info text-dark"><i class="fas fa-seedling"></i> Sans allergènes</span>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 mb-4">
                     <div class="card">
-                        <img src="{{ asset('images/blanc.jpeg') }}" class="card-img-top img-fluid" alt="Thé Russie Blanche">
                         <div class="card-body">
                             <h5 class="card-title">Thé Russie Blanche <span class="float-end">3.00€</span></h5>
-                            <p class="card-text">Délicat et légèrement floral, parce que la Russie blanche, c'est le nouveau blanc.</p>
+                            <p class="card-text">Découvrez la petite soeur de l'empire Tsariste.</p>
+                               <div>
+                                <span class="badge bg-success"><i class="fas fa-check-circle"></i> Végétalien</span>
+                                <span class="badge bg-info text-dark"><i class="fas fa-seedling"></i> Sans allergènes</span>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 mb-4">
                     <div class="card">
-                        <img src="{{ asset('images/rooibos.jpg') }}" class="card-img-top img-fluid" alt="Rooibots">
                         <div class="card-body">
-                            <h5 class="card-title">Rooibots <span class="float-end">2.50€</span></h5>
-                            <p class="card-text">Infusion sud-africaine naturellement sans caféine, parce que les rooibots, c'est les nouveaux robots.</p>
+                            <h5 class="card-title">Rooibots love <span class="float-end">2.50€</span></h5>
+                            <p class="card-text">Conforme aux trois lois de la robotique d'Asimov.</p>
+                               <div>
+                                <span class="badge bg-success"><i class="fas fa-check-circle"></i> Végétalien</span>
+                                <span class="badge bg-info text-dark"><i class="fas fa-seedling"></i> Sans allergènes</span>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 mb-4">
                     <div class="card">
-                        <img src="{{ asset('images/matcha.jpg') }}" class="card-img-top img-fluid" alt="Matcha">
                         <div class="card-body">
-                            <h5 class="card-title">Matcha <span class="float-end">4.00€</span></h5>
-                            <p class="card-text">Poudre de thé vert japonaise battue dans l'eau chaude, parce que le matcha, c'est le nouveau match.</p>
+                            <h5 class="card-title">Matcha-cha-cha<span class="float-end">4.00€</span></h5>
+                            <p class="card-text">Voulez-vous danser avec moi?</p>
+                         <div>
+                                <span class="badge bg-success"><i class="fas fa-check-circle"></i> Végétalien</span>
+                                <span class="badge bg-info text-dark"><i class="fas fa-seedling"></i> Sans allergènes</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-               
                 <div class="col-md-6 mb-4">
                     <div class="card">
-                        <img src="{{ asset('images/eau.jpg') }}" class="card-img-top img-fluid" alt="Novichok">
                         <div class="card-body">
                             <h5 class="card-title">Novichok (eau plate) <span class="float-end">1.50€</span></h5>
-                            <p class="card-text">Une eau pure et désaltérante, parce que le novichok, c'est le nouveau choc.</p>
+                            <p class="card-text">Testé et approuvé par nos opposants politiques!</p>
+                               <div>
+                                <span class="badge bg-success"><i class="fas fa-check-circle"></i> Végétalien</span>
+                                <span class="badge bg-info text-dark"><i class="fas fa-seedling"></i> Sans allergènes</span>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 mb-4">
                     <div class="card">
-                        <img src="{{ asset('images/jus.jpg') }}" class="card-img-top img-fluid" alt="Jus de Fruit 'Tropico'">
                         <div class="card-body">
                             <h5 class="card-title">Jus de Fruit "Tropico" <span class="float-end">3.00€</span></h5>
-                            <p class="card-text">Jus de fruits frais au choix, parce que le tropico, c'est le nouveau tropique.</p>
+                            <p class="card-text">Quand c'est trop libre  , c'est Tropico.</p>
+                               <div>
+                                <span class="badge bg-success"><i class="fas fa-check-circle"></i> Végétalien</span>
+                                <span class="badge bg-info text-dark"><i class="fas fa-seedling"></i> Sans allergènes</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -176,56 +217,66 @@
 
             <div class="menu-item mb-4">
                 <div class="row">
-                    <div class="col-md-4">
-                      
-                    </div>
+              
                     <div class="col-md-8">
                         <h4>Croissant <span class="float-end">2.00€</span></h4>
                         <p>Croissant traditionnel au beurre.</p>
+                      <div>
+                            <span class="badge bg-warning text-dark"><i class="fas fa-exclamation-triangle"></i> Contient arachides</span>
+                            <span class="badge bg-warning text-dark"><i class="fas fa-exclamation-triangle"></i> Contient gluten</span>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="menu-item mb-4">
                 <div class="row">
-                    <div class="col-md-4">
-                       
-                    </div>
+               
                     <div class="col-md-8">
-                        <h4>Chocolatine <span class="float-end">2.20€</span></h4>
-                        <p>Pain au chocolat doré et croustillant.</p>
+                        <h4>On dit chocolatine! <span class="float-end">2.20€</span></h4>
+                        <p>Non négociable</p>
+                       <div>
+                            <span class="badge bg-warning text-dark"><i class="fas fa-exclamation-triangle"></i> Contient arachides</span>
+                            <span class="badge bg-warning text-dark"><i class="fas fa-exclamation-triangle"></i> Contient gluten</span>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="menu-item mb-4">
                 <div class="row">
-                    <div class="col-md-4">
-                        
-                    </div>
+                   
                     <div class="col-md-8">
                         <h4>Gâteau Napoléon <span class="float-end">5.00€</span></h4>
-                        <p>Couches de pâte feuilletée et crème.</p>
+                        <p>"Bons baisers de Russie".Carte postale de la Bérézina.</p>
+                       <div>
+                            <span class="badge bg-warning text-dark"><i class="fas fa-exclamation-triangle"></i> Contient arachides</span>
+                            <span class="badge bg-warning text-dark"><i class="fas fa-exclamation-triangle"></i> Contient gluten</span>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="menu-item mb-4">
                 <div class="row">
-                    <div class="col-md-4">
-                        
-                    </div>
+                 
                     <div class="col-md-8">
                         <h4>Muffin <span class="float-end">2.50€</span></h4>
                         <p>Muffin moelleux, disponible en plusieurs saveurs.</p>
+                        <div>
+                            <span class="badge bg-warning text-dark"><i class="fas fa-exclamation-triangle"></i> Contient arachides</span>
+                            <span class="badge bg-warning text-dark"><i class="fas fa-exclamation-triangle"></i> Contient gluten</span>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="menu-item mb-4">
                 <div class="row">
-                    <div class="col-md-4">
-                      
-                    </div>
+                  
                     <div class="col-md-8">
                         <h4>Cookies Communiste <span class="float-end">3.00€</span></h4>
-                        <p>Parce que même les communistes aiment les cookies.</p>
+                        <p>A partager , évidemment!</p>
+                     <div>
+                            <span class="badge bg-warning text-dark"><i class="fas fa-exclamation-triangle"></i> Contient arachides</span>
+                            <span class="badge bg-warning text-dark"><i class="fas fa-exclamation-triangle"></i> Contient gluten</span>
+                        </div>
                     </div>
                 </div>
             </div>

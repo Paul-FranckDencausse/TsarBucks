@@ -4,17 +4,60 @@
 
 {% block body %}
     <div class="container mt-5">
-        <h1 class="mb-4">Clients </h1>
+        <h1 class="mb-4">Clients</h1>
 
         <table class="table table-striped table-bordered">
             <thead class="thead-dark">
                 <tr>
-                    <th>Id</th>
-                    <th>Email</th>
-                    <th>Nom</th>
-                    <th>Prénom</th>
+                    <th>
+                        <a href="{{ path('app_user_index', {'sort': 'id', 'order': order == 'asc' ? 'desc' : 'asc'}) }}">
+                            Id
+                            {% if sort == 'id' %}
+                                {% if order == 'asc' %}
+                                    <i class="fas fa-sort-up"></i>
+                                {% else %}
+                                    <i class="fas fa-sort-down"></i>
+                                {% endif %}
+                            {% endif %}
+                        </a>
+                    </th>
+                    <th>
+                        <a href="{{ path('app_user_index', {'sort': 'email', 'order': order == 'asc' ? 'desc' : 'asc'}) }}">
+                            Email
+                            {% if sort == 'email' %}
+                                {% if order == 'asc' %}
+                                    <i class="fas fa-sort-up"></i>
+                                {% else %}
+                                    <i class="fas fa-sort-down"></i>
+                                {% endif %}
+                            {% endif %}
+                        </a>
+                    </th>
+                    <th>
+                        <a href="{{ path('app_user_index', {'sort': 'nom', 'order': order == 'asc' ? 'desc' : 'asc'}) }}">
+                            Nom
+                            {% if sort == 'nom' %}
+                                {% if order == 'asc' %}
+                                    <i class="fas fa-sort-up"></i>
+                                {% else %}
+                                    <i class="fas fa-sort-down"></i>
+                                {% endif %}
+                            {% endif %}
+                        </a>
+                    </th>
+                    <th>
+                        <a href="{{ path('app_user_index', {'sort': 'prenom', 'order': order == 'asc' ? 'desc' : 'asc'}) }}">
+                            Prénom
+                            {% if sort == 'prenom' %}
+                                {% if order == 'asc' %}
+                                    <i class="fas fa-sort-up"></i>
+                                {% else %}
+                                    <i class="fas fa-sort-down"></i>
+                                {% endif %}
+                            {% endif %}
+                        </a>
+                    </th>
                     <th>Media_id</th>
-                    
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -26,11 +69,10 @@
                     <td>{{ user.nom }}</td>
                     <td>{{ user.prenom }}</td>
                     <td>Media</td>
-                    
                     <td>
                         <a href="{{ path('app_user_show', {'id': user.id}) }}" class="btn text-light btn-info btn-lg mb-2">Afficher</a>
                         <a href="{{ path('app_user_edit', {'id': user.id}) }}" class="btn text-light btn-warning btn-lg mb-2">Modifier</a>
-                        {{ include('user/_delete_form.html.twig') }} 
+                        {{ include('user/_delete_form.html.twig') }}
                     </td>
                 </tr>
             {% else %}
@@ -41,6 +83,6 @@
             </tbody>
         </table>
 
-       <a href="{{ path('app_admin_dashboard')}}" class="btn text-light btn-info btn-lg mb-2">Retour au tableau de bord</a>
+        <a href="{{ path('app_admin_dashboard') }}" class="btn text-light btn-info btn-lg mb-2">Retour au tableau de bord</a>
     </div>
 {% endblock %}

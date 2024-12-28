@@ -15,13 +15,20 @@ use Symfony\Component\Routing\Attribute\Route;
 final class UserController extends AbstractController
 {
     #[Route(name: 'app_user_index', methods: ['GET'])]
-    public function index(UserRepository $userRepository): Response
+    public function index(UserRepository $userRepository, Request $request): Response
     {
+        $sort = $request->query->get('sort', 'id'); // Par défaut, trier par 'id'
+        $order = $request->query->get('order', 'asc'); // Par défaut, trier en ordre croissant
+    
+        $users = $userRepository->findAllSorted($sort, $order);
+    
         return $this->render('user/index.html.twig', [
-            'users' => $userRepository->findAll(),
+            'users' => $users,
+            'sort' => $sort,
+            'order' => $order,
         ]);
     }
-
+    
     #[Route('/new', name: 'app_user_new', methods: ['GET', 'POST'])]
     public function new(Request $request, EntityManagerInterface $entityManager): Response
     {
