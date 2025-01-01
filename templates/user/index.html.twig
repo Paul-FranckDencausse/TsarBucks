@@ -10,7 +10,7 @@
 {% block body %}
     <div class="container mt-5">
         <h1 class="mb-4">Clients</h1>
- <input type="text" id="searchInput" placeholder="Rechercher..." class="form-control mb-3">
+        <input type="text" id="searchInput" placeholder="Rechercher..." class="form-control mb-3">
         <form id="filterForm">
             <div class="row mb-3">
                 <div class="col-md-3">
@@ -23,7 +23,7 @@
                     <input type="text" id="filterEmail" name="filterEmail" class="form-control" placeholder="Email">
                 </div>
                 <div class="col-md-3">
-                    <button type="button" class="btn btn-primary" onclick="applyFilters()">Filtrer</button>
+                    <button type="button" class="btn btn-success text-white btn-lg" onclick="applyFilters()">Filtrer</button>
                 </div>
             </div>
         </form>
@@ -108,14 +108,17 @@
         <a href="{{ path('app_admin_dashboard') }}" class="btn text-light btn-info btn-lg mb-2">Retour au tableau de bord</a>
     </div>
 {% endblock %}
-
 {% block javascripts %}
-    {{ parent() }}
     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Réinitialise les champs de filtre au chargement de la page
+            document.getElementById("filterForm").reset();
+        });
+
         function applyFilters() {
-            var filterName = document.getElementById("filterName").value.toUpperCase();
-            var filterPrenom = document.getElementById("filterPrenom").value.toUpperCase();
-            var filterEmail = document.getElementById("filterEmail").value.toUpperCase();
+            var filterName = document.getElementById("filterName").value.trim().toUpperCase();
+            var filterPrenom = document.getElementById("filterPrenom").value.trim().toUpperCase();
+            var filterEmail = document.getElementById("filterEmail").value.trim().toUpperCase();
             var table = document.getElementById("userTable");
             var tr = table.getElementsByTagName("tr");
 
@@ -143,3 +146,4 @@
         }
     </script>
 {% endblock %}
+
