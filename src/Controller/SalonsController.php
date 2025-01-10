@@ -15,6 +15,27 @@ class SalonsController extends AbstractController
             'controller_name' => 'SalonsController',
         ]);
     }
+    #[Route('/en/salons', name: 'app_salons_english')]
+    public function enIndex(): Response
+    {
+        return $this->render('salons/english.html.twig', [
+            'controller_name' => 'SalonsController',
+        ]);
+    }
+    #[Route('/es/salons', name: 'app_salons_castellano')]
+    public function esIndex(): Response
+    {
+        return $this->render('salons/castellano.html.twig', [
+            'controller_name' => 'SalonsController',
+        ]);
+    }
+    #[Route('/ru/salons', name: 'app_salons_russe')]
+    public function ruIndex(): Response
+    {
+        return $this->render('salons/russian.html.twig', [
+            'controller_name' => 'SalonsController',
+        ]);
+    }
     #[Route('/stalingrad', name: 'app_stalingrad')]
     public function stalingrad(): Response
     {
@@ -64,10 +85,31 @@ class SalonsController extends AbstractController
             'controller_name' => 'AnastasiaController',
         ]);
     }
+    #[Route('/ru/anastasia', name: 'app_anastasia_russe')]
+    public function ruAnastasia(): Response
+    {
+        return $this->render('anastasia/russe.html.twig', [
+            'controller_name' => 'AnastasiaController',
+        ]);
+    }
     #[Route('/catherine', name: 'app_catherine')]
     public function catherine(): Response
     {
         return $this->render('catherine/index.html.twig', [
+            'controller_name' => 'CatherineController',
+        ]);
+    }
+    #[Route('/en/catherine', name: 'app_catherine_english')]
+    public function enCatherine(): Response
+    {
+        return $this->render('catherine/english.html.twig', [
+            'controller_name' => 'CatherineController',
+        ]);
+    }
+    #[Route('/es/catherine', name: 'app_catherine_castellano')]
+    public function esCatherine(): Response
+    {
+        return $this->render('catherine/castellano.html.twig', [
             'controller_name' => 'CatherineController',
         ]);
     }
