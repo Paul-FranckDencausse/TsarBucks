@@ -45,4 +45,11 @@ class HomeController extends AbstractController
             'controller_name' => 'ActivitesController',
         ]);
     }
+    #[Route('/allergenes', name: 'app_allergenes')]
+    public function allergenes(): Response
+    {
+        return $this->render('allergenes/index.html.twig', [
+            'controller_name' => 'AllergenesController',
+        ]);
+    }
 }
