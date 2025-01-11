@@ -21,10 +21,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link {% if app.request.attributes.get('_route') == 'app_home' %}active{% endif %}" aria-current="page" href="{{ path('app_home') }}">Home</a>
+                        <a class="nav-link {% if app.request.attributes.get('_route') == 'app_home' %}active{% endif %}" aria-current="page" href="{{ path('app_english') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if app.request.attributes.get('_route') == 'app_login' %}active{% endif %}" href="{{ path('app_login') }}">Login</a>
+                        <a class="nav-link {% if app.request.attributes.get('_route') == 'app_login' %}active{% endif %}" href="{{ path('app_login_english') }}">Login</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {% if app.request.attributes.get('_route') == 'app_contact' %}active{% endif %}" href="{{ path('app_contact') }}">Contact</a>
@@ -56,10 +56,10 @@
     <footer class="bg-success text-white text-center py-4">
         <div class="container">
            <p>
-                <a href="{{ path('app_legal_english') }}" class="text-white">LAW</a>
+                <a href="{{ path('app_legal_english') }}" class="text-white">Legal Notices</a>
                 <a href="{{ path('app_cgu_english') }}" class="text-white">TOU</a>
                 <a href="{{ path('app_cgv_english') }}" class="text-white">TOS</a>
-                <a href="{{ path('app_rgpd_english') }}" class="text-white">LAW</a>
+                <a href="{{ path('app_rgpd_english') }}" class="text-white">Privacy Policy</a>
             </p>
         </div>
     </footer>

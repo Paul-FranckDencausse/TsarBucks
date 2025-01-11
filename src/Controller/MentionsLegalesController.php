@@ -32,7 +32,7 @@ class MentionsLegalesController extends AbstractController
     #[Route('/ru/legal', name: 'app_legal_russe')]
     public function ruIndex(): Response
     {
-        return $this->render('mentions_legales/russian.html.twig', [
+        return $this->render('mentions_legales/russe.html.twig', [
             'controller_name' => 'MentionsLegalesController',
         ]);
     }
@@ -60,7 +60,7 @@ class MentionsLegalesController extends AbstractController
     #[Route('/ru/rgpd', name: 'app_rgpd_russe')]
     public function ruRgpd(): Response
     {
-        return $this->render('rgpd/russian.html.twig', [
+        return $this->render('rgpd/russe.html.twig', [
             'controller_name' => 'RgpdController',
         ]);
     }
@@ -88,7 +88,7 @@ class MentionsLegalesController extends AbstractController
     #[Route('/ru/cgu', name: 'app_cgu_russe')]
     public function ruCgu(): Response
     {
-        return $this->render('cgu/russian.html.twig', [
+        return $this->render('cgu/russe.html.twig', [
             'controller_name' => 'CguController',
         ]);
     }
@@ -116,7 +116,7 @@ class MentionsLegalesController extends AbstractController
     #[Route('/ru/cgv', name: 'app_cgv_russe')]
     public function ruCgv(): Response
     {
-        return $this->render('cgv/russian.html.twig', [
+        return $this->render('cgv/russe.html.twig', [
             'controller_name' => 'CgvController',
         ]);
     }
