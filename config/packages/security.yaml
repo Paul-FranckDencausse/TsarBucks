@@ -1,6 +1,10 @@
 # config/packages/security.yaml
 
 security:
+    role_hierarchy:
+        ROLE_SUPER_ADMIN: [ROLE_ADMIN, ROLE_SALON_MANAGER]
+        ROLE_ADMIN: [ROLE_SALON_MANAGER]
+        ROLE_SALON_MANAGER: []
 
     password_hashers:
         # auto hasher with default options for the User class (and children)
@@ -16,6 +20,7 @@ security:
             entity:
                 class: App\Entity\User
                 property: email
+        # used to reload user from session & other features (e.g. switch_user)
 
     firewalls:
         dev:
