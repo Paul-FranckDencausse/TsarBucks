@@ -21,6 +21,7 @@
                     <p class="card-text"><strong>Adresse:</strong> {{ user.address }}</p>
                     <p class="card-text"><strong>Code Postal:</strong> {{ user.postalCode }}</p>
                     <p class="card-text"><strong>Ville:</strong> {{ user.city }}</p>
+                    <p class="card-text"><strong>Rôle:</strong> {{ role }}</p>
                 </div>
             </div>
         </div>
@@ -28,24 +29,38 @@
         <!-- Statistiques -->
         <div class="col-md-8">
             <div class="row">
-                <div class="col-md-6">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h5 class="card-title">Statistiques</h5>
-                            <p class="card-text"><strong>Rôle:</strong> {{ role }}</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h5 class="card-title">Activités Récentes</h5>
-                            <p class="card-text">Vous avez modifié votre profil.</p>
-                            <p class="card-text">Vous avez ajouté un nouveau commentaire.</p>
-                            <p class="card-text">Vous avez aimé une publication.</p>
-                        </div>
-                    </div>
-                </div>
+    <!-- Informations statistiques -->
+    <div class="col-md-6">
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">Statistiques</h5>
+                <p class="card-text"><strong>Total des activités :</strong> {{ totalActivities }}</p>
+                <p class="card-text"><strong>Dernière connexion :</strong> {{ lastLogin|date('d/m/Y H:i') }}</p>
+                <p class="card-text"><strong>Nombre de connexions :</strong> {{ connectionsCount }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+             <div class="col-md-6">
+    <div class="card mb-4">
+        <div class="card-body">
+            <h5 class="card-title">Activités Récentes</h5>
+            {% if activities|length > 0 %}
+                <ul>
+                    {% for activity in activities %}
+                        <li>
+                            {{ activity.description }} - <small>{{ activity.createdAt|date('d/m/Y H:i') }}</small>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>Aucune activité récente.</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
             </div>
         </div>
     </div>
