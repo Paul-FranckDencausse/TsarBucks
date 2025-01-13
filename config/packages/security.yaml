@@ -2,9 +2,14 @@
 
 security:
     role_hierarchy:
-        ROLE_SUPER_ADMIN: [ROLE_ADMIN, ROLE_SALON_MANAGER]
-        ROLE_ADMIN: [ROLE_SALON_MANAGER]
-        ROLE_SALON_MANAGER: []
+        ROLE_MANAGER_SALON_1: []
+        ROLE_MANAGER_SALON_2: []
+        ROLE_MANAGER_SALON_3: []
+        ROLE_MANAGER_SALON_4: []
+        ROLE_MANAGER_SALON_5: []
+        ROLE_MANAGER_SALON_6: []
+        ROLE_ADMIN: [ROLE_MANAGER_SALON_1, ROLE_MANAGER_SALON_2, ROLE_MANAGER_SALON_3, ROLE_MANAGER_SALON_4, ROLE_MANAGER_SALON_5, ROLE_MANAGER_SALON_6]
+        ROLE_SUPER_ADMIN: [ROLE_ADMIN]
 
     password_hashers:
         # auto hasher with default options for the User class (and children)

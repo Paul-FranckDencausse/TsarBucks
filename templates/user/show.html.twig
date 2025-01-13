@@ -35,13 +35,13 @@
     <h3>Modifier les rôles</h3>
     {{ form_start(form, {'attr': {'class': 'form'}}) }}
         {{ form_widget(form) }}
-        <button type="submit" class="btn btn-success mt-3">Mettre à jour</button>
+        <button type="submit" class="btn btn-warning btn-lg text-light mt-3">Mettre à jour</button>
     {{ form_end(form) }}
 </div>
 
 
         <div class="mt-3">
-            <a href="{{ path('app_user_index') }}" class="btn btn-lg btn-primary">Retour</a>
+            <a href="{{ path('app_user_index') }}" class="btn btn-lg btn-info text-light">Retour</a>
             {{ include('user/_delete_form.html.twig') }}
         </div>
     </div>
