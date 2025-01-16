@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Entity;
 
 use App\Repository\MenuRepository;
@@ -13,8 +12,8 @@ class Menu
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\Column(nullable: true)]
-    private ?int $media_id = null;
+    #[ORM\Column(length: 255, nullable: true)] // Correction ici
+    private ?string $media_id = null;
 
     #[ORM\Column(length: 255)]
     private ?string $name = null;
@@ -36,12 +35,12 @@ class Menu
         return $this->id;
     }
 
-    public function getMediaId(): ?int
+    public function getMediaId(): ?string
     {
         return $this->media_id;
     }
 
-    public function setMediaId(?int $media_id): static
+    public function setMediaId(?string $media_id): self
     {
         $this->media_id = $media_id;
 

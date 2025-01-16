@@ -19,3 +19,5 @@ services:
     App\Security\AuthenticationSuccessHandler:
         arguments:
             $router: '@router'
+parameters:
+    media_directory: '%kernel.project_dir%/public/uploads/media'

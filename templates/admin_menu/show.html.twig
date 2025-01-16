@@ -13,9 +13,18 @@
                 <td>{{ menu.id }}</td>
             </tr>
             <tr>
-                <th scope="row">Media ID</th>
-                <td>{{ menu.mediaId }}</td>
-            </tr>
+   <tr>
+    <th scope="row">Image</th>
+    <td>
+        {% if menu.mediaId %}
+            <img src="{{ asset('uploads/' ~ menu.mediaId) }}" alt="Image du menu {{ menu.name }}" class="img-thumbnail" style="max-width: 300px;">
+        {% else %}
+            <p>Aucune image disponible</p>
+        {% endif %}
+    </td>
+</tr>
+
+
             <tr>
                 <th scope="row">Nom</th>
                 <td>{{ menu.name }}</td>

@@ -10,6 +10,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
+use Symfony\Component\HttpFoundation\File\Exception\FileException; // Ajout de l'import
 
 #[Route('/admin/menu')]
 final class AdminMenuController extends AbstractController
@@ -30,6 +31,26 @@ final class AdminMenuController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            // Récupérer le fichier
+            $mediaFile = $form->get('media')->getData();
+
+            if ($mediaFile) {
+                $newFilename = uniqid() . '.' . $mediaFile->guessExtension();
+
+                try {
+                    $mediaFile->move(
+                        $this->getParameter('media_directory'), // Dossier où sauvegarder
+                        $newFilename
+                    );
+                } catch (FileException $e) {
+                    $this->addFlash('error', 'Le fichier n\'a pas pu être téléversé.'); // Message en cas d'erreur
+                    return $this->redirectToRoute('app_admin_menu_new', [], Response::HTTP_SEE_OTHER);
+                }
+
+                // Met à jour l'entité avec le nouveau chemin du fichier
+                $menu->setMediaId($newFilename);
+            }
+
             $entityManager->persist($menu);
             $entityManager->flush();
 
@@ -38,7 +59,7 @@ final class AdminMenuController extends AbstractController
 
         return $this->render('admin_menu/new.html.twig', [
             'menu' => $menu,
-            'form' => $form,
+            'form' => $form->createView(),
         ]);
     }
 
@@ -71,7 +92,13 @@ final class AdminMenuController extends AbstractController
     #[Route('/{id}', name: 'app_admin_menu_delete', methods: ['POST'])]
     public function delete(Request $request, Menu $menu, EntityManagerInterface $entityManager): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$menu->getId(), $request->getPayload()->getString('_token'))) {
+        if ($this->isCsrfTokenValid('delete' . $menu->getId(), $request->request->get('_token'))) {
+            // Supprimer le fichier lié
+            $mediaPath = $this->getParameter('media_directory') . '/' . $menu->getMediaId();
+            if (file_exists($mediaPath)) {
+                unlink($mediaPath);
+            }
+
             $entityManager->remove($menu);
             $entityManager->flush();
         }
