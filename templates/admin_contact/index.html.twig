@@ -10,6 +10,7 @@
         <thead class="thead-dark">
             <tr>
                 <th>Id</th>
+                <th>Salon</th>
                 <th>Email</th>
                 <th>Sujet</th>
                 <th>Message</th>
@@ -20,6 +21,7 @@
         {% for contact in contacts %}
             <tr>
                 <td>{{ contact.id }}</td>
+                <td>{{ contact.salon }}</td>
                 <td>{{ contact.email }}</td>
                 <td>{{ contact.subject }}</td>
                 <td>{{ contact.message }}</td>

@@ -23,6 +23,9 @@ class Contact
 
     #[ORM\Column(type: 'text')]
     private ?string $message = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $Salon = null;
     
 
     // Getters et Setters
@@ -63,6 +66,18 @@ class Contact
     public function setMessage(string $message): self
     {
         $this->message = $message;
+        return $this;
+    }
+
+    public function getSalon(): ?string
+    {
+        return $this->Salon;
+    }
+
+    public function setSalon(?string $Salon): static
+    {
+        $this->Salon = $Salon;
+
         return $this;
     }
 }
