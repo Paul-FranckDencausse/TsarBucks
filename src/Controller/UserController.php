@@ -12,6 +12,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
+
 #[Route('/user')]
 final class UserController extends AbstractController
 {
@@ -126,4 +127,6 @@ public function show(Request $request, User $user, EntityManagerInterface $entit
 
         return $this->redirectToRoute('app_user_index', [], Response::HTTP_SEE_OTHER);
     }
+
+  
 }

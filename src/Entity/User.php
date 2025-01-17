@@ -29,7 +29,8 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private ?string $prenom = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $mot_de_passe = null;
+    private ?string $password = null;
+    
 
     #[ORM\Column(type: 'json')]
     private array $roles = [];
@@ -117,30 +118,19 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
-    public function getMotDePasse(): ?string
-    {
-        return $this->mot_de_passe;
-    }
-
-    public function setMotDePasse(string $mot_de_passe): self
-    {
-        $this->mot_de_passe = $mot_de_passe;
-
-        return $this;
-    }
 
     public function getPassword(): ?string
     {
-        return $this->mot_de_passe;
+        return $this->password;
     }
 
-    public function setPassword(string $mot_de_passe): self
+    public function setPassword(string $password): self
     {
-        $this->mot_de_passe = $mot_de_passe;
-
+        $this->password = $password;
+    
         return $this;
     }
-
+    
     public function getRoles(): array
     {
         $roles = $this->roles;
