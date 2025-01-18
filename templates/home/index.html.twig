@@ -72,22 +72,30 @@
         </div>
     </div>
 </section>
-
 <div class="modal fade" id="cookieModal" tabindex="-1" aria-labelledby="cookieModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="cookieModalLabel">Utilisation des cookies</h5>
+                <h5 class="modal-title" id="cookieModalLabel">Un peu de cookies ? 🍪</h5>
             </div>
-            <div class="modal-body">
-                Camarade! Acceptez donc de partager vos cookies avec nous!
+            <div class="modal-body text-center">
+                <p>
+                    Camarade, nous avons besoin de tes cookies pour alimenter la révolution du café !<br>
+                    Promis, pas d'espionnage, juste du bon café et des statistiques anonymes.
+                </p>
+                <p>
+                    Tu ne voudrais pas dire non à un Tsar, hein ? Allez, fais un geste impérial, accepte nos cookies !
+                </p>
+                <img src="https://media.giphy.com/media/l4FGuhL4U2WyjdkaY/giphy.gif" alt="Cookie gif" class="img-fluid rounded">
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary" id="acceptCookies">Accepter</button>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-primary" id="acceptCookies">D'accord, pour la Tsarbuckocratie !</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Non, je préfère rester sans café...</button>
             </div>
         </div>
     </div>
 </div>
+
 
 
 {% endblock %}
@@ -111,11 +119,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Gestion du clic sur le bouton
     acceptButton.addEventListener('click', () => {
         document.cookie = "cookieConsent=true; path=/; max-age=" + 60 * 60 * 24 * 365; // 1 an
+        alert('Merci, camarade ! Ta contribution sera gravée dans l’histoire du café impérial.');
         cookieModal.hide();
     });
 });
-
 </script>
 {% endblock %}
-
 

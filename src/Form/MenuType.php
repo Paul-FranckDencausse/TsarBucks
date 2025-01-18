@@ -19,7 +19,8 @@ class MenuType extends AbstractType
             ])
             ->add('name')
             ->add('type')
-            ->add('recipe_id');
+            ->add('recipe_id')
+            ->add('price');
     }
 
     public function configureOptions(OptionsResolver $resolver): void
