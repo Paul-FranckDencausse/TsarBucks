@@ -10,11 +10,11 @@
         <!-- Session Barista -->
         <div class="col-md-4 mb-4">
             <div class="card">
-                <img src="{{ asset('images/barista.jpg') }}"  class="card-img-top" alt="Session Barista">
+                <img src="{{ asset('images/Barista.jpg') }}"  class="card-img-top" alt="Session Barista">
                 <div class="card-body">
                     <h5 class="card-title">Session Barista</h5>
                     <p class="card-text">Apprenez l'art de préparer des cafés exceptionnels avec nos experts barista. Découvrez les techniques de préparation, de mouture et d'infusion.</p>
-                    <a href="#" class="btn btn-success">En savoir plus</a>
+                        <a href="{{ path('app_barista') }}" class="btn btn-success">En savoir plus</a>
                 </div>
             </div>
         </div>
@@ -22,35 +22,11 @@
         <!-- Latte Art -->
         <div class="col-md-4 mb-4">
             <div class="card">
-                <img  src="{{ asset('images/latte.jpeg') }}" class="card-img-top" alt="Latte Art">
+                <img  src="{{ asset('images/latte_art.jpg') }}" class="card-img-top" alt="Latte Art">
                 <div class="card-body">
                     <h5 class="card-title">Latte Art</h5>
                     <p class="card-text">Explorez la créativité dans la préparation de votre café en apprenant à faire des dessins avec de la mousse de lait.</p>
-                    <a href="#" class="btn btn-success">En savoir plus</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Échecs -->
-        <div class="col-md-4 mb-4">
-            <div class="card">
-                <img  src="{{ asset('images/echecs.jpg') }}" class="card-img-top" alt="Échecs">
-                <div class="card-body">
-                    <h5 class="card-title">Échecs</h5>
-                    <p class="card-text">Participez à nos tournois d'échecs et améliorez vos compétences stratégiques avec d'autres passionnés.</p>
-                    <a href="#" class="btn btn-success">En savoir plus</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Langue et Culture Russe -->
-        <div class="col-md-4 mb-4">
-            <div class="card">
-                <img  src="{{ asset('images/traditions_russe.jpg') }}" class="card-img-top" alt="Langue et Culture Russe">
-                <div class="card-body">
-                    <h5 class="card-title">Langue et Culture Russe</h5>
-                    <p class="card-text">Découvrez la langue et la culture russes à travers des cours interactifs et des ateliers passionnants.</p>
-                    <a href="#" class="btn btn-success">En savoir plus</a>
+                      <a href="{{ path('app_latte') }}" class="btn btn-success">En savoir plus</a>
                 </div>
             </div>
         </div>
@@ -58,23 +34,47 @@
         <!-- Atelier Torréfaction -->
         <div class="col-md-4 mb-4">
             <div class="card">
-                <img  src="{{ asset('images/torréfaction.jpg') }}" class="card-img-top" alt="Atelier Torréfaction">
+                <img  src="{{ asset('images/torrefaction.jpg') }}" class="card-img-top" alt="Atelier Torréfaction">
                 <div class="card-body">
                     <h5 class="card-title">Atelier Torréfaction</h5>
                     <p class="card-text">Venez découvrir le processus de torréfaction du café et apprenez à créer des mélanges uniques.</p>
-                    <a href="#" class="btn btn-success">En savoir plus</a>
+                        <a href="{{ path('app_torrefaction') }}" class="btn btn-success">En savoir plus</a>
                 </div>
             </div>
         </div>
 
+
+        <!-- Langue et Culture Russe -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img  src="{{ asset('images/russe.jpg') }}" class="card-img-top" alt="Langue et Culture Russe">
+                <div class="card-body">
+                    <h5 class="card-title">Langue et Culture Russe</h5>
+                    <p class="card-text">Découvrez la langue et la culture russes à travers des cours interactifs et des ateliers passionnants.</p>
+                       <a href="{{ path('app_culture') }}" class="btn btn-success">En savoir plus</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Échecs -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img  src="{{ asset('images/chess.jpg') }}" class="card-img-top" alt="Échecs">
+                <div class="card-body">
+                    <h5 class="card-title">Échecs</h5>
+                    <p class="card-text">Participez à nos tournois d'échecs et améliorez vos compétences stratégiques avec d'autres passionnés.</p>
+                       <a href="{{ path('app_chess') }}" class="btn btn-success">En savoir plus</a>
+                </div>
+            </div>
+        </div>
         <!-- Activités pour Enfants -->
         <div class="col-md-4 mb-4">
             <div class="card">
-                <img  src="{{ asset('images/kids.jpg') }}" class="card-img-top" alt="Activités pour Enfants">
+                <img  src="{{ asset('images/children.jpg') }}" class="card-img-top" alt="Activités pour Enfants">
                 <div class="card-body">
                     <h5 class="card-title">Activités pour Enfants</h5>
                     <p class="card-text">Des ateliers ludiques et éducatifs pour les plus jeunes : jeux, créations artistiques, et bien plus encore !</p>
-                    <a href="#" class="btn btn-success">En savoir plus</a>
+                      <a href="{{ path('app_kids') }}" class="btn btn-success">En savoir plus</a>
                 </div>
             </div>
         </div>
