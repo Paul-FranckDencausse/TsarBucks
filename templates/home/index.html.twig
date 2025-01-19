@@ -3,11 +3,11 @@
 {% block title %}Accueil - Tsarbucks{% endblock %}
 
 {% block body %}
-<header class="text-center text-white py-5" style="background-image: url('https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fs2.r29static.com%2Fbin%2Fentry%2Ff13%2Fx%2C80%2F1743546%2Fimage.jpg&f=1&nofb=1&ipt=583b6949c22a36e694637256b169290a9b1c49155acf0e762c251e7ce2b2d2b4&ipo=images'); background-size: cover; background-position: center; min-height: 400px;">
+<header class="text-center text-white py-5" style="background-image: url('images/devanture.jpg'); background-size: cover; background-position: center; min-height: 400px;">
     <div class="container">
         <h1 class="display-4">Bienvenue chez TsarBucks</h1>
         <p class="lead">Découvrez les meilleurs salons de cafés près de chez vous</p>
-        <a href="{{ path('app_salons') }}" class="btn btn-success btn-lg">Voir les salons</a>
+       
     </div>
 </header>
 
@@ -16,14 +16,13 @@
         <h2 class="text-center mb-4">Le Concept Tsarbucks</h2>
         <div class="row">
             <div class="col-md-6 mb-4">
-                <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fs2.r29static.com%2Fbin%2Fentry%2Ff13%2Fx%2C80%2F1743546%2Fimage.jpg&f=1&nofb=1&ipt=583b6949c22a36e694637256b169290a9b1c49155acf0e762c251e7ce2b2d2b4&ipo=images" class="img-fluid rounded" alt="Café Tsarbucks">
+                <img src="{{ asset('images/toulouse.jpg') }}" class="img-fluid rounded" alt="Café Tsarbucks">
             </div>
             <div class="col-md-6">
                 <p class="text-center">
-                  Bienvenue chez TsarBucks! Toute ressemblance avec une marque américaine de salons de cafés est purement fortuite.
-                  Ce project est une création fictive réalisée dans le cadre du bachelor et titre professionnel de concepteur/développeur d'applications web chez My Digital School Bordeaux par Paul-Franck Dencausse.
-                  Tsarbucks s'inspire librement de l'histoire de la russie Tsariste et Soviétique jusqu'à la chute du mur de Berlin. Ce n'est en aucun cas une apologie de ces régimes politiques ou de l'actuel. 
-                  J'espère que vous saurez apprécier ce projet pas très orthodoxe, ni très catholique sans protester  
+                  Bienvenue chez TsarBucks! Toute ressemblance avec une marque américaine de salons de cafés est purement fortuite.<br>
+                   <a href="{{ path('app_salons') }}" class="btn btn-success ml-2 btn-lg text-white">Voir les salons</a>
+                
                 </p>
                 <p class="text-center">
                     L'âme de Tsarbucks c'est un humour décalé et des activités conviviales.
@@ -87,7 +86,9 @@
                     Promis, pas d'espionnage, juste du bon café et des statistiques anonymes.
                 </p>
                 <p>
-                    Tu ne voudrais pas dire non à un Tsar, hein ? Allez, fais un geste impérial, accepte nos cookies !
+                     Ce project est une création fictive réalisée dans le cadre du bachelor et titre professionnel de concepteur/développeur d'applications web chez My Digital School Bordeaux par Paul-Franck Dencausse.
+                  Tsarbucks s'inspire librement de l'histoire de la russie Tsariste et Soviétique jusqu'à la chute du mur de Berlin. Ce n'est en aucun cas une apologie de ces régimes politiques ou de l'actuel. 
+                  J'espère que vous saurez apprécier ce projet pas très orthodoxe, ni très catholique sans protester  
                 </p>
                 <img src="https://media.giphy.com/media/l4FGuhL4U2WyjdkaY/giphy.gif" alt="Cookie gif" class="img-fluid rounded">
             </div>

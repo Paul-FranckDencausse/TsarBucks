@@ -76,16 +76,39 @@ final class AdminMenuController extends AbstractController
     {
         $form = $this->createForm(MenuType::class, $menu);
         $form->handleRequest($request);
-
+    
         if ($form->isSubmitted() && $form->isValid()) {
+            $newMediaFile = $form->get('media')->getData();
+    
+            if ($newMediaFile) {
+                // Supprimer l'ancien fichier si nécessaire
+                if ($menu->getMediaId()) {
+                    $oldMediaPath = $this->getParameter('media_directory') . '/' . $menu->getMediaId();
+                    if (file_exists($oldMediaPath)) {
+                        unlink($oldMediaPath);
+                    }
+                }
+    
+                // Sauvegarder le nouveau fichier
+                $newFilename = uniqid() . '.' . $newMediaFile->guessExtension();
+                $newMediaFile->move(
+                    $this->getParameter('media_directory'),
+                    $newFilename
+                );
+    
+                // Mettre à jour l'entité avec le nouveau fichier
+                $menu->setMediaId($newFilename);
+            }
+    
             $entityManager->flush();
-
+    
+            $this->addFlash('success', 'Le plat a bien été modifié.');
             return $this->redirectToRoute('app_admin_menu_index', [], Response::HTTP_SEE_OTHER);
         }
-
+    
         return $this->render('admin_menu/edit.html.twig', [
             'menu' => $menu,
-            'form' => $form,
+            'form' => $form->createView(),
         ]);
     }
 

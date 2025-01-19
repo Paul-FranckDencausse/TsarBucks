@@ -33,29 +33,28 @@
                     <div class="card mb-4">
                         <div class="card-body">
                             <h5 class="card-title">Statistiques</h5>
-                            
+                            <canvas id="userChart" width="400" height="200"></canvas>
                         </div>
                     </div>
                 </div>
-             <div class="col-md-6">
-    <div class="card mb-4">
-        <div class="card-body">
-            <h5 class="card-title">Activités Récentes</h5>
-            {% if activities|length > 0 %}
-                <ul>
-                    {% for activity in activities %}
-                        <li>
-                            {{ activity.description }} - <small>{{ activity.createdAt|date('d/m/Y H:i') }}</small>
-                        </li>
-                    {% endfor %}
-                </ul>
-            {% else %}
-                <p>Aucune activité récente.</p>
-            {% endif %}
-        </div>
-    </div>
-</div>
-
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Activités Récentes</h5>
+                            {% if activities|length > 0 %}
+                                <ul>
+                                    {% for activity in activities %}
+                                        <li>
+                                            {{ activity.description }} - <small>{{ activity.createdAt|date('d/m/Y H:i') }}</small>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            {% else %}
+                                <p>Aucune activité récente.</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -64,17 +63,42 @@
     <div class="row">
         <div class="col-md-12">
             <div class="card mb-4">
-                    <div class="d-grid gap-3">
-                        <a href="#" class="btn btn-primary btn-lg">Modifier le Profil</a>
-                        <a href="{{ path('app_change_password', { id: user.id }) }}" class="btn btn-secondary btn-lg">Changer le mot de passe</a>
-                        <a href="{{ path('app_logout') }}" class="btn btn-danger btn-lg">Déconnexion</a>
-                        {% if is_granted('ROLE_ADMIN') %}
-                            <a href="{{ path('app_admin_dashboard') }}" class="btn btn-warning btn-lg text-white">Tableau de Bord Admin</a>
-                        {% endif %}
-                    </div>
-
+                <div class="d-grid gap-3">
+                    <a href="#" class="btn btn-primary btn-lg">Modifier le Profil</a>
+                    <a href="{{ path('app_change_password', { id: user.id }) }}" class="btn btn-secondary btn-lg">Changer le mot de passe</a>
+                    <a href="{{ path('app_logout') }}" class="btn btn-danger btn-lg">Déconnexion</a>
+                    {% if is_granted('ROLE_ADMIN') %}
+                        <a href="{{ path('app_admin_dashboard') }}" class="btn btn-warning btn-lg text-white">Tableau de Bord Admin</a>
+                    {% endif %}
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var ctx = document.getElementById('userChart').getContext('2d');
+        var userChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet'],
+                datasets: [{
+                    label: 'Nombre d\'utilisateurs',
+                    data: [12, 19, 3, 5, 2, 3, 7],
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    });
+</script>
 {% endblock %}

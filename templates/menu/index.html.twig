@@ -6,23 +6,24 @@
 <div class="container mt-5">
     <h1 class="text-center">Notre Menu</h1>
     <p class="text-center">Découvrez notre menu de petits-déjeuners, brunchs et goûters.</p>
+<div class="row">
+    {% for item in menus %}
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <!-- Image -->
+               <img src="{{ asset('uploads/media/' ~ item.MediaId) }}" class="card-img-top" alt="{{ item.name }}">
 
-    <div class="row">
-        {% for item in menus %}
-            <div class="col-md-4 mb-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ item.name }}</h5>
-                        <p class="card-text">{{ item.type }}</p>
-                        <p class="card-text text-muted">{{ item.description }}</p>
-                        <p class="card-text fw-bold">{{ item.price }} €</p>
-                        <p>{{item.MediaId}}</p>
-                    </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{ item.name }}</h5>
+                    <p class="card-text">{{ item.type }}</p>
+                    <p class="card-text text-muted">{{ item.description }}</p>
+                    <p class="card-text fw-bold">{{ item.price }} €</p>
                 </div>
             </div>
-        {% else %}
-            <p class="text-center">Aucun élément trouvé dans le menu pour le moment.</p>
-        {% endfor %}
-    </div>
+        </div>
+    {% else %}
+        <p class="text-center">Aucun élément trouvé dans le menu pour le moment.</p>
+    {% endfor %}
 </div>
+
 {% endblock %}

@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello CatherineController!{% endblock %}
+{% block title %}Tsarbucks Catherine II{% endblock %}
 
 {% block body %}
 
@@ -9,7 +9,7 @@
         <h1 class="text-center mb-4">Tsarbucks Catherine II</h1>
         <div class="row">
             <div class="col-md-6">
-                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.lequotidiendelart.com%2Fmedia%2Fcache%2Farticle_page_cover%2Fshared%2Farticle-image%2F1377.jpg&f=1&nofb=1&ipt=8960def0889c94161053c3b159a86d259c4f022e49d6935394edee95bd0c1147&ipo=images" class="img-fluid rounded mb-4" alt="Tsarbucks Catherine II">
+               <img src="{{ asset('images/eiffel.jpg') }}"   class="img-fluid rounded mb-4" alt="Tsarbucks Catherine II">
             </div>
             <div class="col-md-6">
                 <h2 class="mb-3">Un Voyage dans le Temps</h2>
@@ -34,7 +34,7 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
-                    <img src="#" class="card-img-top" alt="Macarons Impériaux">
+                   <img src="{{ asset('images/macarons_imperiaux.jpg') }}"   class="card-img-top" alt="Macarons Impériaux">
                     <div class="card-body">
                         <h5 class="card-title">Macarons Impériaux</h5>
                         <p class="card-text">Des macarons raffinés, aux saveurs royales et à la texture parfaite, pour un plaisir impérial en bouche.</p>
@@ -44,7 +44,7 @@
             </div>
             <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
-                    <img src="#" class="card-img-top" alt="Chocolat Chaud Russie Blanche">
+                    <img src="{{ asset('images/chocolat_chaud_blanc.jpg') }}"   class="card-img-top" alt="Chocolat Chaud Russie Blanche">
                     <div class="card-body">
                         <h5 class="card-title">Chocolat Chaud "Russie Blanche"</h5>
                         <p class="card-text">Un chocolat chaud crémeux et onctueux, inspiré des hivers russes, pour réchauffer les âmes les plus froides.</p>
@@ -54,7 +54,7 @@
             </div>
             <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
-                    <img src="#" class="card-img-top" alt="Café Moscovite">
+                    <img src="{{ asset('images/cafe_viennois.jpg') }}"   class="card-img-top" alt="Café Moscovite">
                     <div class="card-body">
                         <h5 class="card-title">Café Moscovite</h5>
                         <p class="card-text">Un café viennois revisité, mariant l'intensité du café et la douceur de la crème, pour un voyage au cœur de Moscou.</p>
