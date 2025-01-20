@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Créer un Nouveau Menu de Salon{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Créer un Nouveau Menu de Salon</h1>
+
+    <!-- Formulaire -->
+    <div class="card shadow p-4">
+        {{ include('saloon_menu/_form.html.twig') }}
+    </div>
+
+    <!-- Bouton retour -->
+    <div class="mt-3">
+        <a href="{{ path('app_saloon_menu_index') }}" class="btn btn-secondary">
+            Retour à la liste
+        </a>
+    </div>
+</div>
+{% endblock %}

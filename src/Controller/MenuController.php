@@ -6,19 +6,25 @@ use App\Repository\MenuRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use App\Repository\SaloonMenuRepository;
 
 class MenuController extends AbstractController
 {
-    #[Route('/menu', name: 'app_menu_index')]
-    public function index(MenuRepository $menuRepository): Response
-    {
-        // Récupérer tous les éléments du menu depuis la base de données
-        $menus = $menuRepository->findAll();
+   // Dans ton contrôleur
+#[Route('/menu', name: 'app_menu')]
+public function menu(MenuRepository $menuRepo, SaloonMenuRepository $saloonMenuRepo): Response
+{
+    $menus = $menuRepo->findAll();
+    $saloonMenus = $saloonMenuRepo->findAll();
 
-        return $this->render('menu/index.html.twig', [
+    return $this->render('menu/index.html.twig', [
+        'allMenus' => [
             'menus' => $menus,
-        ]);
-    }
+            'specialties' => $saloonMenus,
+        ],
+    ]);
+}
+
 
     #[Route('/ruMenu', name: 'app_menu_russian')]
     public function russian(MenuRepository $menuRepository): Response
