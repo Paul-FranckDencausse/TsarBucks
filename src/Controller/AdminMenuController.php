@@ -48,7 +48,7 @@ final class AdminMenuController extends AbstractController
                 }
 
                 // Met à jour l'entité avec le nouveau chemin du fichier
-                $menu->setMediaId($newFilename);
+                $menu->setimageFilename($newFilename);
             }
 
             $entityManager->persist($menu);
@@ -82,8 +82,8 @@ final class AdminMenuController extends AbstractController
     
             if ($newMediaFile) {
                 // Supprimer l'ancien fichier si nécessaire
-                if ($menu->getMediaId()) {
-                    $oldMediaPath = $this->getParameter('media_directory') . '/' . $menu->getMediaId();
+                if ($menu->getimageFilename()) {
+                    $oldMediaPath = $this->getParameter('media_directory') . '/' . $menu->getimageFilename();
                     if (file_exists($oldMediaPath)) {
                         unlink($oldMediaPath);
                     }
@@ -97,7 +97,7 @@ final class AdminMenuController extends AbstractController
                 );
     
                 // Mettre à jour l'entité avec le nouveau fichier
-                $menu->setMediaId($newFilename);
+                $menu->setimageFilename($newFilename);
             }
     
             $entityManager->flush();
@@ -117,7 +117,7 @@ final class AdminMenuController extends AbstractController
     {
         if ($this->isCsrfTokenValid('delete' . $menu->getId(), $request->request->get('_token'))) {
             // Supprimer le fichier lié
-            $mediaPath = $this->getParameter('media_directory') . '/' . $menu->getMediaId();
+            $mediaPath = $this->getParameter('media_directory') . '/' . $menu->getimageFilename();
             if (file_exists($mediaPath)) {
                 unlink($mediaPath);
             }

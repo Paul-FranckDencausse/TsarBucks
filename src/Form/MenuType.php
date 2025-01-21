@@ -20,6 +20,8 @@ class MenuType extends AbstractType
             ])
             ->add('name')
             ->add('type')
+            ->add('description')
+            ->add('allergies')
             ->add('recipe_id')
             ->add('price')
             ->add('isAvailable', CheckboxType::class, [

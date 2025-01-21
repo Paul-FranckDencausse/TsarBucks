@@ -33,6 +33,9 @@ class Menu
     #[ORM\Column(nullable: true)]
     private ?bool $isAvailable = true;
 
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $allergies = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -118,6 +121,18 @@ class Menu
     public function setIsAvailable(?bool $isAvailable): static
     {
         $this->isAvailable = $isAvailable;
+
+        return $this;
+    }
+
+    public function getAllergies(): ?string
+    {
+        return $this->allergies;
+    }
+
+    public function setAllergies(?string $allergies): static
+    {
+        $this->allergies = $allergies;
 
         return $this;
     }
