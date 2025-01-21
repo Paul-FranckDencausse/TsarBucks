@@ -42,11 +42,8 @@ class RegistrationFormType extends AbstractType
                 ],
             ])
             ->add('email', EmailType::class, [
-                'label' => 'Adresse Email',
-                'attr' => ['class' => 'form-control'],
-                'constraints' => [
-                    new NotBlank(['message' => 'Veuillez fournir une adresse email.']),
-                ],
+                'required' => true,
+                'label' => 'Adresse email',
             ])
             ->add('genre', ChoiceType::class, [
                 'label' => 'Genre',

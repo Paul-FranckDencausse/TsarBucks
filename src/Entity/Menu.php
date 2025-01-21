@@ -13,7 +13,7 @@ class Menu
     private ?int $id = null;
 
     #[ORM\Column(length: 255, nullable: true)] // Correction ici
-    private ?string $media_id = null;
+    private ?string $imageFilename = null;
 
     #[ORM\Column(length: 255)]
     private ?string $name = null;
@@ -30,19 +30,22 @@ class Menu
     #[ORM\Column(nullable: true)]
     private ?float $price = null;
 
+    #[ORM\Column(nullable: true)]
+    private ?bool $isAvailable = true;
+
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getMediaId(): ?string
+    public function getimageFilename(): ?string
     {
-        return $this->media_id;
+        return $this->imageFilename;
     }
 
-    public function setMediaId(?string $media_id): self
+    public function setimageFilename(?string $imageFilename): self
     {
-        $this->media_id = $media_id;
+        $this->imageFilename = $imageFilename;
 
         return $this;
     }
@@ -104,6 +107,18 @@ class Menu
     {
         $this->price = $price;
     
+        return $this;
+    }
+
+    public function isAvailable(): ?bool
+    {
+        return $this->isAvailable;
+    }
+
+    public function setIsAvailable(?bool $isAvailable): static
+    {
+        $this->isAvailable = $isAvailable;
+
         return $this;
     }
 }

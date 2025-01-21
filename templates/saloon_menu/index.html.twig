@@ -4,7 +4,7 @@
 
 {% block body %}
 <div class="container mt-5">
-    <h1 class="text-center mb-4">Menu des Salons</h1>
+    <h1 class="text-center mb-4">Spécialités locales</h1>
 
     <table class="table table-striped table-bordered text-center">
         <thead class="table-dark">
@@ -40,8 +40,8 @@
                 <td>{{ saloon_menu.recipeId }}</td>
                 <td>{{ saloon_menu.price }}</td>
                 <td>
-                    <a href="{{ path('app_saloon_menu_show', {'id': saloon_menu.id}) }}" class="btn btn-sm btn-primary">Voir</a>
-                    <a href="{{ path('app_saloon_menu_edit', {'id': saloon_menu.id}) }}" class="btn btn-sm btn-warning">Modifier</a>
+                    <a href="{{ path('app_saloon_menu_show', {'id': saloon_menu.id}) }}" class="btn  btn-info btn-lg text-white">Voir</a>
+                    <a href="{{ path('app_saloon_menu_edit', {'id': saloon_menu.id}) }}" class="btn btn-lg btn-warning text-white">Modifier</a>
                 </td>
             </tr>
         {% else %}
@@ -53,7 +53,9 @@
     </table>
 
     <div class="d-flex justify-content-end">
-        <a href="{{ path('app_saloon_menu_new') }}" class="btn btn-success">Créer un nouveau menu</a>
+        <a href="{{ path('app_saloon_menu_new') }}" class="btn btn-success btn-lg text-white">Créer un nouveau plat</a>
+        
     </div>
+    <br>
 </div>
 {% endblock %}

@@ -38,6 +38,9 @@ class SaloonMenu
     #[ORM\Column(nullable: true)]
     private ?float $price = null;
 
+    #[ORM\Column(nullable: true)]
+    private ?bool $isAvailable = true;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -135,6 +138,18 @@ public function setImageFilename(?string $imageFilename): static
     public function setPrice(?float $price): static
     {
         $this->price = $price;
+
+        return $this;
+    }
+
+    public function isAvailable(): ?bool
+    {
+        return $this->isAvailable;
+    }
+
+    public function setIsAvailable(?bool $isAvailable): static
+    {
+        $this->isAvailable = $isAvailable;
 
         return $this;
     }

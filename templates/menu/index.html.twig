@@ -8,19 +8,22 @@
     <p class="text-center">Découvrez notre menu de petits-déjeuners, brunchs et goûters.</p>
     <div class="row">
         {% for category, items in allMenus %}
-           <h2 class="mt-5 text-center" style="color: {{ category == 'specialties' ? 'red' : 'black' }};">
-    {{ category == 'menus' ? 'Menu Principal' : 'Spécialités' }}
-</h2>
+            <h2 class="mt-5 text-center" style="color: {{ category == 'specialties' ? 'red' : 'black' }};">
+                {{ category == 'menus' ? 'Menu Principal' : 'Spécialités' }}
+            </h2>
 
             {% for item in items %}
                 <div class="col-md-4 mb-4">
-                    <div class="card h-100">
-                        <img src="{{ asset('uploads/media/' ~ item.MediaId) }}" class="card-img-top" alt="{{ item.name }}">
+                    <div class="card h-100 {{ not item.isAvailable ? 'grayed-out' : '' }}">
+                        <img src="{{ asset('uploads/media/' ~ item.imageFilename) }}" class="card-img-top" alt="{{ item.name }}">
                         <div class="card-body">
                             <h5 class="card-title">{{ item.name }}</h5>
                             <p class="card-text">{{ item.type }}</p>
                             <p class="card-text text-muted">{{ item.description }}</p>
                             <p class="card-text fw-bold">{{ item.price }} €</p>
+                            {% if not item.isAvailable %}
+                                <p class="text-danger fw-bold">Indisponible</p>
+                            {% endif %}
                         </div>
                     </div>
                 </div>

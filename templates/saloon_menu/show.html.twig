@@ -1,10 +1,10 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Détails du Menu du Salon{% endblock %}
+{% block title %}Détails du plat{% endblock %}
 
 {% block body %}
 <div class="container mt-5">
-    <h1 class="text-center mb-4">Détails du Menu du Salon</h1>
+    <h1 class="text-center mb-4">Détails du plat</h1>
 
     <table class="table table-bordered">
         <tbody>
@@ -54,9 +54,10 @@
     </table>
 
     <div class="d-flex justify-content-between mt-4">
-        <a href="{{ path('app_saloon_menu_index') }}" class="btn btn-secondary">Retour à la liste</a>
+      
         <div>
-            <a href="{{ path('app_saloon_menu_edit', {'id': saloon_menu.id}) }}" class="btn btn-warning">Modifier</a>
+          <a href="{{ path('app_saloon_menu_index') }}" class="btn btn-info btn-lg text-white">Retour à la liste</a>
+            <a href="{{ path('app_saloon_menu_edit', {'id': saloon_menu.id}) }}" class="btn btn-warning btn-lg text-white">Modifier</a>
             {{ include('saloon_menu/_delete_form.html.twig', { class: 'd-inline-block' }) }}
         </div>
     </div>

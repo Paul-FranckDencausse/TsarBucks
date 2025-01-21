@@ -6,6 +6,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 
 class MenuType extends AbstractType
 {
@@ -20,7 +21,11 @@ class MenuType extends AbstractType
             ->add('name')
             ->add('type')
             ->add('recipe_id')
-            ->add('price');
+            ->add('price')
+            ->add('isAvailable', CheckboxType::class, [
+                'label' => 'Disponible',
+                'required' => false, // Facultatif, décoché par défaut
+            ]);
     }
 
     public function configureOptions(OptionsResolver $resolver): void

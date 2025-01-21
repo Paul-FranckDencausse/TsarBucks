@@ -11,7 +11,7 @@ use App\Repository\SaloonMenuRepository;
 class MenuController extends AbstractController
 {
    // Dans ton contrôleur
-#[Route('/menu', name: 'app_menu')]
+#[Route('/menu', name: 'app_menu_index')]
 public function menu(MenuRepository $menuRepo, SaloonMenuRepository $saloonMenuRepo): Response
 {
     $menus = $menuRepo->findAll();
