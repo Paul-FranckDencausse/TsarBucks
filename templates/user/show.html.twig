@@ -25,20 +25,46 @@
                     <td>{{ user.prenom }}</td>
                 </tr>
                 <tr>
+                    <th>Rôles</th>
+                    <td>
+                        {% for role in user.roles %}
+                            {% if role == 'ROLE_MANAGER_TSALINGRAD' %}
+                                Manager de Tsalingrad
+                            {% elseif role == 'ROLE_MANAGER_CATHERINE' %}
+                                Manager de Catherine
+                            {% elseif role == 'ROLE_MANAGER_IVAN' %}
+                                Manager de Ivan
+                            {% elseif role == 'ROLE_MANAGER_USSR' %}
+                                Manager de USSR
+                            {% elseif role == 'ROLE_MANAGER_ANASTASIA' %}
+                                Manager de Anastasia
+                            {% elseif role == 'ROLE_MANAGER_RASPOUTINE' %}
+                                Manager de Raspoutine
+                            {% elseif role == 'ROLE_ADMIN' %}
+                                Administrateur
+                            {% elseif role == 'ROLE_SUPER_ADMIN' %}
+                                Super Administrateur
+                            {% else %}
+                                {{ role }}
+                            {% endif %}
+                            <br>
+                        {% endfor %}
+                    </td>
+                </tr>
+                <tr>
                     <th>Media_id</th>
                     <td></td>
                 </tr>
             </tbody>
         </table>
 
-      <div class="mt-4">
-    <h3>Modifier les rôles</h3>
-    {{ form_start(form, {'attr': {'class': 'form'}}) }}
-        {{ form_widget(form) }}
-        <button type="submit" class="btn btn-warning btn-lg text-light mt-3">Mettre à jour</button>
-    {{ form_end(form) }}
-</div>
-
+        <div class="mt-4">
+            <h3>Modifier les rôles</h3>
+            {{ form_start(form, {'attr': {'class': 'form'}}) }}
+                {{ form_widget(form) }}
+                <button type="submit" class="btn btn-warning btn-lg text-light mt-3">Mettre à jour</button>
+            {{ form_end(form) }}
+        </div>
 
         <div class="mt-3">
             <a href="{{ path('app_user_index') }}" class="btn btn-lg btn-info text-light">Retour</a>

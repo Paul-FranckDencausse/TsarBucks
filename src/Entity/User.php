@@ -6,6 +6,7 @@ use App\Repository\UserRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\DBAL\Types\Types;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
@@ -38,8 +39,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $gender = null;
 
-    #[ORM\Column(length: 255, nullable: true)]
-    private ?string $birthDate = null;
+   
 
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $phone = null;
@@ -169,17 +169,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
-    public function getBirthDate(): ?string
-    {
-        return $this->birthDate;
-    }
-
-    public function setBirthDate(?string $birthDate): self
-    {
-        $this->birthDate = $birthDate;
-
-        return $this;
-    }
 
     public function getPhone(): ?string
     {

@@ -1,14 +1,12 @@
-# config/packages/security.yaml
-
 security:
     role_hierarchy:
-        ROLE_MANAGER_SALON_1: []
-        ROLE_MANAGER_SALON_2: []
-        ROLE_MANAGER_SALON_3: []
-        ROLE_MANAGER_SALON_4: []
-        ROLE_MANAGER_SALON_5: []
-        ROLE_MANAGER_SALON_6: []
-        ROLE_ADMIN: [ROLE_MANAGER_SALON_1, ROLE_MANAGER_SALON_2, ROLE_MANAGER_SALON_3, ROLE_MANAGER_SALON_4, ROLE_MANAGER_SALON_5, ROLE_MANAGER_SALON_6]
+        ROLE_MANAGER_TSALINGRAD: []
+        ROLE_MANAGER_CATHERINE: []
+        ROLE_MANAGER_IVAN: []
+        ROLE_MANAGER_USSR: []
+        ROLE_MANAGER_ANASTASIA: []
+        ROLE_MANAGER_RASPOUTINE: []
+        ROLE_ADMIN: [ROLE_MANAGER_TSALINGRAD, ROLE_MANAGER_CATHERINE, ROLE_MANAGER_IVAN, ROLE_MANAGER_USSR, ROLE_MANAGER_ANASTASIA, ROLE_MANAGER_RASPOUTINE]
         ROLE_SUPER_ADMIN: [ROLE_ADMIN]
 
     password_hashers:
@@ -18,7 +16,7 @@ security:
         # auto hasher with custom options for all PasswordAuthenticatedUserInterface instances
         Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface:
             algorithm: 'auto'
-            cost:      15
+            cost: 15
 
     providers:
         app_user_provider:

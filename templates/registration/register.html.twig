@@ -7,19 +7,19 @@
     <h1 class="mb-4">Inscription</h1>
 
     <!-- Affichage des erreurs globaux du formulaire -->
-    {% if form_errors(registrationForm) %}
+    {% if form_errors(form) %}
         <div class="alert alert-danger">
-            {{ form_errors(registrationForm) }}
+            {{ form_errors(form) }}
         </div>
     {% endif %}
 
     <!-- Début du formulaire -->
-    {{ form_start(registrationForm, {'attr': {'class': 'needs-validation'}}) }}
+    {{ form_start(form, {'attr': {'class': 'needs-validation'}}) }}
 
     <div class="row g-3">
         <!-- Adresse e-mail -->
         <div class="col-md-6">
-            {{ form_row(registrationForm.email, {
+            {{ form_row(form.email, {
                 label: 'Adresse e-mail',
                 attr: {'class': 'form-control'}
             }) }}
@@ -27,7 +27,7 @@
 
         <!-- Mot de passe -->
         <div class="col-md-6">
-            {{ form_row(registrationForm.plainPassword, {
+            {{ form_row(form.plainPassword, {
                 label: 'Mot de passe',
                 attr: {'class': 'form-control'}
             }) }}
@@ -35,7 +35,7 @@
 
         <!-- Nom -->
         <div class="col-md-6">
-            {{ form_row(registrationForm.nom, {
+            {{ form_row(form.nom, {
                 label: 'Nom',
                 attr: {'class': 'form-control'}
             }) }}
@@ -43,7 +43,7 @@
 
         <!-- Prénom -->
         <div class="col-md-6">
-            {{ form_row(registrationForm.prenom, {
+            {{ form_row(form.prenom, {
                 label: 'Prénom',
                 attr: {'class': 'form-control'}
             }) }}
@@ -51,7 +51,7 @@
 
         <!-- Genre -->
         <div class="col-md-6">
-            {{ form_row(registrationForm.genre, {
+            {{ form_row(form.gender, {
                 label: 'Genre',
                 attr: {'class': 'form-select'}
             }) }}
@@ -59,23 +59,17 @@
 
         <!-- Téléphone -->
         <div class="col-md-6">
-            {{ form_row(registrationForm.telephone, {
+            {{ form_row(form.phone, {
                 label: 'Téléphone',
                 attr: {'class': 'form-control'}
             }) }}
         </div>
 
-        <!-- Date de naissance -->
-        <div class="col-md-6">
-            {{ form_row(registrationForm.dateNaissance, {
-                label: 'Date de naissance',
-                attr: {'class': 'form-control'}
-            }) }}
-        </div>
+    
 
         <!-- Adresse -->
         <div class="col-md-12">
-            {{ form_row(registrationForm.adresse, {
+            {{ form_row(form.address, {
                 label: 'Adresse',
                 attr: {'class': 'form-control'}
             }) }}
@@ -83,7 +77,7 @@
 
         <!-- Code postal -->
         <div class="col-md-6">
-            {{ form_row(registrationForm.codePostal, {
+            {{ form_row(form.PostalCode, {
                 label: 'Code postal',
                 attr: {'class': 'form-control'}
             }) }}
@@ -91,7 +85,7 @@
 
         <!-- Ville -->
         <div class="col-md-6">
-            {{ form_row(registrationForm.ville, {
+            {{ form_row(form.City, {
                 label: 'Ville',
                 attr: {'class': 'form-control'}
             }) }}
@@ -100,7 +94,7 @@
         <!-- Accord parental -->
         <div class="col-md-12">
             <div class="form-check">
-                {{ form_row(registrationForm.accordParental, {
+                {{ form_row(form.accordParental, {
                     label: 'J\'atteste avoir obtenu l\'accord parental (si mineur)',
                     attr: {'class': 'form-check-input'}
                 }) }}
@@ -110,7 +104,7 @@
         <!-- Accepter les termes -->
         <div class="col-md-12">
             <div class="form-check">
-                {{ form_row(registrationForm.agreeTerms, {
+                {{ form_row(form.agreeTerms, {
                     label: 'J\'accepte les termes et conditions',
                     attr: {'class': 'form-check-input'}
                 }) }}
@@ -123,6 +117,6 @@
         <button type="submit" class="btn btn-success">S'inscrire</button>
     </div>
     
-    {{ form_end(registrationForm) }}
+    {{ form_end(form) }}
 </div>
 {% endblock %}

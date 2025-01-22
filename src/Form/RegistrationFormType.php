@@ -45,12 +45,12 @@ class RegistrationFormType extends AbstractType
                 'required' => true,
                 'label' => 'Adresse email',
             ])
-            ->add('genre', ChoiceType::class, [
+            ->add('gender', ChoiceType::class, [
                 'label' => 'Genre',
                 'choices' => [
                     'Homme' => 'Homme',
                     'Femme' => 'Femme',
-                    'Autre' => 'Autre',
+                  
                     'Préfère ne pas répondre' => 'NA',
                 ],
                 'placeholder' => 'Sélectionnez votre genre',
@@ -59,7 +59,7 @@ class RegistrationFormType extends AbstractType
                     new NotBlank(['message' => 'Veuillez sélectionner un genre.']),
                 ],
             ])
-            ->add('telephone', TelType::class, [
+            ->add('phone', TelType::class, [
                 'label' => 'Téléphone',
                 'required' => false,
                 'attr' => ['class' => 'form-control'],
@@ -71,21 +71,13 @@ class RegistrationFormType extends AbstractType
                     ]),
                 ],
             ])
-            ->add('dateNaissance', DateType::class, [
-                'label' => 'Date de Naissance',
-                'widget' => 'single_text',
-                'attr' => ['class' => 'form-control'],
-                'constraints' => [
-                    new NotBlank(['message' => 'Veuillez saisir votre date de naissance.']),
-                    new Callback([$this, 'validateAge']),
-                ],
-            ])
-            ->add('adresse', TextType::class, [
+           
+            ->add('address', TextType::class, [
                 'label' => 'Adresse',
                 'required' => false,
                 'attr' => ['class' => 'form-control'],
             ])
-            ->add('codePostal', TextType::class, [
+            ->add('PostalCode', TextType::class, [
                 'label' => 'Code Postal',
                 'required' => false,
                 'attr' => ['class' => 'form-control'],
@@ -93,7 +85,7 @@ class RegistrationFormType extends AbstractType
                     new Length(['max' => 10]),
                 ],
             ])
-            ->add('ville', TextType::class, [
+            ->add('City', TextType::class, [
                 'label' => 'Ville',
                 'required' => false,
                 'attr' => ['class' => 'form-control'],
@@ -109,18 +101,10 @@ class RegistrationFormType extends AbstractType
                     ]),
                 ],
             ])
-            ->add('plainPassword', PasswordType::class, [
-                'label' => 'Mot de Passe',
-                'mapped' => false,
-                'attr' => ['class' => 'form-control', 'autocomplete' => 'new-password'],
-                'constraints' => [
-                    new NotBlank(['message' => 'Veuillez choisir un mot de passe.']),
-                    new Length([
-                        'min' => 6,
-                        'minMessage' => 'Votre mot de passe doit contenir au moins {{ limit }} caractères.',
-                        'max' => 4096,
-                    ]),
-                ],
+           ->add('plainPassword', PasswordType::class, [
+                'mapped' => false, // Indique que ce champ n'est pas mappé directement à une propriété de l'entité
+                'required' => true,
+                'label' => 'Password',
             ])
             ->add('accordParental', CheckboxType::class, [
                 'label' => 'J\'atteste avoir obtenu l\'accord parental (si mineur)',
