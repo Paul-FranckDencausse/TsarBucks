@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Stalingrad index{% endblock %}
+
+{% block body %}
+    <h1>Stalingrad index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Media</th>
+                <th>Address</th>
+                <th>Phone</th>
+                <th>OpeningHours</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for stalingrad in stalingrads %}
+            <tr>
+                <td>{{ stalingrad.id }}</td>
+                <td>{{ stalingrad.Name }}</td>
+                <td>{{ stalingrad.Media }}</td>
+                <td>{{ stalingrad.address }}</td>
+                <td>{{ stalingrad.phone }}</td>
+                <td>{{ stalingrad.openingHours }}</td>
+                <td>
+                    <a href="{{ path('app_manager_stalingrad_show', {'id': stalingrad.id}) }}">show</a>
+                    <a href="{{ path('app_manager_stalingrad_edit', {'id': stalingrad.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_manager_stalingrad_new') }}">Create new</a>
+{% endblock %}

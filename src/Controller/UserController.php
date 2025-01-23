@@ -57,12 +57,12 @@ public function show(Request $request, User $user, EntityManagerInterface $entit
     ->add('roles', ChoiceType::class, [
         'choices' => [
             'Super Admin' => 'ROLE_SUPER_ADMIN',
-            'Salon Manager Salon 1' => 'ROLE_MANAGER_SALON_1',
-            'Salon Manager Salon 2' => 'ROLE_MANAGER_SALON_2',
-            'Salon Manager Salon 3' => 'ROLE_MANAGER_SALON_3',
-            'Salon Manager Salon 4' => 'ROLE_MANAGER_SALON_4',
-            'Salon Manager Salon 5' => 'ROLE_MANAGER_SALON_5',
-            'Salon Manager Salon 6' => 'ROLE_MANAGER_SALON_6',
+            'Salon Manager  Stalingrad' => 'ROLE_MANAGER_STALINGRAD',
+            'Salon Manager Catherine' => 'ROLE_MANAGER_CATHERINE',
+            'Salon Manager URSS' => 'ROLE_MANAGER_URSS',
+            'Salon Manager Ivan' => 'ROLE_MANAGER_IVAN',
+            'Salon Manager  Anastasia' => 'ROLE_MANAGER_ANASTASIA',
+            'Salon Manager Raspoutine' => 'ROLE_MANAGER_RASPOUTINE',
         ],
         'expanded' => true, // Affiche comme des cases à cocher
         'multiple' => true, // Permet de sélectionner plusieurs rôles
@@ -96,7 +96,13 @@ public function show(Request $request, User $user, EntityManagerInterface $entit
                 'choices' => [
                     'Super Admin' => 'ROLE_SUPER_ADMIN',
                     'Admin' => 'ROLE_ADMIN',
-                    'Salon Manager' => 'ROLE_SALON_MANAGER',
+                    'Manager Stalingrad' => 'ROLE_MANAGER_STALINGRAD',
+                    'Manager Catherine' => 'ROLE_MANAGER_CATHERINE',
+                    'Manager URSS' => 'ROLE_MANAGER_URSS',
+                    'Manager Ivan' => 'ROLE_MANAGER_IVAN',
+                    'Manager Anastasia' => 'ROLE_MANAGER_ANASTASIA',
+                    'Manager Raspoutine' => 'ROLE_MANAGER_RASPOUTINE',
+
                 ],
                 'expanded' => true,
                 'multiple' => true,

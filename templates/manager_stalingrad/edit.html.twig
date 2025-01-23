@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Stalingrad{% endblock %}
+
+{% block body %}
+    <h1>Edit Stalingrad</h1>
+
+    {{ include('manager_stalingrad/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_manager_stalingrad_index') }}">back to list</a>
+
+    {{ include('manager_stalingrad/_delete_form.html.twig') }}
+{% endblock %}

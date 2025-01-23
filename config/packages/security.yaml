@@ -1,12 +1,12 @@
 security:
     role_hierarchy:
-        ROLE_MANAGER_TSALINGRAD: []
+        ROLE_MANAGER_STALINGRAD: []
         ROLE_MANAGER_CATHERINE: []
         ROLE_MANAGER_IVAN: []
-        ROLE_MANAGER_USSR: []
+        ROLE_MANAGER_URSS: []
         ROLE_MANAGER_ANASTASIA: []
         ROLE_MANAGER_RASPOUTINE: []
-        ROLE_ADMIN: [ROLE_MANAGER_TSALINGRAD, ROLE_MANAGER_CATHERINE, ROLE_MANAGER_IVAN, ROLE_MANAGER_USSR, ROLE_MANAGER_ANASTASIA, ROLE_MANAGER_RASPOUTINE]
+        ROLE_ADMIN: [ROLE_MANAGER_STALINGRAD, ROLE_MANAGER_CATHERINE, ROLE_MANAGER_IVAN, ROLE_MANAGER_URSSS, ROLE_MANAGER_ANASTASIA, ROLE_MANAGER_RASPOUTINE]
         ROLE_SUPER_ADMIN: [ROLE_ADMIN]
 
     password_hashers:
@@ -47,6 +47,12 @@ security:
                 # target: app_any_route
 
     access_control:
+        - {path: ^/super/admin, roles: ROLE_SUPER_ADMIN}
         - { path: ^/admin, roles: ROLE_ADMIN }
-        - { path: ^/profile, roles: ROLE_USER }
+        - {path: ^/manager/stalingrad, roles: ROLE_MANAGER_STALINGRAD}
+        - {path: ^/manager/catherine, roles: ROLE_MANAGER_CATHERINE}
+        - {path: ^/manager/ivan, roles: ROLE_MANAGER_IVAN}
+        - {path: ^/manager/urss, roles: ROLE_MANAGER_URSS}
+        - {path: ^/manager/anastasia, roles: ROLE_MANAGER_ANASTASIA}
+        - {path: ^/manager/raspoutine, roles: ROLE_MANAGER_RASPOUTINE}
         - { path: ^/dashboard, roles: ROLE_USER }

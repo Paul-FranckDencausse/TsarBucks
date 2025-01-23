@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Stalingrad{% endblock %}
+
+{% block body %}
+    <h1>Create new Stalingrad</h1>
+
+    {{ include('manager_stalingrad/_form.html.twig') }}
+
+    <a href="{{ path('app_manager_stalingrad_index') }}">back to list</a>
+{% endblock %}

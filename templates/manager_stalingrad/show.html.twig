@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Stalingrad{% endblock %}
+
+{% block body %}
+    <h1>Stalingrad</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ stalingrad.id }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ stalingrad.Name }}</td>
+            </tr>
+            <tr>
+                <th>Media</th>
+                <td>{{ stalingrad.Media }}</td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td>{{ stalingrad.address }}</td>
+            </tr>
+            <tr>
+                <th>Phone</th>
+                <td>{{ stalingrad.phone }}</td>
+            </tr>
+            <tr>
+                <th>OpeningHours</th>
+                <td>{{ stalingrad.openingHours }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_manager_stalingrad_index') }}">back to list</a>
+
+    <a href="{{ path('app_manager_stalingrad_edit', {'id': stalingrad.id}) }}">edit</a>
+
+    {{ include('manager_stalingrad/_delete_form.html.twig') }}
+{% endblock %}
